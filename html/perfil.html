@@ -20,10 +20,10 @@
 <body>
     <header>
         <h1>Plataforma de Orientación Estudiantil</h1>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="perfil.html" aria-current="page">Perfil</a></li>
                 <li><a href="test.html">Test</a></li>
                 <li><a href="resultados.html">Resultados</a></li>
                 <li><a href="ruta.html">Ruta de Aprendizaje</a></li>
@@ -31,25 +31,27 @@
         </nav>
     </header>
     <main>
-        <h2>Perfil del Estudiante</h2>
-        <form>
-            <div>
-                <label for="nombre">Nombre y Apellido:</label>
-                <input type="text" id="nombre" name="nombre">
-            </div>
-            
-            <div>
-                <label for="intereses">Intereses:</label>
-                <input type="text" id="intereses" name="intereses">
-            </div>
+        <section>
+            <h2>Perfil del Estudiante</h2>
+            <form>
+                <div>
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
 
-            <div>
-                <label for="habilidades">Habilidades:</label>
-                <textarea id="habilidades" name="habilidades"></textarea>
-            </div>
+                <div>
+                    <label for="intereses">Intereses:</label>
+                    <input type="text" id="intereses" name="intereses">
+                </div>
 
-            <button type="submit">Guardar Perfil</button>
-        </form>
+                <div>
+                    <label for="habilidades">Habilidades:</label>
+                    <textarea id="habilidades" name="habilidades"></textarea>
+                </div>
+
+                <button type="submit">Guardar Perfil</button>
+            </form>
+        </section>
     </main>
     <footer>
         <p><strong>Trabajo Práctico Integrador - C9 TUP UTN</strong></p>
