@@ -22,11 +22,11 @@
 <body>
     <header>
         <h1>Plataforma de Orientación Estudiantil</h1>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="perfil.html">Perfil</a></li>
-                <li><a href="test.html">Test</a></li>
+                <li><a href="test.html" aria-current="page">Test</a></li>
                 <li><a href="resultados.html">Resultados</a></li>
                 <li><a href="ruta.html">Ruta de Aprendizaje</a></li>
             </ul>
@@ -37,8 +37,7 @@
             <h2>Test de Orientación</h2>
             <p>Respondé las siguientes preguntas según tus gustos, habilidades e intereses.</p>
             <p>No existen respuestas correctas o incorrectas. Elegí una opción en cada pregunta.</p>
-        </section>
-        <form action="resultados.html" method="get">
+            <form action="resultados.html" method="get">
             <fieldset>
                 <legend>1. ¿Qué actividad disfrutás más?</legend>
                 <input type="radio" id="pregunta1-tecnologia" name="pregunta1" value="tecnologia" required>
@@ -127,7 +126,8 @@
                 <button type="reset">Borrar respuestas</button>
                 <button type="submit">Finalizar Test</button>
             </p>
-        </form>
+            </form>
+        </section>
     </main>
     <footer>
         <p><strong>Trabajo Práctico Integrador - C9 TUP UTN</strong></p>

@@ -20,15 +20,17 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">Inicio</a> |
-            <a href="perfil.html">Mi perfil</a> |
-            <a href="test.html">Test</a> |
-            <a href="resultados.html">Resultados</a> |
-            <a href="ruta.html">Mi ruta</a> |
+        <h1>Plataforma de Orientación Estudiantil</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="test.html">Test</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+                <li><a href="ruta.html" aria-current="page">Ruta de Aprendizaje</a></li>
+            </ul>
         </nav>
     </header>
-    <hr>
     <main>
         <section>
             <h2>Mi ruta profesional</h2>
@@ -96,19 +98,13 @@
         </section>
         <section>
             <h2>Mi progreso</h2>
-            <p>
-                Progreso actual de la ruta:
-            </p>
-            <progress value="0" max="100">
-                0%
+            <label for="progreso-ruta">Progreso actual de la ruta:</label>
+            <progress id="progreso-ruta" value="30" max="100">
+                30%
             </progress>
             <p>
                 30% completado
             </p>
-        </section>
-        <section>
-            <a href="resultados.html">
-            </a>
         </section>
     </main>
     <footer>
