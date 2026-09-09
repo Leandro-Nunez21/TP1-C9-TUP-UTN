@@ -1,0 +1,103 @@
+:root {
+    --color-primario: #1E3A8A;    
+    --color-secundario: #3B82F6;  
+    --color-fondo: #F8FAFC;       
+    --color-texto: #0F172A;       
+    --color-blanco: #ffffff;
+    --fuente-principal: 'Inter', system-ui, -apple-system, sans-serif;
+    --espacio-sm: 10px;       
+    --espacio-md: 20px;
+    --espacio-lg: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: var(--espacio-md) var(--espacio-lg);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: var(--espacio-md);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;          
+    flex-wrap: wrap;        
+    justify-content: center;
+    gap: var(--espacio-md); /* Separa los items del menu */
+}
+
+nav a {
+    display: block; /* Obliga al boton a tomar forma */
+    color: var(--color-blanco);
+    text-decoration: none;
+    background-color: var(--color-secundario);
+    padding: var(--espacio-sm) var(--espacio-md);
+    border-radius: 5px;
+    border: 2px solid transparent; 
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-secundario);
+    border-color: var(--color-secundario);
+}
+
+main {
+    padding: var(--espacio-lg);
+    max-width: 1200px;
+    margin: 20px auto; /* Da un margen arriba y abajo, y centra */
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: var(--espacio-lg);
+    min-height: 70vh; 
+}
+
+section {
+    background-color: var(--color-blanco);
+    padding: var(--espacio-lg);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para que parezca tarjeta */
+}
+
+/* RESPONSIVE DESIGN */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+    main {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    section:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: var(--espacio-lg) var(--espacio-md);
+    margin-top: var(--espacio-lg); /* Lo separa del contenido de arriba */
+}
+
+footer p {
+    margin-bottom: var(--espacio-sm); /* Un pequeño espacio entre los renglones */
+}
