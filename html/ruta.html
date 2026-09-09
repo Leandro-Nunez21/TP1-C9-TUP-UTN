@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="../style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explorá el mapa de correlatividades, la ruta académica y el avance del plan de estudios de tu carrera.">
@@ -20,8 +19,7 @@
 </head>
 <body>
     <header>
-        <p><strong>Plataforma de Orientación Estudiantil</strong></p>
-        <img src="img/CareerPath.jpeg" alt="Logotipo oficial de la Plataforma de Orientación Estudiantil">
+        <h1>Plataforma de Orientación Estudiantil</h1>
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -32,6 +30,7 @@
             </ul>
         </nav>
     </header>
+    <hr>
     <main>
         <section>
             <h1>Mi ruta profesional</h1>
@@ -99,13 +98,18 @@
         </section>
         <section>
             <h2>Mi progreso</h2>
-            <label for="progreso-ruta">Progreso actual de la ruta:</label>
-            <progress id="progreso-ruta" value="30" max="100">
-                30%
+            <p>
+                Progreso actual de la ruta:
+            </p>
+            <progress value="0" max="100">
+                0%
             </progress>
             <p>
-                30% completado
+                0% completado
             </p>
+        </section>
+        <section>
+            <a href="resultados.html">Ver mis resultados</a>
         </section>
     </main>
     <footer>
