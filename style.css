@@ -76,6 +76,19 @@ body {
 }
 
 
+/* FORZANDO BOTONES DE TARJETAS PARA QUE BOOTSTRAP NO LOS ROMPA */
+.btn-outline-morado {
+    border: 2px solid var(--color-primario) !important;
+    color: var(--color-primario) !important;
+    background-color: transparent !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-outline-morado:hover {
+    background-color: var(--color-primario) !important;
+    color: var(--color-blanco) !important;
+}
+
 /* =========================================================
    CSS ORIGINAL DEL TP2 - COMENTADO PARA CONSERVAR
    (Ya no se aplica directamente porque ahora usamos Bootstrap,

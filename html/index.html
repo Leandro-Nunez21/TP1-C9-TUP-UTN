@@ -2,54 +2,104 @@
 <html lang="es">
 <head>
     <link rel="stylesheet" href="../style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Plataforma Estudiantil: accedé a tus materias, horarios, calificaciones y avisos académicos en tiempo real.">
     <meta name="keywords" content="plataforma estudiantil, portal alumno, materias, calificaciones, universidad, utn">
     <link rel="canonical" href="https://leandro-nunez21.github.io/TP1-C9-TUP-UTN/index.html">
     <title>Portal Estudiantil | Inicio</title>
-    <meta property="og:title" content="Portal Estudiantil">
-    <meta property="og:description" content="Accedé a tus materias, calificaciones y gestión académica en tiempo real.">
-    <meta property="og:image" content="img/preview.png">
-    <meta property="og:url" content="https://leandro-nunez21.github.io/TP1-C9-TUP-UTN/index.html">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Portal Estudiantil">
-    <meta name="twitter:description" content="Accedé a tus materias, calificaciones y gestión académica en tiempo real.">
-    <meta name="twitter:image" content="img/preview.png">
 </head>
-<body>
-    <header>
-        <h1>Plataforma de Orientación Estudiantil</h1>
-        <img src="img/CareerPath.jpeg" alt="Logotipo oficial de la Plataforma de Orientación Estudiantil">
-        <nav aria-label="Navegación principal">
-            <ul>
-                <li><a href="index.html" aria-current="page">Inicio</a></li>
-                <li><a href="perfil.html">Perfil</a></li>
-                <li><a href="test.html">Test</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-                <li><a href="ruta.html">Ruta de Aprendizaje</a></li>
-            </ul>
-        </nav>
+
+<body class="d-flex flex-column min-vh-100">
+    
+    <header class="py-3 mb-4 shadow-sm" style="background-color: var(--color-blanco);">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <img src="img/CareerPath.jpeg" alt="Logotipo" class="me-3" style="width: 50px; height: auto;">
+                <h1 class="h4 mb-0 fw-bold" style="color: var(--color-texto);">CareerPath AI</h1>
+            </div>
+            <nav aria-label="Navegación principal">
+                <ul class="nav nav-pills mt-3 mt-md-0">
+                    <li class="nav-item"><a href="index.html" class="nav-link fw-bold text-decoration-underline" style="color: var(--color-primario);" aria-current="page">Inicio</a></li>
+                    <li class="nav-item"><a href="perfil.html" class="nav-link" style="color: var(--color-texto);">Perfil</a></li>
+                    <li class="nav-item"><a href="test.html" class="nav-link" style="color: var(--color-texto);">Test</a></li>
+                    <li class="nav-item"><a href="resultados.html" class="nav-link" style="color: var(--color-texto);">Resultados</a></li>
+                    <li class="nav-item"><a href="ruta.html" class="nav-link" style="color: var(--color-texto);">Ruta de Aprendizaje</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>¡Te damos la bienvenida!</h2>
-            <p>Descubrí tu camino ideal. Nuestra plataforma está diseñada para ayudarte a identificar tus fortalezas, evaluar tus conocimientos y trazar una ruta de aprendizaje 100% personalizada para tu futuro.</p>
+
+    <main class="container flex-grow-1 my-4">
+        
+        <!-- Hero Section-->
+        <section class="p-5 mb-5 rounded-3 text-center shadow text-white" style="background-color: var(--color-primario);">
+            <h2 class="display-5 fw-bold mb-3">¡Te damos la bienvenida!</h2>
+            <p class="lead fs-4 col-lg-8 mx-auto mb-4">
+                Descubrí tu camino ideal. Nuestra plataforma está diseñada para ayudarte a identificar tus fortalezas, evaluar tus conocimientos y trazar una ruta de aprendizaje 100% personalizada para tu futuro.
+            </p>
+            
+            <a href="perfil.html" class="btn-destacado text-decoration-none mt-2">
+                <span class="texto-boton">Comenzar mi ruta</span>
+            </a>
         </section>
-        <section>
-            <h2>¿Cómo funciona?</h2>
-            <ul>
-                <li><strong>1. Mi Perfil:</strong> Completá tus datos básicos, contanos sobre tus intereses y las habilidades que ya tenés.</li>
-                <li><strong>2. Realizar Test:</strong> Poné a prueba tus capacidades con nuestras preguntas interactivas.</li>
-                <li><strong>3. Resultados y Ruta:</strong> Obtené un análisis detallado y descubrí los siguientes pasos para alcanzar tus metas.</li>
-            </ul>
+
+        <!-- Grid de presentación -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-5" style="color: var(--color-texto);">¿Cómo funciona?</h2>
+            
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center" style="background-color: var(--color-blanco);">
+                        <div class="card-body d-flex flex-column p-4">
+                            <h3 class="card-title h5 fw-bold" style="color: var(--color-primario);">1. Mi Perfil</h3>
+                            <p class="card-text mt-2 flex-grow-1" style="color: var(--color-texto);">Completá tus datos básicos, contanos sobre tus intereses y las habilidades que ya tenés.</p>
+                            <!-- Acá aplicamos la nueva clase btn-tarjeta -->
+                            <a href="perfil.html" class="btn mt-3 mt-auto fw-bold btn-outline-morado">Completar datos</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center" style="background-color: var(--color-blanco);">
+                        <div class="card-body d-flex flex-column p-4">
+                            <h3 class="card-title h5 fw-bold" style="color: var(--color-primario);">2. Realizar Test</h3>
+                            <p class="card-text mt-2 flex-grow-1" style="color: var(--color-texto);">Poné a prueba tus capacidades con nuestras preguntas interactivas y psicológicas.</p>
+                            <!-- Acá aplicamos la nueva clase btn-tarjeta -->
+                            <a href="test.html" class="btn mt-3 mt-auto fw-bold btn-outline-morado">Ir al test</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center" style="background-color: var(--color-blanco);">
+                        <div class="card-body d-flex flex-column p-4">
+                            <h3 class="card-title h5 fw-bold" style="color: var(--color-primario);">3. Resultados y Ruta</h3>
+                            <p class="card-text mt-2 flex-grow-1" style="color: var(--color-texto);">Obtené un análisis detallado y descubrí los siguientes pasos para alcanzar tus metas.</p>
+                            <!-- Acá aplicamos la nueva clase btn-tarjeta -->
+                            <a href="resultados.html" class="btn mt-3 mt-auto fw-bold btn-outline-morado">Ver resultados</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
     </main>
-    <footer>
-        <p><strong>Trabajo Final - C9 TUP UTN</strong></p>
-        <p> Integrador: Leandro Nuñez</p>
-        <p> Equipo de Desarrollo: Valentina Pérez del Rien | Marina Noguera Morena Giovanna | Tatiana Herrera</p>
+
+    <footer class="border-top py-4 text-center mt-auto" style="background-color: var(--color-blanco);">
+        <div class="container">
+            <p class="mb-1 fw-bold" style="color: var(--color-texto);">Trabajo Final - C9 TUP UTN</p>
+            <p class="mb-1 small" style="color: var(--color-texto);">Integrador: Leandro Nuñez</p>
+            <p class="mb-0 small" style="color: var(--color-texto);">Equipo de Desarrollo: Valentina Pérez del Rien | Marina Noguera Morena Giovanna | Tatiana Herrera</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
