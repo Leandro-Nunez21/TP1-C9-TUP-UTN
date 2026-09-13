@@ -1,14 +1,86 @@
 :root {
-    --color-primario: #1E3A8A;    
-    --color-secundario: #3B82F6;  
-    --color-fondo: #F8FAFC;       
-    --color-texto: #0F172A;       
+    /* ===== PALETA NUEVA TP3 - Bootstrap + estilo lila/mostaza ===== */
+    --color-primario: #6C4AB6;      
+    --color-secundario: #FFB84C;    
+    --color-fondo: #F4F0FB;         
+    --color-texto: #2E2A3D;         
     --color-blanco: #ffffff;
+    --color-exito: #4CAF91;    
+    --color-crema: #FFF6E9;    
     --fuente-principal: 'Inter', system-ui, -apple-system, sans-serif;
-    --espacio-sm: 10px;       
+    --espacio-sm: 10px;
     --espacio-md: 20px;
     --espacio-lg: 40px;
 }
+
+/* Botón destacado - inspirado en Uiverse.io, adaptado con la paleta del proyecto */
+.btn-destacado {
+  --border_radius: 9999px;
+  --transtion: 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--border_radius);
+  transform: scale(calc(1 + (var(--active, 0) * 0.08)));
+  transition: transform var(--transtion);
+  text-decoration: none;
+}
+
+.btn-destacado::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-texto);
+  border-radius: var(--border_radius);
+  box-shadow: inset 0 0.5px hsl(0, 0%, 100%),
+    0px 4px 12px -4px hsla(0, 0%, 0%, calc(1 - var(--active, 0))),
+    0 0 0 calc(var(--active, 0) * 0.4rem) hsla(266, 60%, 55%, 0.6);
+  transition: all var(--transtion);
+  z-index: 0;
+}
+
+.btn-destacado::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-primario);
+  background-image: radial-gradient(at 30% 90%, hsla(266, 50%, 65%, 1) 0px, transparent 55%),
+    radial-gradient(at 100% 100%, hsla(38, 100%, 62%, 0.7) 0px, transparent 50%);
+  opacity: var(--active, 0);
+  border-radius: var(--border_radius);
+  transition: opacity var(--transtion);
+  z-index: 1;
+}
+
+.btn-destacado:is(:hover, :focus-visible) {
+  --active: 1;
+}
+.btn-destacado:active {
+  transform: scale(0.97);
+}
+
+.btn-destacado .texto-boton {
+  position: relative;
+  z-index: 2;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+body {
+   background-color: var(--color-crema);
+}
+
+
+/* =========================================================
+   CSS ORIGINAL DEL TP2 - COMENTADO PARA CONSERVAR
+   (Ya no se aplica directamente porque ahora usamos Bootstrap,
+   pero se deja documentado según lo pedido en la consigna del TP3)
+   =========================================================
 
 * {
     margin: 0;
@@ -39,11 +111,11 @@ nav ul {
     display: flex;          
     flex-wrap: wrap;        
     justify-content: center;
-    gap: var(--espacio-md); /* Separa los items del menu */
+    gap: var(--espacio-md);
 }
 
 nav a {
-    display: block; /* Obliga al boton a tomar forma */
+    display: block;
     color: var(--color-blanco);
     text-decoration: none;
     background-color: var(--color-secundario);
@@ -62,7 +134,7 @@ nav a:hover {
 main {
     padding: var(--espacio-lg);
     max-width: 1200px;
-    margin: 20px auto; /* Da un margen arriba y abajo, y centra */
+    margin: 20px auto;
     display: grid;
     grid-template-columns: 1fr; 
     gap: var(--espacio-lg);
@@ -73,10 +145,9 @@ section {
     background-color: var(--color-blanco);
     padding: var(--espacio-lg);
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para que parezca tarjeta */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* RESPONSIVE DESIGN */
 @media (min-width: 768px) {
     header {
         flex-direction: row; 
@@ -95,9 +166,11 @@ footer {
     color: var(--color-blanco);
     text-align: center;
     padding: var(--espacio-lg) var(--espacio-md);
-    margin-top: var(--espacio-lg); /* Lo separa del contenido de arriba */
+    margin-top: var(--espacio-lg);
 }
 
 footer p {
-    margin-bottom: var(--espacio-sm); /* Un pequeño espacio entre los renglones */
+    margin-bottom: var(--espacio-sm);
 }
+
+   ===== FIN CSS ORIGINAL TP2 ===== 

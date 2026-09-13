@@ -2,22 +2,24 @@
 
 **Trabajo Práctico Integrador - C9 TUP UTN**
 
-Una aplicación web interactiva diseñada para ayudar a los estudiantes a descubrir su camino profesional ideal. La plataforma permite evaluar perfiles, identificar fortalezas mediante un test vocacional y trazar una ruta de aprendizaje 100% personalizada hacia el futuro laboral (Desarrollo Web, Inteligencia Artificial, etc.).
+Una aplicación web interactiva diseñada para ayudar a los estudiantes de Tucumán a descubrir su camino profesional ideal. La plataforma permite evaluar perfiles mediante un test vocacional con aval psicológico, e integra Inteligencia Artificial para sugerir carreras únicas (abarcando instituciones como UNT, UTN, UNSTA, USPT y terciarios) y trazar una ruta de aprendizaje 100% personalizada con temarios dinámicos.
 
-## 🚀 Tecnologías y Arquitectura
+## 🚀 Tecnologías, Arquitectura e IA
 * **HTML5:** Estructura semántica y formularios interactivos.
 * **CSS3:** Maquetación responsiva utilizando Flexbox, CSS Grid y variables de entorno (`:root`).
 * **Git & GitHub:** Control de versiones y flujo de trabajo colaborativo mediante ramas protegidas.
+* **Arquitectura de Datos:** Modelo de base de datos optimizado donde las carreras son entidades únicas asociadas a múltiples instituciones.
+* **Integración IA:** Motor inteligente para el análisis de perfiles y la generación automática de temarios de materias troncales.
 
 ## 📂 Estructura del Proyecto
 
 El sitio está compuesto por 5 vistas principales, interconectadas para ofrecer una experiencia fluida:
 
-1. **`index.html` (Inicio):** Landing page que explica el funcionamiento de la plataforma.
+1. **`index.html` (Inicio):** Landing page que explica el funcionamiento de la plataforma y su alcance provincial.
 2. **`perfil.html` (Mi Perfil):** Formulario para la recolección de datos, intereses y habilidades previas del usuario.
-3. **`test.html` (Test Vocacional):** Cuestionario interactivo de 6 preguntas que evalúa inclinaciones tecnológicas, sociales, de gestión y creativas.
-4. **`resultados.html` (Resultados):** Despliegue del análisis del perfil, habilidades a desarrollar y sugerencias de carrera.
-5. **`ruta.html` (Ruta de Aprendizaje):** Un plan de estudios dividido en etapas (Fundamentos, Desarrollo, Especialización) con seguimiento de progreso.
+3. **`test.html` (Test Vocacional):** Cuestionario interactivo validado por un psicólogo profesional que evalúa inclinaciones tecnológicas, sociales, de gestión y creativas.
+4. **`resultados.html` (Resultados):** Despliegue del análisis de la IA, sugerencias de carrera, instituciones recomendadas y temarios generados dinámicamente.
+5. **`ruta.html` (Ruta de Aprendizaje):** Un plan de estudios estructurado basado en la recomendación de la IA, dividido en etapas (Fundamentos, Desarrollo, Especialización) con seguimiento de progreso.
 
 ## 🔎 Estrategia SEO y Accesibilidad
 
@@ -39,9 +41,8 @@ Para asegurar el correcto posicionamiento orgánico en motores de búsqueda y un
 El trabajo se dividió estratégicamente en ramas individuales a partir de `dev` para optimizar el flujo de trabajo:
 
 * **Leandro Núñez (Integrador):** Dueño del repositorio, revisión de Pull Requests, configuración base de `style.css`, variables de entorno y maquetación (Grid/Flexbox).
-* **Valentina Pérez del Rien:** Documentación general, redacción del README y definición de estrategias SEO.
+* **Valentina Pérez del Rien:** Documentación general, análisis de requerimientos (UML), redacción del README y definición de estrategias SEO.
 * **Tatiana Herrera:** SEO Técnico, implementación de metaetiquetas (viewport, description, keywords) y Open Graph.
 * **Marina Noguera Morena Giovanna:** Revisión de semántica HTML, accesibilidad, jerarquía de etiquetas y atributos `alt` en elementos multimedia.
 
 ---
-*Desarrollado para la Tecnicatura Universitaria en Programación - Universidad Tecnológica Nacional (UTN).*
