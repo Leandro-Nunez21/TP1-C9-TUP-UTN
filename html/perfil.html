@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- CSS de Bootstrap 5.0.2 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
     />
 
+    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="../style.css" />
 
     <meta
@@ -29,7 +33,7 @@
       property="og:description"
       content="Gestioná tu información personal y académica."
     />
-    <meta property="og:image" content="img/preview.png" />
+    <meta property="og:image" content="../img/preview.png" />
     <meta
       property="og:url"
       content="https://leandro-nunez21.github.io/TP1-C9-TUP-UTN/perfil.html"
@@ -41,26 +45,40 @@
       name="twitter:description"
       content="Gestioná tu información personal y académica."
     />
-    <meta name="twitter:image" content="img/preview.png" />
+    <meta name="twitter:image" content="../img/preview.png" />
   </head>
-  <body>
+  
+  <body class="d-flex flex-column min-vh-100">
+    
+    <!-- HEADER / NAVBAR CON BOOTSTRAP -->
     <header>
-      <h1>Plataforma de Orientación Estudiantil</h1>
-      <img
-        src="img/CareerPath.jpeg"
-        alt="Logotipo oficial de la Plataforma de Orientación Estudiantil"
-      />
-      <nav aria-label="Navegación principal">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="perfil.html" aria-current="page">Perfil</a></li>
-          <li><a href="test.html">Test</a></li>
-          <li><a href="resultados.html">Resultados</a></li>
-          <li><a href="ruta.html">Ruta de Aprendizaje</a></li>
-        </ul>
-      </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="../img/CareerPath.jpeg" alt="Logo" width="40" height="40" class="me-2 rounded">
+                    CareerPath AI
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="menuNavegacion">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <!-- La clase 'active' ahora está en Perfil -->
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="perfil.html">Perfil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="test.html">Test</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resultados.html">Resultados</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ruta.html">Ruta de Aprendizaje</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main class="container py-5 d-block">
+
+    <!-- MAIN -->
+    <main class="container py-5 d-block flex-grow-1">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
           <section class="card border-0 shadow-sm p-0">
@@ -72,7 +90,6 @@
                   <label for="nombre" class="form-label">
                     Nombre y Apellido:
                   </label>
-
                   <input
                     type="text"
                     class="form-control"
@@ -83,7 +100,6 @@
 
                 <div class="mb-3">
                   <label for="intereses" class="form-label"> Intereses: </label>
-
                   <input
                     type="text"
                     class="form-control"
@@ -96,7 +112,6 @@
                   <label for="habilidades" class="form-label">
                     Habilidades:
                   </label>
-
                   <textarea
                     class="form-control"
                     id="habilidades"
@@ -114,13 +129,27 @@
         </div>
       </div>
     </main>
-    <footer>
-      <p><strong>Trabajo Práctico Integrador - C9 TUP UTN</strong></p>
-      <p>Integrador: Leandro Núñez</p>
-      <p>
-        Equipo de Desarrollo: Valentina Pérez del Rien | Marina Noguera Morena
-        Giovanna | Tatiana Herrera
-      </p>
+
+    <!-- FOOTER CON BOOTSTRAP -->
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-md-12 mb-3 text-center border-bottom border-secondary pb-2">
+                    <h5 class="m-0">Trabajo Práctico Integrador - C9 TUP UTN</h5>
+                </div>
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-1 text-info"><strong>Integrador:</strong></p>
+                    <p class="mb-0">Leandro Nuñez</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1 text-info"><strong>Equipo de Desarrollo:</strong></p>
+                    <p class="mb-0 small">Valentina Pérez del Rien | Marina Noguera</p>
+                    <p class="mb-0 small">Morena Giovanna | Tatiana Herrera</p>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
