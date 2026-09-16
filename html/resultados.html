@@ -1,38 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS de Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="../style.css">
+
     <meta name="description" content="Consultá tus últimos resultados académicos, notas de exámenes y estadísticas de cursada actualizadas.">
     <meta name="keywords" content="resultados academicos, notas, examenes, promociones, calificaciones estudiantiles">
     <link rel="canonical" href="https://leandro-nunez21.github.io/TP1-C9-TUP-UTN/resultados.html">
     <title>Portal Estudiantil | Resultados y Notas</title>
     <meta property="og:title" content="Portal Estudiantil | Resultados">
     <meta property="og:description" content="Consultá tus notas y rendimiento académico actualizado.">
-    <meta property="og:image" content="img/preview.png">
+    <meta property="og:image" content="../img/preview.png">
     <meta property="og:url" content="https://leandro-nunez21.github.io/TP1-C9-TUP-UTN/resultados.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Portal Estudiantil | Resultados">
     <meta name="twitter:description" content="Consultá tus notas y rendimiento académico actualizado.">
-    <meta name="twitter:image" content="img/preview.png">
+    <meta name="twitter:image" content="../img/preview.png">
 </head>
-<body>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- HEADER / NAVBAR CON BOOTSTRAP -->
     <header>
-        <h1>Plataforma de Orientación Estudiantil</h1>
-        <nav aria-label="Navegación principal">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="perfil.html">Perfil</a></li>
-                <li><a href="test.html">Test</a></li>
-                <li><a href="resultados.html" aria-current="page">Resultados</a></li>
-                <li><a href="ruta.html">Ruta de Aprendizaje</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="../img/CareerPath.jpeg" alt="Logo" width="40" height="40" class="me-2 rounded">
+                    CareerPath AI
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuNavegacion">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="test.html">Test</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="resultados.html">Resultados</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ruta.html">Ruta de Aprendizaje</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <main class="container my-4">
+
+    <main class="container my-4 flex-grow-1">
         <section class="rounded-4 text-center text-white p-4 mb-4" style="background-color: var(--color-primario);">
             <h2 class="mb-2">Resultados de tu orientación profesional</h2>
             <p class="mb-0" style="color: #E4DEF3;">
@@ -40,6 +66,7 @@
                 que podrían adaptarse a tus intereses y habilidades.
             </p>
         </section>
+
         <section class="mb-4">
             <h3 class="mb-3" style="color: var(--color-texto);">Áreas recomendadas</h3>
             <div class="d-flex flex-wrap gap-2">
@@ -48,6 +75,7 @@
                 <span class="badge rounded-pill p-2 px-3" style="background-color: var(--color-exito); font-size: 0.9rem;">Desarrollo web</span>
             </div>
         </section>
+
         <div class="row">
             <div class="col-md-6 mb-4">
                 <div class="card h-100 border-0 shadow-sm">
@@ -66,6 +94,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-6 mb-4">
                 <div class="card h-100 border-0" style="background-color: #FFE9C7;">
                     <div class="card-body">
@@ -84,7 +113,7 @@
                 </div>
             </div>
         </div>
-        
+
         <section class="mb-4">
             <h3 class="mb-3" style="color: var(--color-texto);">Posibles caminos profesionales</h3>
             <p class="text-muted small mb-3">
@@ -99,9 +128,10 @@
             </div>
             <p class="text-muted small" id="contador-resultados"></p>
             <div id="contenedor-carreras" class="row row-cols-1 row-cols-md-2 g-3">
-               //   Aqui se generan las tarjetas de carreras  
+                <!-- Aquí se generan las tarjetas de carreras -->
             </div>
         </section>
+
         <section class="rounded-4 p-4 text-center" style="background-color: var(--color-fondo);">
             <h3 style="color: var(--color-texto);">¿Querés comenzar tu ruta profesional?</h3>
             <p class="text-muted">
@@ -113,16 +143,38 @@
             </a>
         </section>
     </main>
-    <footer class="text-center py-3 mt-4" style="background-color: var(--color-fondo); color: var(--color-texto);">
-        <hr>
-        <p class="mb-1">© 2026 CareerPath AI</p>
-        <p class="mb-0">Plataforma de orientación profesional para estudiantes.</p>
+
+    <!-- FOOTER CON BOOTSTRAP UNIFICADO -->
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-md-12 mb-3 text-center border-bottom border-secondary pb-2">
+                    <h5 class="m-0">Trabajo Práctico Integrador - C9 TUP UTN</h5>
+                </div>
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-1 text-info"><strong>Integrador:</strong></p>
+                    <p class="mb-0">Leandro Nuñez</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-1 text-info"><strong>Equipo de Desarrollo:</strong></p>
+                    <p class="mb-0 small">Valentina Pérez del Rien | Marina Noguera</p>
+                    <p class="mb-0 small">Morena Giovanna | Tatiana Herrera</p>
+                </div>
+            </div>
+            <div class="row mt-3 pt-3 border-top border-secondary text-center">
+                <div class="col-12">
+                    <p class="mb-1 small text-muted">© 2026 CareerPath AI</p>
+                    <p class="mb-0 small text-muted">Plataforma de orientación profesional para estudiantes.</p>
+                </div>
+            </div>
+        </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
-        //  Oferta academica de la UNT (agrupada por area)
+        // Oferta academica de la UNT (agrupada por area)
         const carreras = [
-            //  Area de tecnología
+            // Area de tecnología
             { titulo: "Geología", area: "tecnologia" },
             { titulo: "Licenciatura en Ciencias Biológicas", area: "tecnologia" },
             { titulo: "Licenciatura en Biotecnología", area: "tecnologia" },
@@ -155,7 +207,7 @@
             { titulo: "Tecnicatura Superior en Electricidad Industrial", area: "tecnologia" },
             { titulo: "Tecnicatura Superior en Diseño Industrial", area: "tecnologia" },
 
-            //  Area de salud 
+            // Area de salud
             { titulo: "Medicina Veterinaria", area: "salud" },
             { titulo: "Medicina", area: "salud" },
             { titulo: "Licenciatura en Kinesiología y Fisiatría", area: "salud" },
@@ -172,7 +224,7 @@
             { titulo: "Enfermería Universitaria", area: "salud" },
             { titulo: "Tecnicatura en Estadísticas de Salud", area: "salud" },
 
-            //  Area de negocios 
+            // Area de negocios
             { titulo: "Abogacía", area: "negocios" },
             { titulo: "Escribanía", area: "negocios" },
             { titulo: "Procuración", area: "negocios" },
@@ -186,7 +238,7 @@
             { titulo: "Licenciatura en Administración", area: "negocios" },
             { titulo: "Licenciatura en Economía", area: "negocios" },
 
-             // Area de arte
+            // Area de arte
             { titulo: "Profesorado/Licenciatura en Ciencias de la Educación", area: "arte" },
             { titulo: "Profesorado/Licenciatura en Letras", area: "arte" },
             { titulo: "Profesorado/Licenciatura en Filosofía", area: "arte" },
@@ -228,11 +280,14 @@
             { titulo: "Profesorado en Música con Orientación en Dirección Coral", area: "arte" },
             { titulo: "Profesorado en Música con Orientación en Instrumento", area: "arte" }
         ];
+
         const contenedor = document.getElementById("contenedor-carreras");
         const contador = document.getElementById("contador-resultados");
+
         function renderizarCarreras(lista) {
             contenedor.innerHTML = "";
             contador.textContent = `${lista.length} carrera(s) encontrada(s)`;
+
             if (lista.length === 0) {
                 const aviso = document.createElement("p");
                 aviso.textContent = "No hay carreras para mostrar en esta área.";
@@ -240,23 +295,30 @@
                 contenedor.appendChild(aviso);
                 return;
             }
+
             lista.forEach((carrera) => {
                 const col = document.createElement("div");
                 col.className = "col";
+
                 const card = document.createElement("div");
                 card.className = "card h-100 border-0 shadow-sm";
+
                 const cardBody = document.createElement("div");
                 cardBody.className = "card-body d-flex justify-content-between align-items-center";
+
                 const titulo = document.createElement("span");
                 titulo.textContent = carrera.titulo;
                 titulo.className = "fw-medium";
+
                 const btnFav = document.createElement("button");
                 btnFav.className = "btn btn-sm flex-shrink-0 ms-2";
                 btnFav.style.backgroundColor = "var(--color-secundario)";
                 btnFav.style.color = "var(--color-texto)";
+
                 const favoritosGuardados = obtenerFavoritos();
                 btnFav.textContent = favoritosGuardados.includes(carrera.titulo) ? "★ Guardado" : "☆ Favorito";
                 btnFav.addEventListener("click", () => alternarFavorito(carrera.titulo, btnFav));
+
                 cardBody.appendChild(titulo);
                 cardBody.appendChild(btnFav);
                 card.appendChild(cardBody);
@@ -264,11 +326,14 @@
                 contenedor.appendChild(col);
             });
         }
+
         function obtenerFavoritos() {
             return JSON.parse(localStorage.getItem("favoritos")) || [];
         }
+
         function alternarFavorito(titulo, boton) {
             let favoritos = obtenerFavoritos();
+
             if (favoritos.includes(titulo)) {
                 favoritos = favoritos.filter(f => f !== titulo);
                 boton.textContent = "☆ Favorito";
@@ -278,8 +343,10 @@
                 boton.textContent = "★ Guardado";
                 mostrarMensaje(`"${titulo}" se agregó a tus favoritos`);
             }
+
             localStorage.setItem("favoritos", JSON.stringify(favoritos));
         }
+
         function mostrarMensaje(texto) {
             const aviso = document.createElement("div");
             aviso.textContent = texto;
@@ -291,20 +358,24 @@
             document.body.appendChild(aviso);
             setTimeout(() => aviso.remove(), 2500);
         }
+
         const botonesFiltro = document.querySelectorAll(".filtro-btn");
         botonesFiltro.forEach(btn => {
             btn.addEventListener("click", () => {
                 const area = btn.dataset.area;
                 const filtradas = area === "todas" ? carreras : carreras.filter(c => c.area === area);
                 renderizarCarreras(filtradas);
+
                 botonesFiltro.forEach(b => {
                     b.style.backgroundColor = "var(--color-fondo)";
                     b.style.color = "var(--color-texto)";
                 });
+
                 btn.style.backgroundColor = "var(--color-primario)";
                 btn.style.color = "white";
-            })
+            });
         });
+
         renderizarCarreras(carreras);
     </script>
 </body>
