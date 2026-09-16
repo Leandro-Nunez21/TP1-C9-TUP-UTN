@@ -89,6 +89,609 @@ body {
     color: var(--color-blanco) !important;
 }
 
+/* RUTA DE APRENDIZAJE */
+
+/* ENCABEZADO */
+.ruta-encabezado {
+  position: relative;
+  max-width: 900px;
+  padding: 1.5rem 1.75rem;
+  background:
+    linear-gradient(
+      100deg,
+      rgba(108, 74, 182, 0.08),
+      rgba(255, 184, 76, 0.08)
+    );
+  border-left: 6px solid var(--color-secundario);
+  border-radius: 0 18px 18px 0;
+}
+
+.ruta-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-primario);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.ruta-etiqueta::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-secundario);
+  border-radius: 50%;
+}
+
+.ruta-titulo {
+  color: var(--color-texto);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.ruta-descripcion {
+  max-width: 780px;
+  color: #665f73;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* OBJETIVO Y PROGRESO */
+
+.ruta-resumen {
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem;
+  color: var(--color-blanco);
+  background:
+    radial-gradient(
+      circle at 90% 120%,
+      rgba(255, 184, 76, 0.4),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 5% -20%,
+      rgba(255, 255, 255, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #5c3da3,
+      var(--color-primario),
+      #8061c9
+    );
+  border-radius: 28px;
+  box-shadow:
+    0 20px 45px rgba(108, 74, 182, 0.18),
+    0 5px 15px rgba(46, 42, 61, 0.08);
+}
+
+.ruta-resumen::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 180px;
+  height: 180px;
+  border: 35px solid rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+}
+
+.ruta-subtitulo {
+  color: var(--color-secundario);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.11rem;
+  text-transform: uppercase;
+}
+
+.ruta-objetivo-texto {
+  max-width: 720px;
+  color: #f1edf9;
+  line-height: 1.8;
+}
+
+
+/* PROGRESO */
+
+.ruta-progreso {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ruta-progress-container {
+  height: 15px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+}
+
+.ruta-progress-bar {
+  width: 0;
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-secundario),
+      #ffd078
+    );
+  border-radius: 999px;
+  box-shadow:
+    0 0 12px rgba(255, 184, 76, 0.6);
+  transition: width 0.4s ease;
+}
+
+/* ESTADÍSTICAS */
+
+.ruta-estadisticas {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.ruta-estadistica {
+  flex: 1;
+  padding: 1rem 0.65rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.ruta-estadistica:hover {
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.17);
+}
+
+.ruta-estadistica strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--color-blanco);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.ruta-estadistica span {
+  color: #eae4f5;
+  font-size: 0.77rem;
+}
+
+/* ETAPAS */
+
+.ruta-seccion-titulo {
+  color: var(--color-texto);
+  font-weight: 800;
+}
+
+.ruta-acordeon {
+  position: relative;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(108, 74, 182, 0.18);
+}
+
+.ruta-acordeon .accordion-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  background-color: var(--color-blanco);
+  border: 1px solid #ddd3ed;
+  border-radius: 18px;
+  box-shadow:
+    0 8px 20px rgba(46, 42, 61, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ruta-acordeon .accordion-item:hover {
+  transform: translateX(4px);
+  box-shadow:
+    0 12px 24px rgba(108, 74, 182, 0.1);
+}
+
+.ruta-acordeon .accordion-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--color-primario);
+}
+
+.ruta-acordeon .accordion-button {
+  padding: 1.25rem 1.4rem;
+  color: var(--color-texto);
+  background-color: var(--color-blanco);
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.ruta-acordeon .accordion-button:not(.collapsed) {
+  color: var(--color-primario);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(108, 74, 182, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+  box-shadow: none;
+}
+
+.ruta-acordeon .accordion-button:focus {
+  box-shadow: none;
+}
+
+/* NÚMEROS DE ETAPA */
+
+.ruta-numero-etapa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  margin-right: 0.9rem;
+  color: var(--color-blanco);
+  background-color: var(--color-primario);
+  border-radius: 14px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  box-shadow:
+    0 5px 12px rgba(108, 74, 182, 0.22);
+  transition: transform 0.2s ease;
+}
+
+.ruta-acordeon
+  .accordion-item:nth-child(2)
+  .ruta-numero-etapa {
+  color: var(--color-texto);
+  background-color: var(--color-secundario);
+  box-shadow:
+    0 5px 12px rgba(255, 184, 76, 0.28);
+}
+
+.ruta-acordeon
+  .accordion-item:nth-child(2)::before {
+  background-color: var(--color-secundario);
+}
+
+.ruta-acordeon
+  .accordion-item:nth-child(3)
+  .ruta-numero-etapa {
+  background-color: var(--color-exito);
+  box-shadow:
+    0 5px 12px rgba(76, 175, 145, 0.25);
+}
+
+.ruta-acordeon
+  .accordion-item:nth-child(3)::before {
+  background-color: var(--color-exito);
+}
+
+.ruta-acordeon
+  .accordion-button:hover
+  .ruta-numero-etapa {
+  transform: rotate(-4deg) scale(1.08);
+}
+
+.ruta-etapa-descripcion {
+  max-width: 800px;
+  padding: 0.8rem 1rem;
+  color: #696173;
+  background-color: var(--color-crema);
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+/* TEMAS */
+
+.ruta-tema {
+  position: relative;
+  height: 100%;
+  padding:
+    1rem
+    5.5rem
+    1rem
+    2.8rem;
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #faf7fe
+    );
+  border: 1px solid #ded5ec;
+  border-radius: 14px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ruta-tema:hover {
+  transform: translateY(-3px);
+  border-color: #b7a3dd;
+  box-shadow:
+    0 8px 18px rgba(108, 74, 182, 0.1);
+}
+
+.ruta-tema .form-check-input {
+  cursor: pointer;
+  border-color: #a995cf;
+}
+
+.ruta-tema .form-check-input:focus {
+  border-color: var(--color-primario);
+  box-shadow:
+    0 0 0 0.2rem rgba(108, 74, 182, 0.15);
+}
+
+.ruta-tema .form-check-input:checked {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+.ruta-tema .form-check-label {
+  width: 100%;
+  cursor: pointer;
+  color: var(--color-texto);
+  font-weight: 600;
+}
+
+/* COMPLETADO */
+
+.ruta-tema.completado {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(76, 175, 145, 0.13),
+      rgba(244, 240, 251, 0.8)
+    );
+  border-color: var(--color-exito);
+  box-shadow:
+    0 5px 14px rgba(76, 175, 145, 0.1);
+  animation: temaCompletado 0.35s ease;
+}
+
+.ruta-tema.completado::after {
+  content: "Listo";
+  position: absolute;
+  top: 50%;
+  right: 0.8rem;
+  transform: translateY(-50%);
+  padding: 0.25rem 0.55rem;
+  color: #287c64;
+  background-color: rgba(76, 175, 145, 0.16);
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+
+.ruta-tema.completado
+  .form-check-input:checked {
+  background-color: var(--color-exito);
+  border-color: var(--color-exito);
+}
+
+.ruta-tema.completado
+  .form-check-label {
+  color: #746e79;
+}
+
+/* RECOMENDACIONES */
+
+.ruta-recomendados {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 2.2rem;
+  background:
+    linear-gradient(
+      100deg,
+      var(--color-blanco),
+      #f8f3ff
+    );
+  border: 1px solid #dfd5ee;
+  border-radius: 22px;
+  box-shadow:
+    0 12px 28px rgba(46, 42, 61, 0.05);
+}
+
+.ruta-recomendados::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 100%;
+  background:
+    linear-gradient(
+      var(--color-secundario),
+      var(--color-primario)
+    );
+}
+
+/* CHIPS */
+
+.ruta-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  color: var(--color-primario);
+  background-color: #f4effc;
+  border: 1px solid #d9ccec;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.ruta-chip:nth-child(2n) {
+  color: #9a6414;
+  background-color: #fff5df;
+  border-color: #f1d49f;
+}
+
+.ruta-chip:nth-child(3n) {
+  color: #287d65;
+  background-color: #eaf8f3;
+  border-color: #b7dfd1;
+}
+
+.ruta-chip:hover {
+  transform: translateY(-3px);
+  color: var(--color-blanco);
+  background-color: var(--color-primario);
+}
+
+/* SIGUIENTE PASO */
+
+.ruta-siguiente {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  background:
+    linear-gradient(
+      110deg,
+      var(--color-crema),
+      #fff9ef
+    );
+  border: 1px solid #efd9b8;
+  border-radius: 20px;
+}
+
+.ruta-siguiente::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: -45px;
+  width: 130px;
+  height: 130px;
+  background-color: rgba(255, 184, 76, 0.12);
+  border-radius: 50%;
+}
+
+.ruta-siguiente h2 {
+  color: var(--color-texto);
+  font-weight: 800;
+}
+
+/* ANIMACIONES */
+
+/* Entrada de secciones */
+.js-animaciones .animar-ruta {
+  opacity: 0;
+
+  transform: translateY(28px);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.js-animaciones .animar-ruta.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* Tema completado */
+@keyframes temaCompletado {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Barra completada */
+@keyframes progresoCompleto {
+  0% {
+    box-shadow:
+      0 0 0 rgba(76, 175, 145, 0);
+  }
+  50% {
+    box-shadow:
+      0 0 18px rgba(76, 175, 145, 0.8),
+      0 0 28px rgba(255, 184, 76, 0.4);
+  }
+  100% {
+    box-shadow:
+      0 0 0 rgba(76, 175, 145, 0);
+  }
+}
+
+.ruta-progress-bar.ruta-completa {
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-exito),
+      var(--color-secundario)
+    );
+
+  animation:
+    progresoCompleto 0.9s ease;
+}
+
+/* Panel finalizado */
+.ruta-progreso.ruta-finalizada {
+  border-color:
+    rgba(255, 184, 76, 0.65);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 184, 76, 0.15),
+    0 10px 25px rgba(46, 42, 61, 0.12);
+}
+
+/* Mensaje final */
+.ruta-mensaje-completo {
+  padding: 0.75rem 1rem;
+  color: #205f4d;
+  background-color:
+    rgba(76, 175, 145, 0.18);
+  border:
+    1px solid rgba(76, 175, 145, 0.35);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+
+  animation:
+    aparecerMensaje 0.4s ease;
+}
+
+@keyframes aparecerMensaje {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* =========================================================
    CSS ORIGINAL DEL TP2 - COMENTADO PARA CONSERVAR
    (Ya no se aplica directamente porque ahora usamos Bootstrap,
