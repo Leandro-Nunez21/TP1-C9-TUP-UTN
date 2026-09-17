@@ -2,123 +2,477 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plataforma Estudiantil: accedé a tus materias, horarios, calificaciones y avisos académicos en tiempo real.">
-    <meta name="keywords" content="plataforma estudiantil, portal alumno, materias, calificaciones, universidad, utn">
-    <link rel="canonical" href="https://leandro-nunez21.github.io/TP1-C9-TUP-UTN/index.html">
-    <title>Portal Estudiantil | Inicio</title>
-    
-    <!-- CSS de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- CSS Personalizado -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO: título y descripción específicos de la página -->
+    <title>CareerPath AI | Orientación vocacional con IA</title>
+
+    <meta
+        name="description"
+        content="Explorá tus intereses y descubrí tu próximo paso con CareerPath AI, un proyecto de orientación vocacional con inteligencia artificial para estudiantes."
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+    >
+
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
-    
-    <!-- HEADER / NAVBAR CON BOOTSTRAP -->
+<body class="inicio d-flex flex-column min-vh-100">
+
+    <a
+        class="visually-hidden-focusable inicio-salto"
+        href="#contenido"
+    >
+        Saltar al contenido
+    </a>
+
+    <!-- Navegación compartida con el resto del proyecto -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav
+            class="navbar navbar-expand-lg navbar-dark bg-dark"
+            aria-label="Navegación principal"
+        >
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="../img/CareerPath.jpeg" alt="Logo" width="40" height="40" class="me-2 rounded">
+                <a
+                    class="navbar-brand d-flex align-items-center"
+                    href="index.html"
+                >
+                    <img
+                        src="../img/CareerPath.jpeg"
+                        alt=""
+                        width="40"
+                        height="40"
+                        class="me-2 rounded"
+                    >
                     CareerPath AI
                 </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Abrir menú">
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuNavegacion"
+                    aria-controls="menuNavegacion"
+                    aria-expanded="false"
+                    aria-label="Abrir menú de navegación"
+                >
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
+
                 <div class="collapse navbar-collapse" id="menuNavegacion">
                     <ul class="navbar-nav ms-auto text-center">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="test.html">Test</a></li>
-                        <li class="nav-item"><a class="nav-link" href="resultados.html">Resultados</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ruta.html">Ruta de Aprendizaje</a></li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="index.html"
+                            >
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="perfil.html">
+                                Perfil
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="test.html">
+                                Test
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="resultados.html">
+                                Resultados
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="ruta.html">
+                                Ruta de Aprendizaje
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- MAIN -->
-    <main class="container flex-grow-1 my-4">
-        
-        <!-- Hero Section-->
-        <section class="p-5 mb-5 rounded-3 text-center shadow text-white" style="background-color: var(--color-primario);">
-            <h2 class="display-5 fw-bold mb-3">¡Te damos la bienvenida!</h2>
-            <p class="lead fs-4 col-lg-8 mx-auto mb-4">
-                Descubrí tu camino ideal. Nuestra plataforma está diseñada para ayudarte a identificar tus fortalezas, evaluar tus conocimientos y trazar una ruta de aprendizaje 100% personalizada para tu futuro.
-            </p>
-            
-            <a href="perfil.html" class="btn-destacado text-decoration-none mt-2">
-                <span class="texto-boton">Comenzar mi ruta</span>
-            </a>
+    <main id="contenido" class="flex-grow-1">
+
+        <!-- Presentación principal -->
+        <section class="inicio-hero" aria-labelledby="titulo-inicio">
+            <div class="container py-5">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-7">
+                        <p class="inicio-etiqueta">
+                            Orientación vocacional con inteligencia artificial
+                        </p>
+
+                        <h1 id="titulo-inicio" class="inicio-titulo">
+                            Tu futuro empieza<br>
+                            por <span>conocerte.</span>
+                        </h1>
+
+                        <p class="inicio-bajada mt-4">
+                            ¿Todavía no sabés qué estudiar? Descubrí qué
+                            te interesa, explorá tus posibilidades y
+                            empezá a construir tu propio camino.
+                        </p>
+
+                        <p class="inicio-texto">
+                            CareerPath AI está pensado para estudiantes
+                            que están eligiendo una carrera o buscando
+                            una nueva dirección. Nuestra propuesta combina
+                            perfil, test vocacional e inteligencia artificial
+                            para orientar esa búsqueda.
+                        </p>
+
+                        <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+                            <a class="btn inicio-boton" href="perfil.html">
+                                Comenzar con mi perfil
+                                <span aria-hidden="true">↗</span>
+                            </a>
+
+                            <a
+                                class="btn inicio-boton-secundario"
+                                href="#como-funciona"
+                            >
+                                Conocer el recorrido
+                            </a>
+                        </div>
+
+                        <p class="inicio-nota mt-3 mb-0">
+                            No necesitás tener una carrera elegida para empezar.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <aside
+                            class="inicio-mapa p-4 p-md-5"
+                            aria-label="Resumen del recorrido"
+                        >
+                            <div class="d-flex justify-content-between align-items-center gap-3 mb-4">
+                                <p class="inicio-etiqueta mb-0">
+                                    Tu próximo capítulo
+                                </p>
+
+                                <span class="inicio-simbolo" aria-hidden="true">
+                                    ✳
+                                </span>
+                            </div>
+
+                            <p class="inicio-mapa-titulo">
+                                Hay un camino<br>
+                                que empieza en vos.
+                            </p>
+
+                            <ol class="inicio-recorrido list-unstyled mb-0">
+                                <li>
+                                    <span class="inicio-nodo" aria-hidden="true">
+                                        01
+                                    </span>
+
+                                    <div>
+                                        <strong>Conocé tus intereses</strong>
+                                        <p>Lo que disfrutás y te da curiosidad.</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span class="inicio-nodo" aria-hidden="true">
+                                        02
+                                    </span>
+
+                                    <div>
+                                        <strong>Explorá posibilidades</strong>
+                                        <p>Carreras e instituciones para descubrir.</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span class="inicio-nodo" aria-hidden="true">
+                                        03
+                                    </span>
+
+                                    <div>
+                                        <strong>Encontrá tu próximo paso</strong>
+                                        <p>Conocimientos para seguir creciendo.</p>
+                                    </div>
+                                </li>
+                            </ol>
+
+                            <p class="inicio-mapa-pie mt-4 mb-0">
+                                <span aria-hidden="true">↗</span>
+                                Tu elección. A tu ritmo.
+                            </p>
+                        </aside>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
-        <!-- Grid de presentación -->
-        <section class="mb-5">
-            <h2 class="text-center fw-bold mb-5" style="color: var(--color-texto);">¿Cómo funciona?</h2>
-            
-            <div class="row g-4">
-                <!-- Card 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm text-center" style="background-color: var(--color-blanco);">
-                        <div class="card-body d-flex flex-column p-4">
-                            <h3 class="card-title h5 fw-bold" style="color: var(--color-primario);">1. Mi Perfil</h3>
-                            <p class="card-text mt-2 flex-grow-1" style="color: var(--color-texto);">Completá tus datos básicos, contanos sobre tus intereses y las habilidades que ya tenés.</p>
-                            <a href="perfil.html" class="btn mt-3 mt-auto fw-bold btn-outline-morado">Completar datos</a>
-                        </div>
+        <!-- Franja de conexión con el usuario -->
+        <section class="inicio-franja py-4" aria-label="Preguntas para empezar">
+            <div class="container">
+                <div class="row align-items-center gy-3">
+
+                    <div class="col-lg-4">
+                        <p class="fw-bold mb-0">
+                            Elegir empieza con buenas preguntas.
+                        </p>
                     </div>
+
+                    <div class="col-lg-8">
+                        <ul class="list-unstyled d-flex flex-wrap justify-content-lg-end gap-2 mb-0">
+                            <li class="inicio-chip">¿Qué me interesa?</li>
+                            <li class="inicio-chip">¿Qué podría estudiar?</li>
+                            <li class="inicio-chip">¿Por dónde empiezo?</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Explicación del recorrido del producto -->
+        <section
+            id="como-funciona"
+            class="container inicio-seccion"
+            aria-labelledby="titulo-recorrido"
+        >
+            <div class="row g-5">
+
+                <div class="col-lg-4">
+                    <p class="inicio-etiqueta">Cómo funciona nuestra propuesta</p>
+
+                    <h2 id="titulo-recorrido" class="inicio-subtitulo">
+                        Cada paso<br>
+                        tiene un propósito.
+                    </h2>
+
+                    <p class="inicio-texto mt-3">
+                        Conocerte, explorar y empezar a aprender.
+                        Un recorrido pensado para ayudarte a
+                        decidir con más información.
+                    </p>
+
+                    <a class="inicio-enlace" href="test.html">
+                        Explorar el test vocacional
+                        <span aria-hidden="true">↗</span>
+                    </a>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm text-center" style="background-color: var(--color-blanco);">
-                        <div class="card-body d-flex flex-column p-4">
-                            <h3 class="card-title h5 fw-bold" style="color: var(--color-primario);">2. Realizar Test</h3>
-                            <p class="card-text mt-2 flex-grow-1" style="color: var(--color-texto);">Poné a prueba tus capacidades con nuestras preguntas interactivas y psicológicas.</p>
-                            <a href="test.html" class="btn mt-3 mt-auto fw-bold btn-outline-morado">Ir al test</a>
-                        </div>
-                    </div>
+                <div class="col-lg-8">
+                    <ol class="inicio-pasos list-unstyled mb-0">
+
+                        <li class="row g-3">
+                            <div class="col-2">
+                                <span class="inicio-paso-numero" aria-hidden="true">
+                                    01
+                                </span>
+                            </div>
+
+                            <div class="col-10">
+                                <h3>Primero, tu perfil</h3>
+                                <p>
+                                    Identificá tus intereses y habilidades.
+                                    Son el punto de partida para comprender
+                                    qué actividades te atraen.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="row g-3">
+                            <div class="col-2">
+                                <span class="inicio-paso-numero" aria-hidden="true">
+                                    02
+                                </span>
+                            </div>
+
+                            <div class="col-10">
+                                <h3>Después, tus preferencias</h3>
+                                <p>
+                                    Respondé el test vocacional pensando en
+                                    lo que disfrutás. No es un examen
+                                    de conocimientos.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="row g-3">
+                            <div class="col-2">
+                                <span class="inicio-paso-numero" aria-hidden="true">
+                                    03
+                                </span>
+                            </div>
+
+                            <div class="col-10">
+                                <h3>Análisis y posibilidades</h3>
+                                <p>
+                                    La integración de IA prevista relacionará
+                                    tu perfil y tus respuestas para explicar
+                                    recomendaciones de carreras e instituciones.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="row g-3">
+                            <div class="col-2">
+                                <span class="inicio-paso-numero" aria-hidden="true">
+                                    04
+                                </span>
+                            </div>
+
+                            <div class="col-10">
+                                <h3>Un camino para aprender</h3>
+                                <p>
+                                    La propuesta final incluye una ruta
+                                    adaptada a tu elección. En esta versión
+                                    podés explorar un recorrido de ejemplo
+                                    y registrar tu avance.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ol>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm text-center" style="background-color: var(--color-blanco);">
-                        <div class="card-body d-flex flex-column p-4">
-                            <h3 class="card-title h5 fw-bold" style="color: var(--color-primario);">3. Resultados y Ruta</h3>
-                            <p class="card-text mt-2 flex-grow-1" style="color: var(--color-texto);">Obtené un análisis detallado y descubrí los siguientes pasos para alcanzar tus metas.</p>
-                            <a href="resultados.html" class="btn mt-3 mt-auto fw-bold btn-outline-morado">Ver resultados</a>
-                        </div>
+            </div>
+        </section>
+
+        <!-- Explicación del papel de la IA -->
+        <section
+            class="container pb-5"
+            aria-labelledby="titulo-ia"
+        >
+            <div class="inicio-panel p-4 p-md-5">
+                <div class="row align-items-center g-4">
+
+                    <div class="col-lg-6">
+                        <p class="inicio-etiqueta">
+                            Tecnología para ampliar tu mirada
+                        </p>
+
+                        <h2 id="titulo-ia" class="inicio-subtitulo">
+                            La IA acompaña.<br>
+                            La decisión es tuya.
+                        </h2>
                     </div>
+
+                    <div class="col-lg-6">
+                        <p>
+                            Buscamos que cada recomendación tenga una
+                            explicación: qué intereses la conectan con vos,
+                            dónde podrías estudiar y qué podrías
+                            aprender después.
+                        </p>
+
+                        <p class="inicio-texto mb-0">
+                            La orientación es un punto de partida para
+                            explorar alternativas y conversar con docentes
+                            u orientadores. Tus objetivos pueden cambiar
+                            a medida que descubrís cosas nuevas.
+                        </p>
+                    </div>
+
+                </div>
+
+                <p class="inicio-estado mt-4 pt-4 mb-0">
+                    <strong>Proyecto en desarrollo.</strong>
+                    Esta versión es un prototipo académico. El análisis
+                    con IA y la conexión personalizada entre las etapas
+                    todavía no están integrados.
+                </p>
+            </div>
+        </section>
+
+        <!-- Cierre -->
+        <section
+            class="inicio-cierre py-5"
+            aria-labelledby="titulo-empezar"
+        >
+            <div class="container">
+                <div class="row align-items-center g-4">
+
+                    <div class="col-lg-8">
+                        <p class="inicio-etiqueta">Tu punto de partida</p>
+
+                        <h2 id="titulo-empezar" class="inicio-subtitulo">
+                            No necesitás tener todas las respuestas.
+                        </h2>
+
+                        <p class="mb-0 mt-3">
+                            Empezá por lo que te interesa.
+                            El próximo paso es conocerte.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="btn inicio-boton" href="perfil.html">
+                            Explorar mi perfil
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER CON BOOTSTRAP -->
+    <!-- Créditos del proyecto -->
     <footer class="bg-dark text-white py-4 mt-auto">
         <div class="container">
             <div class="row text-center text-md-start">
-                <div class="col-md-12 mb-3 text-center border-bottom border-secondary pb-2">
-                    <h5 class="m-0">Trabajo Práctico Integrador - C9 TUP UTN</h5>
+
+                <div class="col-12 mb-3 border-bottom border-secondary pb-3">
+                    <p class="fw-bold text-center mb-0">
+                        CareerPath AI · Trabajo Práctico Integrador
+                    </p>
+
+                    <p class="small text-center mb-0">
+                        C9 · Tecnicatura Universitaria en Programación · UTN
+                    </p>
                 </div>
+
                 <div class="col-md-6 mb-3 mb-md-0">
-                    <p class="mb-1 text-info"><strong>Integrador:</strong></p>
-                    <p class="mb-0">Leandro Nuñez</p>
+                    <p class="fw-bold mb-1">Integrador</p>
+                    <p class="small mb-0">Leandro Nuñez</p>
                 </div>
+
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-1 text-info"><strong>Equipo de Desarrollo:</strong></p>
-                    <p class="mb-0 small">Valentina Pérez del Rien | Marina Noguera</p>
-                    <p class="mb-0 small">Morena Giovanna | Tatiana Herrera</p>
+                    <p class="fw-bold mb-1">Equipo de desarrollo</p>
+
+                    <ul class="list-unstyled small mb-0">
+                        <li>Valentina Pérez del Rien</li>
+                        <li>Marina Noguera Morena Giovanna</li>
+                        <li>Tatiana Herrera</li>
+                    </ul>
                 </div>
+
             </div>
+
+            <p class="small text-center mt-4 mb-0">
+                © 2026 CareerPath AI · Orientación vocacional
+            </p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+    ></script>
+
 </body>
 </html>
