@@ -159,20 +159,16 @@ body {
   color: white;
 }
 
-/* Forzando botones outline para Bootstrap */
-.btn-outline-morado {
-    border: 2px solid var(--color-primario) !important;
-    color: var(--color-primario) !important;
-    background-color: transparent !important;
-    font-weight: 600;
-    transition: var(--transition) !important;
-    border-radius: 0.5rem;
+.card-body .btn.btn-outline-morado {
+    border: 2px solid var(--color-primario);
+    color: var(--color-primario);
+    background-color: transparent;
+    transition: all 0.3s ease;
 }
 
-.btn-outline-morado:hover {
-    background-color: var(--color-primario) !important;
-    color: var(--color-blanco) !important;
-    box-shadow: var(--shadow-sm);
+.card-body .btn.btn-outline-morado:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
 }
 
 /* ====================================================
