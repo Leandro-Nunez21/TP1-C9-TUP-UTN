@@ -1044,6 +1044,97 @@ body {
     background-color: var(--color-blanco);
 }
 
+/* =========================================
+   ESTILOS DEL TEST DE ORIENTACIÓN (IA)
+   ========================================= */
+
+/* Panel lateral fijo en pantallas grandes */
+.panel-ia-fijo {
+    background: linear-gradient(135deg, var(--color-primario), #4b3085);
+    color: var(--color-blanco);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(108, 74, 182, 0.2);
+}
+
+.panel-ia-fijo h1 {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+/* Barra de progreso personalizada sin style="" */
+.contenedor-progreso-test {
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.barra-progreso-test {
+    background-color: var(--color-secundario); /* Mostaza para que resalte sobre el fondo morado */
+    color: var(--color-texto);
+    font-weight: bold;
+    transition: width 0.4s ease;
+}
+
+/* Tarjetas de cada pregunta */
+.pregunta-card {
+    background-color: var(--color-blanco);
+    border: 1px solid #e0d9f0;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pregunta-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-primario);
+}
+
+.pregunta-titulo {
+    color: var(--color-primario);
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px dashed #e0d9f0; /* Esta línea separa la pregunta de las opciones */
+    display: block;
+    width: 100%;
+}
+
+/* Opciones de respuesta (Radio buttons mejorados) */
+.opcion-test-label {
+    display: block;
+    padding: 1rem 1.5rem;
+    border: 2px solid #f0ecf9;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--color-texto);
+    font-weight: 500;
+}
+
+.opcion-test-label:hover {
+    background-color: var(--color-crema);
+    border-color: var(--color-secundario);
+}
+
+/* Ocultamos el circulito nativo feo del radio button */
+.opcion-test-input {
+    display: none;
+}
+
+/* Cuando el usuario selecciona una opción, cambiamos el diseño de la etiqueta */
+.opcion-test-input:checked + .opcion-test-label {
+    background-color: var(--color-fondo);
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(108, 74, 182, 0.15);
+}
 
 /* =========================================================
    7. CSS ORIGINAL DEL TP2 — CONSERVADO COMO COMENTARIO
@@ -1148,3 +1239,4 @@ footer p {
 
    ===== FIN CSS ORIGINAL TP2 =====
 */
+
