@@ -1,19 +1,106 @@
+/* ====================================================
+   CAREERPATH AI - HOJA DE ESTILOS GLOBAL (TP3)
+   ==================================================== */
+
+/* ====================================================
+   1. SISTEMA DE VARIABLES (Paleta Lila/Mostaza)
+   ==================================================== */
 :root {
-    /* ===== PALETA NUEVA TP3 - Bootstrap + estilo lila/mostaza ===== */
-    --color-primario: #6C4AB6;      
-    --color-secundario: #FFB84C;    
-    --color-fondo: #F4F0FB;         
-    --color-texto: #2E2A3D;         
-    --color-blanco: #ffffff;
-    --color-exito: #4CAF91;    
-    --color-crema: #FFF6E9;    
+    /* Paleta Principal */
+    --color-primario: #6C4AB6;      /* Lila/Morado principal */
+    --color-secundario: #FFB84C;    /* Mostaza/Naranja IA */
+    --color-acento: #8B5CF6;        /* Violeta brillante para gradientes */
+    
+    /* Fondos y Superficies */
+    --color-fondo: #F4F0FB;         /* Fondo alternativo lila claro */
+    --color-crema: #FFF6E9;         /* Fondo base cálido */
+    --color-blanco: #ffffff;        /* Tarjetas y contenedores */
+    
+    /* Textos y Estados */
+    --color-texto: #2E2A3D;         /* Texto oscuro */
+    --color-texto-mutado: #665f73;  /* Texto secundario/gris */
+    --color-exito: #4CAF91;         /* Verde éxito */
+    
+    /* Bordes y Efectos */
+    --border-color: #dfd5ee;
+    --shadow-sm: 0 4px 12px rgba(108, 74, 182, 0.08);
+    --shadow-md: 0 8px 24px rgba(108, 74, 182, 0.15);
+    
+    /* Tipografía y Espaciado */
     --fuente-principal: 'Inter', system-ui, -apple-system, sans-serif;
     --espacio-sm: 10px;
     --espacio-md: 20px;
     --espacio-lg: 40px;
+    --transition: all 0.3s ease-in-out;
 }
 
-/* Botón destacado - inspirado en Uiverse.io, adaptado con la paleta del proyecto */
+/* ====================================================
+   2. ESTILOS BASE Y RESET GLOBAL
+   ==================================================== */
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-crema);
+    color: var(--color-texto);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+/* Texto con gradiente para títulos principales de IA */
+.text-gradient-ai {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+/* ====================================================
+   3. COMPONENTES GLOBALES (Adaptados a Bootstrap)
+   ==================================================== */
+/* Tarjetas (Cards) para Inicio, Test y Resultados */
+.card {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--border-color);
+    border-radius: 1.2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+/* Componente de Avatar para Perfil (Sin estilos inline en HTML) */
+.avatar-preview {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid var(--color-fondo);
+    box-shadow: 0 0 0 2px var(--color-primario);
+    padding: 4px;
+    background-color: var(--color-blanco);
+}
+
+/* Opciones del Test Vocacional */
+.quiz-option {
+    cursor: pointer;
+    border: 2px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: var(--transition);
+    background-color: var(--color-blanco);
+}
+
+.quiz-option:hover {
+    border-color: var(--color-secundario);
+    background-color: rgba(255, 184, 76, 0.05); /* Mostaza transparente */
+}
+
+/* ====================================================
+   4. BOTONES DEL SISTEMA
+   ==================================================== */
+/* Botón Destacado (Inspirado en Uiverse.io) */
 .btn-destacado {
   --border_radius: 9999px;
   --transtion: 0.3s ease-in-out;
@@ -71,10 +158,6 @@
   font-weight: 500;
   color: white;
 }
-body {
-   background-color: var(--color-crema);
-}
-
 
 .card-body .btn.btn-outline-morado {
     border: 2px solid var(--color-primario);
@@ -88,19 +171,15 @@ body {
     color: var(--color-blanco);
 }
 
-/* RUTA DE APRENDIZAJE */
-
+/* ====================================================
+   5. COMPONENTES: RUTA DE APRENDIZAJE
+   ==================================================== */
 /* ENCABEZADO */
 .ruta-encabezado {
   position: relative;
   max-width: 900px;
   padding: 1.5rem 1.75rem;
-  background:
-    linear-gradient(
-      100deg,
-      rgba(108, 74, 182, 0.08),
-      rgba(255, 184, 76, 0.08)
-    );
+  background: linear-gradient(100deg, rgba(108, 74, 182, 0.08), rgba(255, 184, 76, 0.08));
   border-left: 6px solid var(--color-secundario);
   border-radius: 0 18px 18px 0;
 }
@@ -133,39 +212,22 @@ body {
 
 .ruta-descripcion {
   max-width: 780px;
-  color: #665f73;
+  color: var(--color-texto-mutado);
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
 /* OBJETIVO Y PROGRESO */
-
 .ruta-resumen {
   position: relative;
   overflow: hidden;
   padding: 2.5rem;
   color: var(--color-blanco);
-  background:
-    radial-gradient(
-      circle at 90% 120%,
-      rgba(255, 184, 76, 0.4),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 5% -20%,
-      rgba(255, 255, 255, 0.18),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      #5c3da3,
-      var(--color-primario),
-      #8061c9
-    );
+  background: radial-gradient(circle at 90% 120%, rgba(255, 184, 76, 0.4), transparent 28%),
+              radial-gradient(circle at 5% -20%, rgba(255, 255, 255, 0.18), transparent 30%),
+              linear-gradient(135deg, #5c3da3, var(--color-primario), #8061c9);
   border-radius: 28px;
-  box-shadow:
-    0 20px 45px rgba(108, 74, 182, 0.18),
-    0 5px 15px rgba(46, 42, 61, 0.08);
+  box-shadow: 0 20px 45px rgba(108, 74, 182, 0.18), 0 5px 15px rgba(46, 42, 61, 0.08);
 }
 
 .ruta-resumen::before {
@@ -193,9 +255,7 @@ body {
   line-height: 1.8;
 }
 
-
-/* PROGRESO */
-
+/* PROGRESO Y BARRAS */
 .ruta-progreso {
   position: relative;
   z-index: 2;
@@ -204,9 +264,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 20px;
   backdrop-filter: blur(8px);
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ruta-progress-container {
@@ -218,20 +276,13 @@ body {
 
 .ruta-progress-bar {
   width: 0;
-  background:
-    linear-gradient(
-      90deg,
-      var(--color-secundario),
-      #ffd078
-    );
+  background: linear-gradient(90deg, var(--color-secundario), #ffd078);
   border-radius: 999px;
-  box-shadow:
-    0 0 12px rgba(255, 184, 76, 0.6);
+  box-shadow: 0 0 12px rgba(255, 184, 76, 0.6);
   transition: width 0.4s ease;
 }
 
 /* ESTADÍSTICAS */
-
 .ruta-estadisticas {
   display: flex;
   gap: 0.75rem;
@@ -245,9 +296,7 @@ body {
   background-color: rgba(255, 255, 255, 0.11);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .ruta-estadistica:hover {
@@ -268,8 +317,7 @@ body {
   font-size: 0.77rem;
 }
 
-/* ETAPAS */
-
+/* ACORDEÓN DE ETAPAS */
 .ruta-seccion-titulo {
   color: var(--color-texto);
   font-weight: 800;
@@ -286,19 +334,15 @@ body {
   overflow: hidden;
   margin-bottom: 1.2rem;
   background-color: var(--color-blanco);
-  border: 1px solid #ddd3ed;
+  border: 1px solid var(--border-color);
   border-radius: 18px;
-  box-shadow:
-    0 8px 20px rgba(46, 42, 61, 0.05);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(46, 42, 61, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .ruta-acordeon .accordion-item:hover {
   transform: translateX(4px);
-  box-shadow:
-    0 12px 24px rgba(108, 74, 182, 0.1);
+  box-shadow: var(--shadow-sm);
 }
 
 .ruta-acordeon .accordion-item::before {
@@ -321,12 +365,7 @@ body {
 
 .ruta-acordeon .accordion-button:not(.collapsed) {
   color: var(--color-primario);
-  background:
-    linear-gradient(
-      90deg,
-      rgba(108, 74, 182, 0.1),
-      rgba(255, 255, 255, 0)
-    );
+  background: linear-gradient(90deg, rgba(108, 74, 182, 0.1), rgba(255, 255, 255, 0));
   box-shadow: none;
 }
 
@@ -335,7 +374,6 @@ body {
 }
 
 /* NÚMEROS DE ETAPA */
-
 .ruta-numero-etapa {
   display: inline-flex;
   align-items: center;
@@ -348,83 +386,57 @@ body {
   border-radius: 14px;
   font-size: 0.82rem;
   font-weight: 800;
-  box-shadow:
-    0 5px 12px rgba(108, 74, 182, 0.22);
+  box-shadow: 0 5px 12px rgba(108, 74, 182, 0.22);
   transition: transform 0.2s ease;
 }
 
-.ruta-acordeon
-  .accordion-item:nth-child(2)
-  .ruta-numero-etapa {
+.ruta-acordeon .accordion-item:nth-child(2) .ruta-numero-etapa {
   color: var(--color-texto);
   background-color: var(--color-secundario);
-  box-shadow:
-    0 5px 12px rgba(255, 184, 76, 0.28);
+  box-shadow: 0 5px 12px rgba(255, 184, 76, 0.28);
 }
 
-.ruta-acordeon
-  .accordion-item:nth-child(2)::before {
+.ruta-acordeon .accordion-item:nth-child(2)::before {
   background-color: var(--color-secundario);
 }
 
-.ruta-acordeon
-  .accordion-item:nth-child(3)
-  .ruta-numero-etapa {
+.ruta-acordeon .accordion-item:nth-child(3) .ruta-numero-etapa {
   background-color: var(--color-exito);
-  box-shadow:
-    0 5px 12px rgba(76, 175, 145, 0.25);
+  box-shadow: 0 5px 12px rgba(76, 175, 145, 0.25);
 }
 
-.ruta-acordeon
-  .accordion-item:nth-child(3)::before {
+.ruta-acordeon .accordion-item:nth-child(3)::before {
   background-color: var(--color-exito);
 }
 
-.ruta-acordeon
-  .accordion-button:hover
-  .ruta-numero-etapa {
+.ruta-acordeon .accordion-button:hover .ruta-numero-etapa {
   transform: rotate(-4deg) scale(1.08);
 }
 
 .ruta-etapa-descripcion {
   max-width: 800px;
   padding: 0.8rem 1rem;
-  color: #696173;
+  color: var(--color-texto-mutado);
   background-color: var(--color-crema);
   border-radius: 10px;
   line-height: 1.6;
 }
 
-/* TEMAS */
-
+/* TEMAS (Checkboxes interactivos) */
 .ruta-tema {
   position: relative;
   height: 100%;
-  padding:
-    1rem
-    5.5rem
-    1rem
-    2.8rem;
-  background:
-    linear-gradient(
-      135deg,
-      #ffffff,
-      #faf7fe
-    );
-  border: 1px solid #ded5ec;
+  padding: 1rem 5.5rem 1rem 2.8rem;
+  background: linear-gradient(135deg, #ffffff, #faf7fe);
+  border: 1px solid var(--border-color);
   border-radius: 14px;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: var(--transition);
 }
 
 .ruta-tema:hover {
   transform: translateY(-3px);
   border-color: #b7a3dd;
-  box-shadow:
-    0 8px 18px rgba(108, 74, 182, 0.1);
+  box-shadow: var(--shadow-sm);
 }
 
 .ruta-tema .form-check-input {
@@ -434,8 +446,7 @@ body {
 
 .ruta-tema .form-check-input:focus {
   border-color: var(--color-primario);
-  box-shadow:
-    0 0 0 0.2rem rgba(108, 74, 182, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(108, 74, 182, 0.15);
 }
 
 .ruta-tema .form-check-input:checked {
@@ -450,18 +461,11 @@ body {
   font-weight: 600;
 }
 
-/* COMPLETADO */
-
+/* TEMA COMPLETADO */
 .ruta-tema.completado {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(76, 175, 145, 0.13),
-      rgba(244, 240, 251, 0.8)
-    );
+  background: linear-gradient(135deg, rgba(76, 175, 145, 0.13), rgba(244, 240, 251, 0.8));
   border-color: var(--color-exito);
-  box-shadow:
-    0 5px 14px rgba(76, 175, 145, 0.1);
+  box-shadow: 0 5px 14px rgba(76, 175, 145, 0.1);
   animation: temaCompletado 0.35s ease;
 }
 
@@ -481,33 +485,24 @@ body {
   text-transform: uppercase;
 }
 
-.ruta-tema.completado
-  .form-check-input:checked {
+.ruta-tema.completado .form-check-input:checked {
   background-color: var(--color-exito);
   border-color: var(--color-exito);
 }
 
-.ruta-tema.completado
-  .form-check-label {
+.ruta-tema.completado .form-check-label {
   color: #746e79;
 }
 
-/* RECOMENDACIONES */
-
+/* RECOMENDACIONES Y CHIPS */
 .ruta-recomendados {
   position: relative;
   overflow: hidden;
   padding: 2rem 2.2rem;
-  background:
-    linear-gradient(
-      100deg,
-      var(--color-blanco),
-      #f8f3ff
-    );
-  border: 1px solid #dfd5ee;
+  background: linear-gradient(100deg, var(--color-blanco), #f8f3ff);
+  border: 1px solid var(--border-color);
   border-radius: 22px;
-  box-shadow:
-    0 12px 28px rgba(46, 42, 61, 0.05);
+  box-shadow: 0 12px 28px rgba(46, 42, 61, 0.05);
 }
 
 .ruta-recomendados::before {
@@ -517,14 +512,8 @@ body {
   left: 0;
   width: 7px;
   height: 100%;
-  background:
-    linear-gradient(
-      var(--color-secundario),
-      var(--color-primario)
-    );
+  background: linear-gradient(var(--color-secundario), var(--color-primario));
 }
-
-/* CHIPS */
 
 .ruta-chip {
   display: inline-flex;
@@ -536,10 +525,7 @@ body {
   border-radius: 999px;
   font-size: 0.86rem;
   font-weight: 700;
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .ruta-chip:nth-child(2n) {
@@ -561,17 +547,11 @@ body {
 }
 
 /* SIGUIENTE PASO */
-
 .ruta-siguiente {
   position: relative;
   overflow: hidden;
   padding: 2rem;
-  background:
-    linear-gradient(
-      110deg,
-      var(--color-crema),
-      #fff9ef
-    );
+  background: linear-gradient(110deg, var(--color-crema), #fff9ef);
   border: 1px solid #efd9b8;
   border-radius: 20px;
 }
@@ -593,104 +573,55 @@ body {
 }
 
 /* ANIMACIONES */
-
-/* Entrada de secciones */
 .js-animaciones .animar-ruta {
   opacity: 0;
-
   transform: translateY(28px);
-
-  transition:
-    opacity 0.65s ease,
-    transform 0.65s ease;
+  transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
 .js-animaciones .animar-ruta.visible {
   opacity: 1;
-
   transform: translateY(0);
 }
 
-/* Tema completado */
 @keyframes temaCompletado {
-  0% {
-    transform: scale(1);
-  }
-  45% {
-    transform: scale(1.025);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  45% { transform: scale(1.025); }
+  100% { transform: scale(1); }
 }
 
-/* Barra completada */
 @keyframes progresoCompleto {
-  0% {
-    box-shadow:
-      0 0 0 rgba(76, 175, 145, 0);
-  }
-  50% {
-    box-shadow:
-      0 0 18px rgba(76, 175, 145, 0.8),
-      0 0 28px rgba(255, 184, 76, 0.4);
-  }
-  100% {
-    box-shadow:
-      0 0 0 rgba(76, 175, 145, 0);
-  }
+  0% { box-shadow: 0 0 0 rgba(76, 175, 145, 0); }
+  50% { box-shadow: 0 0 18px rgba(76, 175, 145, 0.8), 0 0 28px rgba(255, 184, 76, 0.4); }
+  100% { box-shadow: 0 0 0 rgba(76, 175, 145, 0); }
 }
 
 .ruta-progress-bar.ruta-completa {
-  background:
-    linear-gradient(
-      90deg,
-      var(--color-exito),
-      var(--color-secundario)
-    );
-
-  animation:
-    progresoCompleto 0.9s ease;
+  background: linear-gradient(90deg, var(--color-exito), var(--color-secundario));
+  animation: progresoCompleto 0.9s ease;
 }
 
-/* Panel finalizado */
 .ruta-progreso.ruta-finalizada {
-  border-color:
-    rgba(255, 184, 76, 0.65);
-
-  box-shadow:
-    0 0 0 1px rgba(255, 184, 76, 0.15),
-    0 10px 25px rgba(46, 42, 61, 0.12);
+  border-color: rgba(255, 184, 76, 0.65);
+  box-shadow: 0 0 0 1px rgba(255, 184, 76, 0.15), 0 10px 25px rgba(46, 42, 61, 0.12);
 }
 
-/* Mensaje final */
 .ruta-mensaje-completo {
   padding: 0.75rem 1rem;
   color: #205f4d;
-  background-color:
-    rgba(76, 175, 145, 0.18);
-  border:
-    1px solid rgba(76, 175, 145, 0.35);
+  background-color: rgba(76, 175, 145, 0.18);
+  border: 1px solid rgba(76, 175, 145, 0.35);
   border-radius: 12px;
   font-size: 0.9rem;
   font-weight: 700;
   text-align: center;
-
-  animation:
-    aparecerMensaje 0.4s ease;
+  animation: aparecerMensaje 0.4s ease;
 }
 
 @keyframes aparecerMensaje {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
 /* =========================================================
    CSS ORIGINAL DEL TP2 - COMENTADO PARA CONSERVAR
    (Ya no se aplica directamente porque ahora usamos Bootstrap,
