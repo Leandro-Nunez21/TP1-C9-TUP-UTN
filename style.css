@@ -76,17 +76,16 @@ body {
 }
 
 
-/* FORZANDO BOTONES DE TARJETAS PARA QUE BOOTSTRAP NO LOS ROMPA */
-.btn-outline-morado {
-    border: 2px solid var(--color-primario) !important;
-    color: var(--color-primario) !important;
-    background-color: transparent !important;
-    transition: all 0.3s ease !important;
+.card-body .btn.btn-outline-morado {
+    border: 2px solid var(--color-primario);
+    color: var(--color-primario);
+    background-color: transparent;
+    transition: all 0.3s ease;
 }
 
-.btn-outline-morado:hover {
-    background-color: var(--color-primario) !important;
-    color: var(--color-blanco) !important;
+.card-body .btn.btn-outline-morado:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
 }
 
 /* RUTA DE APRENDIZAJE */
