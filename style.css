@@ -1,42 +1,56 @@
 /* ====================================================
-   CAREERPATH AI - HOJA DE ESTILOS GLOBAL (TP3)
+   CAREERPATH AI — HOJA DE ESTILOS GLOBAL
+
+   1. Variables
+   2. Estilos base
+   3. Componentes compartidos
+   4. Botones
+   5. Ruta de aprendizaje
+   6. Inicio
+   7. CSS histórico del TP2 (comentado)
    ==================================================== */
 
+
 /* ====================================================
-   1. SISTEMA DE VARIABLES (Paleta Lila/Mostaza)
+   1. VARIABLES
    ==================================================== */
+
 :root {
-    /* Paleta Principal */
-    --color-primario: #6C4AB6;      /* Lila/Morado principal */
-    --color-secundario: #FFB84C;    /* Mostaza/Naranja IA */
-    --color-acento: #8B5CF6;        /* Violeta brillante para gradientes */
-    
-    /* Fondos y Superficies */
-    --color-fondo: #F4F0FB;         /* Fondo alternativo lila claro */
-    --color-crema: #FFF6E9;         /* Fondo base cálido */
-    --color-blanco: #ffffff;        /* Tarjetas y contenedores */
-    
-    /* Textos y Estados */
-    --color-texto: #2E2A3D;         /* Texto oscuro */
-    --color-texto-mutado: #665f73;  /* Texto secundario/gris */
-    --color-exito: #4CAF91;         /* Verde éxito */
-    
-    /* Bordes y Efectos */
+    /* Paleta principal */
+    --color-primario: #6c4ab6;
+    --color-secundario: #ffb84c;
+    --color-acento: #8b5cf6;
+
+    /* Fondos */
+    --color-fondo: #f4f0fb;
+    --color-crema: #fff6e9;
+    --color-blanco: #ffffff;
+
+    /* Textos y estados */
+    --color-texto: #2e2a3d;
+    --color-texto-mutado: #665f73;
+    --color-exito: #4caf91;
+
+    /* Bordes y sombras */
     --border-color: #dfd5ee;
     --shadow-sm: 0 4px 12px rgba(108, 74, 182, 0.08);
     --shadow-md: 0 8px 24px rgba(108, 74, 182, 0.15);
-    
-    /* Tipografía y Espaciado */
-    --fuente-principal: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Tipografía y espaciado */
+    --fuente-principal: "Inter", system-ui, -apple-system, sans-serif;
     --espacio-sm: 10px;
     --espacio-md: 20px;
     --espacio-lg: 40px;
+
+    /* Transición compartida */
     --transition: all 0.3s ease-in-out;
 }
 
+
 /* ====================================================
-   2. ESTILOS BASE Y RESET GLOBAL
+   2. ESTILOS BASE
    ==================================================== */
+
 body {
     font-family: var(--fuente-principal);
     background-color: var(--color-crema);
@@ -45,19 +59,24 @@ body {
     transition: var(--transition);
 }
 
-/* Texto con gradiente para títulos principales de IA */
 .text-gradient-ai {
-    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    background: linear-gradient(
+        135deg,
+        var(--color-primario),
+        var(--color-secundario)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 800;
 }
 
+
 /* ====================================================
-   3. COMPONENTES GLOBALES (Adaptados a Bootstrap)
+   3. COMPONENTES COMPARTIDOS
    ==================================================== */
-/* Tarjetas (Cards) para Inicio, Test y Resultados */
+
+/* Tarjetas */
 .card {
     background-color: var(--color-blanco);
     border: 1px solid var(--border-color);
@@ -71,567 +90,973 @@ body {
     transform: translateY(-3px);
 }
 
-/* Componente de Avatar para Perfil (Sin estilos inline en HTML) */
+/* Avatar del perfil */
 .avatar-preview {
     width: 150px;
     height: 150px;
+    padding: 4px;
     object-fit: cover;
+    background-color: var(--color-blanco);
     border: 4px solid var(--color-fondo);
     box-shadow: 0 0 0 2px var(--color-primario);
-    padding: 4px;
-    background-color: var(--color-blanco);
 }
 
-/* Opciones del Test Vocacional */
+/* Opciones del test vocacional */
 .quiz-option {
-    cursor: pointer;
+    padding: 1rem;
+    background-color: var(--color-blanco);
     border: 2px solid var(--border-color);
     border-radius: 0.75rem;
-    padding: 1rem;
+    cursor: pointer;
     transition: var(--transition);
-    background-color: var(--color-blanco);
 }
 
 .quiz-option:hover {
+    background-color: rgba(255, 184, 76, 0.05);
     border-color: var(--color-secundario);
-    background-color: rgba(255, 184, 76, 0.05); /* Mostaza transparente */
 }
 
+
 /* ====================================================
-   4. BOTONES DEL SISTEMA
+   4. BOTONES
    ==================================================== */
-/* Botón Destacado (Inspirado en Uiverse.io) */
+
+/*
+   Botón destacado inspirado en Uiverse.io.
+   Se conservan los nombres de sus variables originales.
+*/
 .btn-destacado {
-  --border_radius: 9999px;
-  --transtion: 0.3s ease-in-out;
-  cursor: pointer;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  background-color: transparent;
-  border: none;
-  border-radius: var(--border_radius);
-  transform: scale(calc(1 + (var(--active, 0) * 0.08)));
-  transition: transform var(--transtion);
-  text-decoration: none;
+    --border_radius: 9999px;
+    --transtion: 0.3s ease-in-out;
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: none;
+    border-radius: var(--border_radius);
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(calc(1 + (var(--active, 0) * 0.08)));
+    transition: transform var(--transtion);
+}
+
+/* Propiedades comunes de las dos capas decorativas */
+.btn-destacado::before,
+.btn-destacado::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--border_radius);
 }
 
 .btn-destacado::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-texto);
-  border-radius: var(--border_radius);
-  box-shadow: inset 0 0.5px hsl(0, 0%, 100%),
-    0px 4px 12px -4px hsla(0, 0%, 0%, calc(1 - var(--active, 0))),
-    0 0 0 calc(var(--active, 0) * 0.4rem) hsla(266, 60%, 55%, 0.6);
-  transition: all var(--transtion);
-  z-index: 0;
+    z-index: 0;
+    background-color: var(--color-texto);
+    box-shadow:
+        inset 0 0.5px hsl(0, 0%, 100%),
+        0 4px 12px -4px hsla(0, 0%, 0%, calc(1 - var(--active, 0))),
+        0 0 0 calc(var(--active, 0) * 0.4rem) hsla(266, 60%, 55%, 0.6);
+    transition: all var(--transtion);
 }
 
 .btn-destacado::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-primario);
-  background-image: radial-gradient(at 30% 90%, hsla(266, 50%, 65%, 1) 0px, transparent 55%),
-    radial-gradient(at 100% 100%, hsla(38, 100%, 62%, 0.7) 0px, transparent 50%);
-  opacity: var(--active, 0);
-  border-radius: var(--border_radius);
-  transition: opacity var(--transtion);
-  z-index: 1;
+    z-index: 1;
+    background-color: var(--color-primario);
+    background-image:
+        radial-gradient(
+            at 30% 90%,
+            hsla(266, 50%, 65%, 1) 0,
+            transparent 55%
+        ),
+        radial-gradient(
+            at 100% 100%,
+            hsla(38, 100%, 62%, 0.7) 0,
+            transparent 50%
+        );
+    opacity: var(--active, 0);
+    transition: opacity var(--transtion);
 }
 
 .btn-destacado:is(:hover, :focus-visible) {
-  --active: 1;
+    --active: 1;
 }
+
 .btn-destacado:active {
-  transform: scale(0.97);
+    transform: scale(0.97);
 }
 
 .btn-destacado .texto-boton {
-  position: relative;
-  z-index: 2;
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
+/* Botón de contorno utilizado dentro de tarjetas */
 .card-body .btn.btn-outline-morado {
-    border: 2px solid var(--color-primario);
     color: var(--color-primario);
     background-color: transparent;
+    border: 2px solid var(--color-primario);
     transition: all 0.3s ease;
 }
 
 .card-body .btn.btn-outline-morado:hover {
-    background-color: var(--color-primario);
     color: var(--color-blanco);
+    background-color: var(--color-primario);
 }
 
+
 /* ====================================================
-   5. COMPONENTES: RUTA DE APRENDIZAJE
+   5. RUTA DE APRENDIZAJE
    ==================================================== */
-/* ENCABEZADO */
+
+/* Encabezado */
 .ruta-encabezado {
-  position: relative;
-  max-width: 900px;
-  padding: 1.5rem 1.75rem;
-  background: linear-gradient(100deg, rgba(108, 74, 182, 0.08), rgba(255, 184, 76, 0.08));
-  border-left: 6px solid var(--color-secundario);
-  border-radius: 0 18px 18px 0;
+    position: relative;
+    max-width: 900px;
+    padding: 1.5rem 1.75rem;
+    background: linear-gradient(
+        100deg,
+        rgba(108, 74, 182, 0.08),
+        rgba(255, 184, 76, 0.08)
+    );
+    border-left: 6px solid var(--color-secundario);
+    border-radius: 0 18px 18px 0;
 }
 
 .ruta-etiqueta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--color-primario);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-primario);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
 
 .ruta-etiqueta::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-secundario);
-  border-radius: 50%;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-secundario);
+    border-radius: 50%;
 }
 
 .ruta-titulo {
-  color: var(--color-texto);
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.1;
+    color: var(--color-texto);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.1;
 }
 
 .ruta-descripcion {
-  max-width: 780px;
-  color: var(--color-texto-mutado);
-  font-size: 1.05rem;
-  line-height: 1.7;
+    max-width: 780px;
+    color: var(--color-texto-mutado);
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 
-/* OBJETIVO Y PROGRESO */
+/* Resumen del objetivo */
 .ruta-resumen {
-  position: relative;
-  overflow: hidden;
-  padding: 2.5rem;
-  color: var(--color-blanco);
-  background: radial-gradient(circle at 90% 120%, rgba(255, 184, 76, 0.4), transparent 28%),
-              radial-gradient(circle at 5% -20%, rgba(255, 255, 255, 0.18), transparent 30%),
-              linear-gradient(135deg, #5c3da3, var(--color-primario), #8061c9);
-  border-radius: 28px;
-  box-shadow: 0 20px 45px rgba(108, 74, 182, 0.18), 0 5px 15px rgba(46, 42, 61, 0.08);
+    position: relative;
+    overflow: hidden;
+    padding: 2.5rem;
+    color: var(--color-blanco);
+    background:
+        radial-gradient(
+            circle at 90% 120%,
+            rgba(255, 184, 76, 0.4),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 5% -20%,
+            rgba(255, 255, 255, 0.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #5c3da3,
+            var(--color-primario),
+            #8061c9
+        );
+    border-radius: 28px;
+    box-shadow:
+        0 20px 45px rgba(108, 74, 182, 0.18),
+        0 5px 15px rgba(46, 42, 61, 0.08);
 }
 
 .ruta-resumen::before {
-  content: "";
-  position: absolute;
-  top: -70px;
-  right: -70px;
-  width: 180px;
-  height: 180px;
-  border: 35px solid rgba(255, 255, 255, 0.07);
-  border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    width: 180px;
+    height: 180px;
+    border: 35px solid rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
 }
 
 .ruta-subtitulo {
-  color: var(--color-secundario);
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.11rem;
-  text-transform: uppercase;
+    color: var(--color-secundario);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.11rem;
+    text-transform: uppercase;
 }
 
 .ruta-objetivo-texto {
-  max-width: 720px;
-  color: #f1edf9;
-  line-height: 1.8;
+    max-width: 720px;
+    color: #f1edf9;
+    line-height: 1.8;
 }
 
-/* PROGRESO Y BARRAS */
+/* Panel y barra de progreso */
 .ruta-progreso {
-  position: relative;
-  z-index: 2;
-  padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 20px;
-  backdrop-filter: blur(8px);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .ruta-progress-container {
-  height: 15px;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 999px;
+    height: 15px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
 }
 
 .ruta-progress-bar {
-  width: 0;
-  background: linear-gradient(90deg, var(--color-secundario), #ffd078);
-  border-radius: 999px;
-  box-shadow: 0 0 12px rgba(255, 184, 76, 0.6);
-  transition: width 0.4s ease;
+    width: 0;
+    background: linear-gradient(
+        90deg,
+        var(--color-secundario),
+        #ffd078
+    );
+    border-radius: 999px;
+    box-shadow: 0 0 12px rgba(255, 184, 76, 0.6);
+    transition: width 0.4s ease;
 }
 
-/* ESTADÍSTICAS */
+/* Estadísticas */
 .ruta-estadisticas {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
 }
 
 .ruta-estadistica {
-  flex: 1;
-  padding: 1rem 0.65rem;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.11);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+    flex: 1;
+    padding: 1rem 0.65rem;
+    background-color: rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
 }
 
 .ruta-estadistica:hover {
-  transform: translateY(-3px);
-  background-color: rgba(255, 255, 255, 0.17);
+    background-color: rgba(255, 255, 255, 0.17);
+    transform: translateY(-3px);
 }
 
 .ruta-estadistica strong {
-  display: block;
-  margin-bottom: 0.2rem;
-  color: var(--color-blanco);
-  font-size: 1.5rem;
-  font-weight: 800;
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--color-blanco);
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 .ruta-estadistica span {
-  color: #eae4f5;
-  font-size: 0.77rem;
+    color: #eae4f5;
+    font-size: 0.77rem;
 }
 
-/* ACORDEÓN DE ETAPAS */
+/* Acordeón de etapas */
 .ruta-seccion-titulo {
-  color: var(--color-texto);
-  font-weight: 800;
+    color: var(--color-texto);
+    font-weight: 800;
 }
 
 .ruta-acordeon {
-  position: relative;
-  padding-left: 1rem;
-  border-left: 3px solid rgba(108, 74, 182, 0.18);
+    position: relative;
+    padding-left: 1rem;
+    border-left: 3px solid rgba(108, 74, 182, 0.18);
 }
 
 .ruta-acordeon .accordion-item {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1.2rem;
-  background-color: var(--color-blanco);
-  border: 1px solid var(--border-color);
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(46, 42, 61, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(46, 42, 61, 0.05);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .ruta-acordeon .accordion-item:hover {
-  transform: translateX(4px);
-  box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-sm);
+    transform: translateX(4px);
 }
 
 .ruta-acordeon .accordion-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
-  background-color: var(--color-primario);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--color-primario);
 }
 
 .ruta-acordeon .accordion-button {
-  padding: 1.25rem 1.4rem;
-  color: var(--color-texto);
-  background-color: var(--color-blanco);
-  font-weight: 700;
-  box-shadow: none;
+    padding: 1.25rem 1.4rem;
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+    box-shadow: none;
+    font-weight: 700;
 }
 
 .ruta-acordeon .accordion-button:not(.collapsed) {
-  color: var(--color-primario);
-  background: linear-gradient(90deg, rgba(108, 74, 182, 0.1), rgba(255, 255, 255, 0));
-  box-shadow: none;
+    color: var(--color-primario);
+    background: linear-gradient(
+        90deg,
+        rgba(108, 74, 182, 0.1),
+        rgba(255, 255, 255, 0)
+    );
+    box-shadow: none;
 }
 
 .ruta-acordeon .accordion-button:focus {
-  box-shadow: none;
+    box-shadow: none;
 }
 
-/* NÚMEROS DE ETAPA */
+/* Números de etapa */
 .ruta-numero-etapa {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 42px;
-  height: 42px;
-  margin-right: 0.9rem;
-  color: var(--color-blanco);
-  background-color: var(--color-primario);
-  border-radius: 14px;
-  font-size: 0.82rem;
-  font-weight: 800;
-  box-shadow: 0 5px 12px rgba(108, 74, 182, 0.22);
-  transition: transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
+    margin-right: 0.9rem;
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    border-radius: 14px;
+    box-shadow: 0 5px 12px rgba(108, 74, 182, 0.22);
+    font-size: 0.82rem;
+    font-weight: 800;
+    transition: transform 0.2s ease;
 }
 
 .ruta-acordeon .accordion-item:nth-child(2) .ruta-numero-etapa {
-  color: var(--color-texto);
-  background-color: var(--color-secundario);
-  box-shadow: 0 5px 12px rgba(255, 184, 76, 0.28);
+    color: var(--color-texto);
+    background-color: var(--color-secundario);
+    box-shadow: 0 5px 12px rgba(255, 184, 76, 0.28);
 }
 
 .ruta-acordeon .accordion-item:nth-child(2)::before {
-  background-color: var(--color-secundario);
+    background-color: var(--color-secundario);
 }
 
 .ruta-acordeon .accordion-item:nth-child(3) .ruta-numero-etapa {
-  background-color: var(--color-exito);
-  box-shadow: 0 5px 12px rgba(76, 175, 145, 0.25);
+    background-color: var(--color-exito);
+    box-shadow: 0 5px 12px rgba(76, 175, 145, 0.25);
 }
 
 .ruta-acordeon .accordion-item:nth-child(3)::before {
-  background-color: var(--color-exito);
+    background-color: var(--color-exito);
 }
 
 .ruta-acordeon .accordion-button:hover .ruta-numero-etapa {
-  transform: rotate(-4deg) scale(1.08);
+    transform: rotate(-4deg) scale(1.08);
 }
 
 .ruta-etapa-descripcion {
-  max-width: 800px;
-  padding: 0.8rem 1rem;
-  color: var(--color-texto-mutado);
-  background-color: var(--color-crema);
-  border-radius: 10px;
-  line-height: 1.6;
+    max-width: 800px;
+    padding: 0.8rem 1rem;
+    color: var(--color-texto-mutado);
+    background-color: var(--color-crema);
+    border-radius: 10px;
+    line-height: 1.6;
 }
 
-/* TEMAS (Checkboxes interactivos) */
+/* Temas y casillas */
 .ruta-tema {
-  position: relative;
-  height: 100%;
-  padding: 1rem 5.5rem 1rem 2.8rem;
-  background: linear-gradient(135deg, #ffffff, #faf7fe);
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-  transition: var(--transition);
+    position: relative;
+    height: 100%;
+    padding: 1rem 5.5rem 1rem 2.8rem;
+    background: linear-gradient(135deg, #ffffff, #faf7fe);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    transition: var(--transition);
 }
 
 .ruta-tema:hover {
-  transform: translateY(-3px);
-  border-color: #b7a3dd;
-  box-shadow: var(--shadow-sm);
+    border-color: #b7a3dd;
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-3px);
 }
 
 .ruta-tema .form-check-input {
-  cursor: pointer;
-  border-color: #a995cf;
+    border-color: #a995cf;
+    cursor: pointer;
 }
 
 .ruta-tema .form-check-input:focus {
-  border-color: var(--color-primario);
-  box-shadow: 0 0 0 0.2rem rgba(108, 74, 182, 0.15);
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 0.2rem rgba(108, 74, 182, 0.15);
 }
 
 .ruta-tema .form-check-input:checked {
-  background-color: var(--color-primario);
-  border-color: var(--color-primario);
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
 }
 
 .ruta-tema .form-check-label {
-  width: 100%;
-  cursor: pointer;
-  color: var(--color-texto);
-  font-weight: 600;
+    width: 100%;
+    color: var(--color-texto);
+    font-weight: 600;
+    cursor: pointer;
 }
 
-/* TEMA COMPLETADO */
+/* Estado: tema completado */
 .ruta-tema.completado {
-  background: linear-gradient(135deg, rgba(76, 175, 145, 0.13), rgba(244, 240, 251, 0.8));
-  border-color: var(--color-exito);
-  box-shadow: 0 5px 14px rgba(76, 175, 145, 0.1);
-  animation: temaCompletado 0.35s ease;
+    background: linear-gradient(
+        135deg,
+        rgba(76, 175, 145, 0.13),
+        rgba(244, 240, 251, 0.8)
+    );
+    border-color: var(--color-exito);
+    box-shadow: 0 5px 14px rgba(76, 175, 145, 0.1);
+    animation: temaCompletado 0.35s ease;
 }
 
 .ruta-tema.completado::after {
-  content: "Listo";
-  position: absolute;
-  top: 50%;
-  right: 0.8rem;
-  transform: translateY(-50%);
-  padding: 0.25rem 0.55rem;
-  color: #287c64;
-  background-color: rgba(76, 175, 145, 0.16);
-  border-radius: 999px;
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.03rem;
-  text-transform: uppercase;
+    content: "Listo";
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+    padding: 0.25rem 0.55rem;
+    color: #287c64;
+    background-color: rgba(76, 175, 145, 0.16);
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.03rem;
+    text-transform: uppercase;
+    transform: translateY(-50%);
 }
 
 .ruta-tema.completado .form-check-input:checked {
-  background-color: var(--color-exito);
-  border-color: var(--color-exito);
+    background-color: var(--color-exito);
+    border-color: var(--color-exito);
 }
 
 .ruta-tema.completado .form-check-label {
-  color: #746e79;
+    color: #746e79;
 }
 
-/* RECOMENDACIONES Y CHIPS */
+/* Recomendaciones */
 .ruta-recomendados {
-  position: relative;
-  overflow: hidden;
-  padding: 2rem 2.2rem;
-  background: linear-gradient(100deg, var(--color-blanco), #f8f3ff);
-  border: 1px solid var(--border-color);
-  border-radius: 22px;
-  box-shadow: 0 12px 28px rgba(46, 42, 61, 0.05);
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 2.2rem;
+    background: linear-gradient(
+        100deg,
+        var(--color-blanco),
+        #f8f3ff
+    );
+    border: 1px solid var(--border-color);
+    border-radius: 22px;
+    box-shadow: 0 12px 28px rgba(46, 42, 61, 0.05);
 }
 
 .ruta-recomendados::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 7px;
-  height: 100%;
-  background: linear-gradient(var(--color-secundario), var(--color-primario));
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background: linear-gradient(
+        var(--color-secundario),
+        var(--color-primario)
+    );
 }
 
 .ruta-chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.65rem 1rem;
-  color: var(--color-primario);
-  background-color: #f4effc;
-  border: 1px solid #d9ccec;
-  border-radius: 999px;
-  font-size: 0.86rem;
-  font-weight: 700;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.65rem 1rem;
+    color: var(--color-primario);
+    background-color: #f4effc;
+    border: 1px solid #d9ccec;
+    border-radius: 999px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .ruta-chip:nth-child(2n) {
-  color: #9a6414;
-  background-color: #fff5df;
-  border-color: #f1d49f;
+    color: #9a6414;
+    background-color: #fff5df;
+    border-color: #f1d49f;
 }
 
 .ruta-chip:nth-child(3n) {
-  color: #287d65;
-  background-color: #eaf8f3;
-  border-color: #b7dfd1;
+    color: #287d65;
+    background-color: #eaf8f3;
+    border-color: #b7dfd1;
 }
 
 .ruta-chip:hover {
-  transform: translateY(-3px);
-  color: var(--color-blanco);
-  background-color: var(--color-primario);
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    transform: translateY(-3px);
 }
 
-/* SIGUIENTE PASO */
+/* Siguiente paso */
 .ruta-siguiente {
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;
-  background: linear-gradient(110deg, var(--color-crema), #fff9ef);
-  border: 1px solid #efd9b8;
-  border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    background: linear-gradient(
+        110deg,
+        var(--color-crema),
+        #fff9ef
+    );
+    border: 1px solid #efd9b8;
+    border-radius: 20px;
 }
 
 .ruta-siguiente::after {
-  content: "";
-  position: absolute;
-  right: -30px;
-  bottom: -45px;
-  width: 130px;
-  height: 130px;
-  background-color: rgba(255, 184, 76, 0.12);
-  border-radius: 50%;
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: -45px;
+    width: 130px;
+    height: 130px;
+    background-color: rgba(255, 184, 76, 0.12);
+    border-radius: 50%;
 }
 
 .ruta-siguiente h2 {
-  color: var(--color-texto);
-  font-weight: 800;
+    color: var(--color-texto);
+    font-weight: 800;
 }
 
-/* ANIMACIONES */
+/* Animación de entrada controlada por JavaScript */
 .js-animaciones .animar-ruta {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity 0.65s ease,
+        transform 0.65s ease;
 }
 
 .js-animaciones .animar-ruta.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
-@keyframes temaCompletado {
-  0% { transform: scale(1); }
-  45% { transform: scale(1.025); }
-  100% { transform: scale(1); }
-}
-
-@keyframes progresoCompleto {
-  0% { box-shadow: 0 0 0 rgba(76, 175, 145, 0); }
-  50% { box-shadow: 0 0 18px rgba(76, 175, 145, 0.8), 0 0 28px rgba(255, 184, 76, 0.4); }
-  100% { box-shadow: 0 0 0 rgba(76, 175, 145, 0); }
-}
-
+/* Estados de finalización */
 .ruta-progress-bar.ruta-completa {
-  background: linear-gradient(90deg, var(--color-exito), var(--color-secundario));
-  animation: progresoCompleto 0.9s ease;
+    background: linear-gradient(
+        90deg,
+        var(--color-exito),
+        var(--color-secundario)
+    );
+    animation: progresoCompleto 0.9s ease;
 }
 
 .ruta-progreso.ruta-finalizada {
-  border-color: rgba(255, 184, 76, 0.65);
-  box-shadow: 0 0 0 1px rgba(255, 184, 76, 0.15), 0 10px 25px rgba(46, 42, 61, 0.12);
+    border-color: rgba(255, 184, 76, 0.65);
+    box-shadow:
+        0 0 0 1px rgba(255, 184, 76, 0.15),
+        0 10px 25px rgba(46, 42, 61, 0.12);
 }
 
 .ruta-mensaje-completo {
-  padding: 0.75rem 1rem;
-  color: #205f4d;
-  background-color: rgba(76, 175, 145, 0.18);
-  border: 1px solid rgba(76, 175, 145, 0.35);
-  border-radius: 12px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-align: center;
-  animation: aparecerMensaje 0.4s ease;
+    padding: 0.75rem 1rem;
+    color: #205f4d;
+    background-color: rgba(76, 175, 145, 0.18);
+    border: 1px solid rgba(76, 175, 145, 0.35);
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    animation: aparecerMensaje 0.4s ease;
+}
+
+/* Definiciones de animaciones */
+@keyframes temaCompletado {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.025);
+    }
+}
+
+@keyframes progresoCompleto {
+    0%, 100% {
+        box-shadow: 0 0 0 rgba(76, 175, 145, 0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 18px rgba(76, 175, 145, 0.8),
+            0 0 28px rgba(255, 184, 76, 0.4);
+    }
 }
 
 @keyframes aparecerMensaje {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+
+/* ====================================================
+   6. INICIO
+   Responsive mediante las clases de Bootstrap.
+   ==================================================== */
+
+/* Variables locales del inicio */
+.inicio {
+    --inicio-fondo: #fffaf3;
+    --inicio-superficie: #eee7f7;
+    --inicio-borde: #d9cbea;
+    --inicio-borde-calido: #e3d9cf;
+    --inicio-texto-fuerte: #53378f;
+
+    background-color: var(--inicio-fondo);
+}
+
+/* Presentación principal */
+.inicio-hero {
+    background: radial-gradient(
+        ellipse at 95% 15%,
+        var(--inicio-superficie),
+        transparent 55%
+    );
+}
+
+.inicio-etiqueta {
+    color: var(--color-primario);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.inicio-titulo {
+    font-size: clamp(2.6rem, 5.5vw, 5rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.05em;
+}
+
+.inicio-titulo span {
+    color: var(--color-primario);
+}
+
+.inicio-bajada,
+.inicio-hero .inicio-texto {
+    max-width: 35rem;
+}
+
+.inicio-bajada {
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+/* Propiedades compartidas de los textos */
+.inicio-texto,
+.inicio-nota,
+.inicio-recorrido p,
+.inicio-pasos p {
+    color: var(--color-texto-mutado);
+}
+
+.inicio-texto {
+    line-height: 1.8;
+}
+
+.inicio-nota,
+.inicio-recorrido p,
+.inicio-chip,
+.inicio-estado {
+    font-size: 0.85rem;
+}
+
+/* Botones del inicio */
+.inicio-boton,
+.inicio-boton-secundario {
+    padding: 0.85rem 1.2rem;
+    border: 2px solid var(--color-primario);
+    border-radius: 0.6rem;
+    font-weight: 600;
+}
+
+.inicio-boton {
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+}
+
+.inicio-boton:hover {
+    color: var(--color-blanco);
+    background-color: var(--inicio-texto-fuerte);
+    border-color: var(--inicio-texto-fuerte);
+}
+
+.inicio-boton span {
+    margin-left: 0.5rem;
+}
+
+.inicio-boton-secundario {
+    color: var(--color-primario);
+    background-color: transparent;
+}
+
+.inicio-boton-secundario:hover {
+    color: var(--inicio-texto-fuerte);
+    background-color: var(--inicio-superficie);
+    border-color: var(--inicio-texto-fuerte);
+}
+
+.inicio-enlace {
+    color: var(--color-primario);
+    font-weight: 600;
+    text-underline-offset: 5px;
+}
+
+.inicio-enlace:hover {
+    color: var(--inicio-texto-fuerte);
+}
+
+/* Representación visual del recorrido */
+.inicio-mapa {
+    background-color: var(--inicio-superficie);
+    border: 1px solid var(--inicio-borde);
+    border-radius: 3rem 1rem 1rem 1rem;
+    box-shadow: 0 12px 28px rgba(108, 74, 182, 0.1);
+}
+
+.inicio-simbolo {
+    color: var(--color-primario);
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.inicio-mapa-titulo,
+.inicio-subtitulo {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+}
+
+.inicio-mapa-titulo {
+    margin-bottom: 2rem;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+}
+
+.inicio-recorrido li {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.inicio-recorrido li:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    left: 19px;
+    width: 1px;
+    background-color: var(--inicio-borde);
+}
+
+.inicio-recorrido li:last-child {
+    padding-bottom: 0;
+}
+
+/* Elementos circulares del recorrido */
+.inicio-nodo,
+.inicio-mapa-pie span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.inicio-nodo {
+    flex: 0 0 40px;
+    height: 40px;
+    color: var(--color-primario);
+    background-color: var(--inicio-fondo);
+    border: 1px solid var(--inicio-borde);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.inicio-recorrido li:last-child .inicio-nodo {
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.inicio-recorrido strong {
+    font-size: 0.95rem;
+}
+
+.inicio-recorrido p {
+    margin: 0.2rem 0 0;
+}
+
+.inicio-mapa-pie {
+    padding-top: 1rem;
+    border-top: 1px solid var(--inicio-borde);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.inicio-mapa-pie span {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+    background-color: var(--color-secundario);
+}
+
+/* Franja de preguntas */
+.inicio-franja {
+    border-top: 1px solid var(--inicio-borde-calido);
+    border-bottom: 1px solid var(--inicio-borde-calido);
+}
+
+.inicio-chip {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--inicio-borde-calido);
+    border-radius: 2rem;
+}
+
+/* Secciones y títulos */
+.inicio-seccion {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.inicio-subtitulo {
+    font-size: clamp(1.9rem, 3vw, 2.8rem);
+}
+
+/* Etapas del recorrido */
+.inicio-pasos > li {
+    margin: 0;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--inicio-borde-calido);
+}
+
+.inicio-pasos > li:first-child {
+    padding-top: 0;
+}
+
+.inicio-pasos > li:last-child {
+    border-bottom: 0;
+}
+
+.inicio-paso-numero {
+    color: var(--color-primario);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.inicio-pasos h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.inicio-pasos p {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* Panel sobre inteligencia artificial */
+.inicio-panel {
+    background-color: var(--inicio-superficie);
+    border: 1px solid var(--inicio-borde);
+    border-radius: 1.25rem;
+}
+
+.inicio-estado {
+    color: var(--inicio-texto-fuerte);
+    border-top: 1px solid var(--inicio-borde);
+}
+
+/* Invitación final */
+.inicio-cierre {
+    background-color: var(--color-crema);
+    border-top: 1px solid var(--inicio-borde-calido);
+}
+
+.inicio-cierre .inicio-subtitulo {
+    font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+}
+
+/* Navegación con teclado */
+.inicio a:focus-visible,
+.inicio button:focus-visible {
+    outline: 3px solid var(--color-secundario);
+    outline-offset: 4px;
+}
+
+.inicio-salto:focus {
+    display: block;
+    padding: 1rem;
+    color: var(--color-primario);
+    background-color: var(--color-blanco);
+}
+
+
 /* =========================================================
-   CSS ORIGINAL DEL TP2 - COMENTADO PARA CONSERVAR
-   (Ya no se aplica directamente porque ahora usamos Bootstrap,
-   pero se deja documentado según lo pedido en la consigna del TP3)
+   7. CSS ORIGINAL DEL TP2 — CONSERVADO COMO COMENTARIO
+
+   Este bloque no se ejecuta.
+   Se mantiene por la consigna del TP3.
+   Las media queries de este bloque también están desactivadas.
    =========================================================
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 body {
@@ -646,16 +1071,16 @@ header {
     color: var(--color-blanco);
     padding: var(--espacio-md) var(--espacio-lg);
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     gap: var(--espacio-md);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
     list-style: none;
-    display: flex;          
-    flex-wrap: wrap;        
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: var(--espacio-md);
 }
@@ -667,7 +1092,7 @@ nav a {
     background-color: var(--color-secundario);
     padding: var(--espacio-sm) var(--espacio-md);
     border-radius: 5px;
-    border: 2px solid transparent; 
+    border: 2px solid transparent;
     transition: all 0.3s ease;
 }
 
@@ -682,9 +1107,9 @@ main {
     max-width: 1200px;
     margin: 20px auto;
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     gap: var(--espacio-lg);
-    min-height: 70vh; 
+    min-height: 70vh;
 }
 
 section {
@@ -696,12 +1121,14 @@ section {
 
 @media (min-width: 768px) {
     header {
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: space-between;
     }
+
     main {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
+
     section:first-child {
         grid-column: 1 / -1;
     }
@@ -719,4 +1146,5 @@ footer p {
     margin-bottom: var(--espacio-sm);
 }
 
-   ===== FIN CSS ORIGINAL TP2 ===== 
+   ===== FIN CSS ORIGINAL TP2 =====
+*/
