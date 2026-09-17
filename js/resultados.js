@@ -1,114 +1,45 @@
-// Oferta academica de la UNT (agrupada por area)
+// Oferta academica de la UTN Facultad Regional Tucumán (agrupada por nivel)
 const carreras = [
-    // Area de tecnología
-    { titulo: "Geología", area: "tecnologia" },
-    { titulo: "Licenciatura en Ciencias Biológicas", area: "tecnologia" },
-    { titulo: "Licenciatura en Biotecnología", area: "tecnologia" },
-    { titulo: "Licenciatura en Química", area: "tecnologia" },
-    { titulo: "Arquitectura y Urbanismo", area: "tecnologia" },
-    { titulo: "Ingeniería Agronómica", area: "tecnologia" },
-    { titulo: "Ingeniería Zootecnista", area: "tecnologia" },
-    { titulo: "Agrimensura", area: "tecnologia" },
-    { titulo: "Ingeniería Azucarera", area: "tecnologia" },
-    { titulo: "Ingeniería Biomédica", area: "tecnologia" },
-    { titulo: "Ingeniería Civil", area: "tecnologia" },
-    { titulo: "Ingeniería Eléctrica", area: "tecnologia" },
-    { titulo: "Ingeniería Electrónica", area: "tecnologia" },
-    { titulo: "Ingeniería en Computación", area: "tecnologia" },
-    { titulo: "Ingeniería en Informática", area: "tecnologia" },
-    { titulo: "Ingeniería Geodésica y Geofísica", area: "tecnologia" },
-    { titulo: "Ingeniería Química", area: "tecnologia" },
-    { titulo: "Ingeniería Mecánica", area: "tecnologia" },
-    { titulo: "Ingeniería Industrial", area: "tecnologia" },
-    { titulo: "Licenciatura en Física", area: "tecnologia" },
-    { titulo: "Licenciatura en Informática", area: "tecnologia" },
-    { titulo: "Licenciatura en Matemática", area: "tecnologia" },
-    { titulo: "Programador Universitario", area: "tecnologia" },
-    { titulo: "Tecnicatura Univ. en Tecnología Azucarera e Industrias Derivadas", area: "tecnologia" },
-    { titulo: "Diseño de Iluminación", area: "tecnologia" },
-    { titulo: "Tecnicatura en Iluminación", area: "tecnologia" },
-    { titulo: "Tecnicatura Universitaria en Física", area: "tecnologia" },
-    { titulo: "Tecnicatura Universitaria en Física Ambiental", area: "tecnologia" },
-    { titulo: "Tecnicatura Superior en Controles Automáticos Industriales", area: "tecnologia" },
-    { titulo: "Tecnicatura Superior en Electricidad Industrial", area: "tecnologia" },
-    { titulo: "Tecnicatura Superior en Diseño Industrial", area: "tecnologia" },
+    // Carreras de Grado
+    { titulo: "Ingeniería en Sistemas de Información", area: "grado" },
+    { titulo: "Ingeniería en Energía Eléctrica", area: "grado" },
+    { titulo: "Ingeniería Mecánica", area: "grado" },
+    { titulo: "Ingeniería Civil", area: "grado" },
+    { titulo: "Ingeniería Electrónica", area: "grado" },
 
-    // Area de salud
-    { titulo: "Medicina Veterinaria", area: "salud" },
-    { titulo: "Medicina", area: "salud" },
-    { titulo: "Licenciatura en Kinesiología y Fisiatría", area: "salud" },
-    { titulo: "Licenciatura en Fonoaudiología", area: "salud" },
-    { titulo: "Odontología", area: "salud" },
-    { titulo: "Tecnicatura Universitaria en Prótesis Dental", area: "salud" },
-    { titulo: "Tecnicatura en Asistencia Dental", area: "salud" },
-    { titulo: "Psicología", area: "salud" },
-    { titulo: "Tecnicatura Universitaria en Acompañamiento Terapéutico", area: "salud" },
-    { titulo: "Bioquímica", area: "salud" },
-    { titulo: "Farmacia", area: "salud" },
-    { titulo: "Tecnicatura Laboratorista Universitaria en Salud", area: "salud" },
-    { titulo: "Licenciatura en Enfermería", area: "salud" },
-    { titulo: "Enfermería Universitaria", area: "salud" },
-    { titulo: "Tecnicatura en Estadísticas de Salud", area: "salud" },
+    // Carreras de Pregrado
+    { titulo: "Tecnicatura Universitaria en Logística", area: "pregrado" },
+    { titulo: "Tecnicatura Universitaria en Mecatrónica", area: "pregrado" },
+    { titulo: "Tecnicatura Universitaria en Programación", area: "pregrado" },
+    { titulo: "Tecnicatura Universitaria en Desarrollo y Producción de Videojuegos", area: "pregrado" },
+    { titulo: "Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo", area: "pregrado" },
+    { titulo: "Tecnicatura Universitaria en Energías Sustentables", area: "pregrado" },
+    { titulo: "Tecnicatura Universitaria en Mantenimiento Industrial", area: "pregrado" },
 
-    // Area de negocios
-    { titulo: "Abogacía", area: "negocios" },
-    { titulo: "Escribanía", area: "negocios" },
-    { titulo: "Procuración", area: "negocios" },
-    { titulo: "Licenciatura en Seguridad Pública", area: "negocios" },
-    { titulo: "Licenciatura en Ciencias de la Comunicación", area: "negocios" },
-    { titulo: "Tecnicatura Universitaria en Comunicación", area: "negocios" },
-    { titulo: "Licenciatura en Geografía", area: "negocios" },
-    { titulo: "Licenciatura en Historia", area: "negocios" },
-    { titulo: "Licenciatura en Trabajo Social", area: "negocios" },
-    { titulo: "Contador Público", area: "negocios" },
-    { titulo: "Licenciatura en Administración", area: "negocios" },
-    { titulo: "Licenciatura en Economía", area: "negocios" },
+    // Complementación Curricular
+    { titulo: "Licenciatura en Gestión Ambiental", area: "complementacion" },
+    { titulo: "Licenciatura en Tecnología Educativa", area: "complementacion" },
+    { titulo: "Licenciatura en Higiene y Seguridad en el Trabajo", area: "complementacion" },
+    { titulo: "Licenciatura en Enseñanza de la Matemática", area: "complementacion" },
+    { titulo: "Profesorado en Docencia Superior", area: "complementacion" },
 
-    // Area de arte
-    { titulo: "Profesorado/Licenciatura en Ciencias de la Educación", area: "arte" },
-    { titulo: "Profesorado/Licenciatura en Letras", area: "arte" },
-    { titulo: "Profesorado/Licenciatura en Filosofía", area: "arte" },
-    { titulo: "Profesorado/Licenciatura en Inglés", area: "arte" },
-    { titulo: "Profesorado/Licenciatura en Francés", area: "arte" },
-    { titulo: "Profesorado en Geografía", area: "arte" },
-    { titulo: "Profesorado en Historia", area: "arte" },
-    { titulo: "Profesorado en Artes Plásticas", area: "arte" },
-    { titulo: "Profesorado en Ciencias Económicas", area: "arte" },
-    { titulo: "Profesorado en Química", area: "arte" },
-    { titulo: "Profesorado en Matemática", area: "arte" },
-    { titulo: "Profesorado/Licenciatura en Educación Física", area: "arte" },
-    { titulo: "Profesorado de Psicología", area: "arte" },
-    { titulo: "Licenciatura en Artes Visuales", area: "arte" },
-    { titulo: "Diseño de Interiores y Equipamiento", area: "arte" },
-    { titulo: "Licenciatura en Teatro", area: "arte" },
-    { titulo: "Intérprete Dramático", area: "arte" },
-    { titulo: "Profesorado Universitario en Teatro", area: "arte" },
-    { titulo: "Licenciatura en Música", area: "arte" },
-    { titulo: "Tecnicatura Universitaria en Fotografía", area: "arte" },
-    { titulo: "Profesorado en Danza Contemporánea", area: "arte" },
-    { titulo: "Bailarín/a en Danza Contemporánea", area: "arte" },
-    { titulo: "Licenciatura en Danza Clásica", area: "arte" },
-    { titulo: "Licenciatura en Diseño de Sonido", area: "arte" },
-    { titulo: "Licenciatura en Luthería", area: "arte" },
-    { titulo: "Tecnicatura Universitaria en Sonorización", area: "arte" },
-    { titulo: "Tecnicatura Universitaria en Actuación Teatral", area: "arte" },
-    { titulo: "Tecnicatura Univ. en Instrumentos de Cuerdas Pulsadas", area: "arte" },
-    { titulo: "Tecnicatura Universitaria en Diseño de Indumentaria y Textil", area: "arte" },
-    { titulo: "Profesorado en Ciencias Biológicas", area: "arte" },
-    { titulo: "Arqueología", area: "arte" },
-    { titulo: "Tecnicatura Univ. en Documentación y Museología Arqueológica", area: "arte" },
-    { titulo: "Licenciatura en Cinematografía", area: "arte" },
-    { titulo: "Tecnicatura Universitaria en Medios Audiovisuales", area: "arte" },
-    { titulo: "Profesorado en Artes Visuales", area: "arte" },
-    { titulo: "Profesorado de Educación Primaria", area: "arte" },
-    { titulo: "Profesorado de Educación Inicial", area: "arte" },
-    { titulo: "Profesorado en Música con Orientación en Educación Musical", area: "arte" },
-    { titulo: "Profesorado en Música con Orientación en Dirección Coral", area: "arte" },
-    { titulo: "Profesorado en Música con Orientación en Instrumento", area: "arte" }
+    // Carreras de Posgrado
+    { titulo: "Especialización en Ingeniería en Mantenimiento", area: "posgrado" },
+    { titulo: "Especialización en Higiene y Seguridad en el Trabajo", area: "posgrado" },
+    { titulo: "Especialización en Ingeniería Ambiental", area: "posgrado" },
+    { titulo: "Especialización en Ingeniería Bioenergética", area: "posgrado" },
+    { titulo: "Especialización en Ingeniería en Sistemas de Información", area: "posgrado" },
+    { titulo: "Especialización en Docencia Universitaria", area: "posgrado" },
+    { titulo: "Especialización en Ingeniería Gerencial", area: "posgrado" },
+    { titulo: "Maestría en Ingeniería Ambiental", area: "posgrado" },
+    { titulo: "Maestría en Ingeniería Bioenergética", area: "posgrado" },
+    { titulo: "Maestría en Ingeniería en Sistemas de Información", area: "posgrado" },
+    { titulo: "Maestría en Docencia Universitaria", area: "posgrado" },
+    { titulo: "Maestría en Administración de Negocios", area: "posgrado" }
 ];
 
-const contenedor = document.getElementById("contenedor-carreras");
-const contador = document.getElementById("contador-resultados");
+let contenedor;
+let contador;
 
 function renderizarCarreras(lista) {
     contenedor.innerHTML = "";
@@ -190,21 +121,29 @@ function mostrarMensaje(texto) {
     setTimeout(() => aviso.remove(), 2500);
 }
 
-const botonesFiltro = document.querySelectorAll(".filtro-btn");
-botonesFiltro.forEach(btn => {
-    btn.addEventListener("click", () => {
-        const area = btn.dataset.area;
-        const filtradas = area === "todas" ? carreras : carreras.filter(c => c.area === area);
-        renderizarCarreras(filtradas);
+document.addEventListener("DOMContentLoaded", () => {
+    contenedor = document.getElementById("contenedor-carreras");
+    contador = document.getElementById("contador-resultados");
 
-        botonesFiltro.forEach(b => {
-            b.style.backgroundColor = "var(--color-fondo)";
-            b.style.color = "var(--color-texto)";
+    if (!contenedor || !contador) {
+        console.error("No se encontraron los elementos de resultados.");
+        return;
+    }
+
+    const botonesFiltro = document.querySelectorAll(".filtro-btn");
+
+    botonesFiltro.forEach((btn) => {
+        btn.type = "button";
+
+        btn.addEventListener("click", () => {
+            const area = btn.dataset.area;
+            const filtradas = area === "todas"
+                ? carreras
+                : carreras.filter((c) => c.area === area);
+
+            renderizarCarreras(filtradas);
         });
-
-        btn.style.backgroundColor = "var(--color-primario)";
-        btn.style.color = "white";
     });
-});
 
-renderizarCarreras(carreras);
+    renderizarCarreras(carreras);
+});
