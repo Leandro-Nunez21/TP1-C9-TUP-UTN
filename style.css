@@ -1457,3 +1457,164 @@ body.d-flex.flex-column.min-vh-100 {
 .res-delay-2 { animation-delay: 0.2s, 1.4s; }
 .res-delay-3 { animation-delay: 0.3s; }
 .res-delay-4 { animation-delay: 0.4s, 1.8s; }
+
+/* ====================================================
+   NAVEGACIÓN COMPARTIDA — CAREERPATH AI
+
+   Paleta inspirada en el logo.
+   Responsive y apertura del menú mediante Bootstrap.
+   ==================================================== */
+
+.cp-header {
+    --nav-fondo: #070d17;
+    --nav-superficie: #112333;
+    --nav-texto: #f5f7fa;
+    --nav-texto-secundario: #b4c4d4;
+    --nav-celeste: #36d9ee;
+    --nav-azul: #246bfe;
+    --nav-borde: #23374b;
+
+    background-color: var(--nav-fondo);
+    border-bottom: 1px solid var(--nav-borde);
+}
+
+/* Línea de identidad inspirada en el camino del logo */
+.cp-header::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        var(--nav-azul),
+        var(--nav-celeste),
+        var(--nav-fondo)
+    );
+}
+
+.cp-navbar {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+/* Marca */
+.cp-navbar .cp-brand {
+    margin-right: 0.75rem;
+    color: var(--nav-texto);
+    text-decoration: none;
+}
+
+.cp-logo {
+    flex-shrink: 0;
+    object-fit: contain;
+    border: 1px solid var(--nav-borde);
+    border-radius: 0.75rem;
+}
+
+.cp-brand-text {
+    display: block;
+}
+
+.cp-brand-name {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+}
+
+.cp-brand-ai {
+    color: var(--nav-celeste);
+}
+
+.cp-brand-caption {
+    margin-top: 0.15rem;
+    color: var(--nav-texto-secundario);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+/* Enlaces: mismo componente para las cinco páginas */
+.cp-navbar .navbar-nav .cp-nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.7rem 0.75rem;
+    color: var(--nav-texto-secundario);
+    border: 1px solid transparent;
+    border-radius: 0.65rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+.cp-nav-number {
+    color: var(--nav-texto-secundario);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Interacción */
+.cp-navbar .navbar-nav .cp-nav-link:hover {
+    color: var(--nav-texto);
+    background-color: var(--nav-superficie);
+    border-color: var(--nav-borde);
+}
+
+/* Página actual: color, fondo y marca inferior */
+.cp-navbar .navbar-nav .cp-nav-link.active {
+    color: var(--nav-celeste);
+    background-color: var(--nav-superficie);
+    border-color: var(--nav-borde);
+    font-weight: 700;
+}
+
+.cp-navbar .cp-nav-link.active .cp-nav-number {
+    color: var(--nav-celeste);
+}
+
+.cp-navbar .cp-nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0.75rem;
+    width: 1.5rem;
+    height: 2px;
+    background-color: var(--nav-celeste);
+    border-radius: 2px;
+}
+
+/* Botón hamburguesa */
+.cp-navbar .cp-toggler {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.4rem;
+    color: var(--nav-celeste);
+    background-color: transparent;
+    border: 1px solid var(--nav-borde);
+    border-radius: 0.65rem;
+}
+
+.cp-navbar .cp-toggler:hover {
+    background-color: var(--nav-superficie);
+    border-color: var(--nav-celeste);
+}
+
+.cp-navbar .cp-toggler:focus {
+    box-shadow: none;
+}
+
+/* Foco visible para navegación con teclado */
+.cp-header .cp-brand:focus-visible,
+.cp-header .cp-nav-link:focus-visible,
+.cp-header .cp-toggler:focus-visible {
+    outline: 2px solid var(--nav-celeste);
+    outline-offset: 4px;
+}

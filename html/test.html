@@ -52,28 +52,118 @@
   <body class="d-flex flex-column min-vh-100">
     
     <!-- HEADER / NAVBAR CON BOOTSTRAP -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header class="cp-header">
+        <nav
+            class="navbar navbar-expand-lg navbar-dark cp-navbar"
+            aria-label="Navegación principal"
+        >
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="../img/CareerPath.jpeg" alt="Logo" width="40" height="40" class="me-2 rounded">
-                    CareerPath AI
+
+                <!-- Identidad de la marca -->
+                <a
+                    class="navbar-brand cp-brand d-flex align-items-center gap-2"
+                    href="index.html"
+                >
+                    <img
+                        src="../img/CareerPath.jpeg"
+                        alt=""
+                        width="52"
+                        height="52"
+                        class="cp-logo"
+                    >
+
+                    <span class="cp-brand-text">
+                        <span class="cp-brand-name">
+                            CareerPath <span class="cp-brand-ai">AI</span>
+                        </span>
+
+                        <span class="cp-brand-caption d-none d-sm-block">
+                            Descubrí tu próximo paso
+                        </span>
+                    </span>
                 </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Abrir menú">
+
+                <!-- Botón del menú móvil -->
+                <button
+                    class="navbar-toggler cp-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Mostrar u ocultar la navegación"
+                >
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
-                <div class="collapse navbar-collapse" id="menuNavegacion">
-                    <ul class="navbar-nav ms-auto text-center">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
-                        <!-- La clase 'active' ahora está en Test -->
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="test.html">Test</a></li>
-                        <li class="nav-item"><a class="nav-link" href="resultados.html">Resultados</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ruta.html">Ruta de Aprendizaje</a></li>
+
+                <!-- Enlaces -->
+                <div
+                    class="collapse navbar-collapse"
+                    id="menuPrincipal"
+                >
+                    <ul class="navbar-nav ms-auto gap-1 pt-3 pt-lg-0">
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link cp-nav-link"
+                                href="index.html"
+                            >
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link cp-nav-link"
+                                href="perfil.html"
+                            >
+                                <span class="cp-nav-number" aria-hidden="true">
+                                    01
+                                </span>
+                                Mi perfil
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link cp-nav-link active"
+                                aria-current="page"
+                                href="test.html"
+                            >
+                                <span class="cp-nav-number" aria-hidden="true">
+                                    02
+                                </span>
+                                Test vocacional
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link cp-nav-link"
+                                href="resultados.html"
+                            >
+                                <span class="cp-nav-number" aria-hidden="true">
+                                    03
+                                </span>
+                                Resultados
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link cp-nav-link"
+                                href="ruta.html"
+                            >
+                                <span class="cp-nav-number" aria-hidden="true">
+                                    04
+                                </span>
+                                Mi ruta
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>
@@ -228,7 +318,7 @@
                 </div>
                 <div class="col-md-6 mb-3 mb-md-0">
                     <p class="mb-1 text-info"><strong>Integrador:</strong></p>
-                    <p class="mb-0">Leandro Núñez</p>
+                    <p class="mb-0">Leandro Nuñez</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <p class="mb-1 text-info"><strong>Equipo de Desarrollo:</strong></p>
@@ -245,7 +335,5 @@
     
     <!-- Script del Test Interactivo -->
     <script src="../js/test.js"></script>
-  </body>
-</html>
   </body>
 </html>

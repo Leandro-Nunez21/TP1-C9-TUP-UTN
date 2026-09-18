@@ -31,79 +31,122 @@
         Saltar al contenido
     </a>
 
-    <!-- Navegación compartida con el resto del proyecto -->
-    <header>
-        <nav
-            class="navbar navbar-expand-lg navbar-dark bg-dark"
-            aria-label="Navegación principal"
-        >
-            <div class="container">
-                <a
-                    class="navbar-brand d-flex align-items-center"
-                    href="index.html"
+<!-- Navegación principal de CareerPath AI -->
+<header class="cp-header">
+    <nav
+        class="navbar navbar-expand-lg navbar-dark cp-navbar"
+        aria-label="Navegación principal"
+    >
+        <div class="container">
+
+            <!-- Identidad de la marca -->
+            <a
+                class="navbar-brand cp-brand d-flex align-items-center gap-2"
+                href="index.html"
+            >
+                <img
+                    src="../img/CareerPath.jpeg"
+                    alt=""
+                    width="52"
+                    height="52"
+                    class="cp-logo"
                 >
-                    <img
-                        src="../img/CareerPath.jpeg"
-                        alt=""
-                        width="40"
-                        height="40"
-                        class="me-2 rounded"
-                    >
-                    CareerPath AI
-                </a>
 
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuNavegacion"
-                    aria-controls="menuNavegacion"
-                    aria-expanded="false"
-                    aria-label="Abrir menú de navegación"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <span class="cp-brand-text">
+                    <span class="cp-brand-name">
+                        CareerPath <span class="cp-brand-ai">AI</span>
+                    </span>
 
-                <div class="collapse navbar-collapse" id="menuNavegacion">
-                    <ul class="navbar-nav ms-auto text-center">
-                        <li class="nav-item">
-                            <a
-                                class="nav-link active"
-                                aria-current="page"
-                                href="index.html"
-                            >
-                                Inicio
-                            </a>
-                        </li>
+                    <span class="cp-brand-caption d-none d-sm-block">
+                        Descubrí tu próximo paso
+                    </span>
+                </span>
+            </a>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="perfil.html">
-                                Perfil
-                            </a>
-                        </li>
+            <!-- Botón del menú móvil -->
+            <button
+                class="navbar-toggler cp-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Mostrar u ocultar la navegación"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="test.html">
-                                Test
-                            </a>
-                        </li>
+            <!-- Enlaces -->
+            <div
+                class="collapse navbar-collapse"
+                id="menuPrincipal"
+            >
+                <ul class="navbar-nav ms-auto gap-1 pt-3 pt-lg-0">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="resultados.html">
-                                Resultados
-                            </a>
-                        </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link cp-nav-link active"
+                            aria-current="page"
+                            href="index.html"
+                        >
+                            Inicio
+                        </a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="ruta.html">
-                                Ruta de Aprendizaje
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link cp-nav-link"
+                            href="perfil.html"
+                        >
+                            <span class="cp-nav-number" aria-hidden="true">
+                                01
+                            </span>
+                            Mi perfil
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link cp-nav-link"
+                            href="test.html"
+                        >
+                            <span class="cp-nav-number" aria-hidden="true">
+                                02
+                            </span>
+                            Test vocacional
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link cp-nav-link"
+                            href="resultados.html"
+                        >
+                            <span class="cp-nav-number" aria-hidden="true">
+                                03
+                            </span>
+                            Resultados
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link cp-nav-link"
+                            href="ruta.html"
+                        >
+                            <span class="cp-nav-number" aria-hidden="true">
+                                04
+                            </span>
+                            Mi ruta
+                        </a>
+                    </li>
+
+                </ul>
             </div>
-        </nav>
-    </header>
+
+        </div>
+    </nav>
+</header>
 
     <main id="contenido" class="flex-grow-1">
 
