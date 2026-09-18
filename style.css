@@ -4,7 +4,7 @@
    1. Variables
    2. Estilos base
    3. Componentes compartidos
-   4. Botones
+   4. BotonesC
    5. Ruta de aprendizaje
    6. Inicio
    7. CSS histórico del TP2 (comentado)
@@ -1239,4 +1239,221 @@ footer p {
 
    ===== FIN CSS ORIGINAL TP2 =====
 */
+/* ====================================================
+   8. PÁGINA DE RESULTADOS (Diseño Lila/Morado + Movimiento)
+   ==================================================== */
 
+:root {
+    --res-dark-blue: #5C3DA3; 
+    --res-purple: #7C5CBA;    
+    --res-light-bg: #F4EBE1;  /* Marrón clarito de fondo */
+    --res-lilac: #D9CBEA;     
+    --res-tech-color: #5C3DA3; 
+    --res-ai-color: #F0E6FF;  
+    --res-web-color: #22C55E;
+    --res-health-color: #10B981;
+    --res-bus-color: #F97316;
+    --res-art-color: #A855F7;
+    
+    --res-shadow-purple: 0 8px 25px rgba(92, 61, 163, 0.15); 
+}
+
+/* Fondo general de resultados */
+body.d-flex.flex-column.min-vh-100 {
+    background-color: var(--res-light-bg);
+}
+
+/* Header & Footer (Gradiente Morado) */
+.res-navbar, .res-footer {
+    background: linear-gradient(135deg, #4B3285, #6C4AB6) !important;
+}
+.res-navbar .nav-link { font-size: 0.9rem; }
+.res-navbar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+}
+
+/* Sombras y bordes lilas compartidos */
+.res-hero, .res-skill-card, .res-cta-section, .res-career-card {
+    box-shadow: var(--res-shadow-purple) !important;
+    border: 1px solid var(--res-lilac) !important;
+}
+
+/* Hero Section */
+.res-hero {
+    background: linear-gradient(135deg, var(--res-purple), #8B5CF6);
+    border-radius: 1.5rem;
+    color: white;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.res-laptop-icon {
+    width: 120px;
+    height: 80px;
+    background-color: transparent;
+    border: 4px solid white;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: relative;
+}
+.res-laptop-icon::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: -15px;
+    right: -15px;
+    height: 8px;
+    background-color: white;
+    border-radius: 4px;
+}
+.res-hero-bubble {
+    background-color: var(--res-ai-color);
+    color: var(--res-dark-blue);
+    border-radius: 15px 15px 15px 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: rotate(5deg);
+}
+
+/* Badges (Áreas Recomendadas) */
+.res-badge-tech { background-color: var(--res-tech-color); color: white; }
+.res-badge-ai { background-color: var(--res-ai-color); color: var(--res-tech-color); }
+.res-badge-web { background-color: var(--res-web-color); color: white; }
+
+/* Tarjetas de Habilidades */
+.res-skill-card {
+    background-color: white;
+    border-radius: 1.2rem;
+    height: 100%;
+    padding: 1.5rem;
+}
+.res-skill-card.bg-light-yellow {
+    background-color: #FFF9EC;
+}
+
+/* Tarjetas de Carreras */
+.res-career-card {
+    background-color: white;
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.res-career-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(92, 61, 163, 0.25) !important;
+}
+
+.res-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+.res-icon-tech { background-color: var(--res-ai-color); color: var(--res-tech-color); }
+.res-icon-health { background-color: #D1FAE5; color: var(--res-health-color); }
+.res-icon-bus { background-color: #FFEDD5; color: var(--res-bus-color); }
+.res-icon-art { background-color: #F3E8FF; color: var(--res-art-color); }
+
+.res-badge-small {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+.res-tag-tech { color: var(--res-tech-color); background-color: var(--res-ai-color); }
+.res-tag-health { color: var(--res-health-color); background-color: #D1FAE5; }
+.res-tag-bus { color: var(--res-bus-color); background-color: #FFEDD5; }
+.res-tag-art { color: var(--res-art-color); background-color: #F3E8FF; }
+
+.res-btn-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    transition: opacity 0.2s;
+}
+.res-btn-circle:hover { opacity: 0.8; }
+.res-btn-tech { background-color: var(--res-purple); }
+.res-btn-health { background-color: var(--res-health-color); }
+.res-btn-bus { background-color: var(--res-bus-color); }
+.res-btn-art { background-color: var(--res-art-color); }
+
+/* Filtros */
+.res-filter-btn {
+    border-radius: 20px;
+    border: 1px solid var(--res-lilac);
+    color: #6B7280;
+    background: white;
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+}
+.res-filter-btn.active {
+    background-color: var(--res-tech-color);
+    color: white;
+    border-color: var(--res-tech-color);
+}
+
+/* Call to Action Inferior */
+.res-cta-section {
+    background-color: #FAF5FF; 
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.res-mountain-svg {
+    width: 100px;
+    height: auto;
+}
+
+/* ====================================================
+   ANIMACIONES DINÁMICAS Y DE MOVIMIENTO
+   ==================================================== */
+@keyframes resFadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes resFlotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.res-animar-entrada {
+    opacity: 0;
+    animation: resFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.res-caja-flotante {
+    opacity: 0;
+    animation: 
+        resFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+        resFlotar 4s ease-in-out 0.8s infinite;
+}
+
+.res-delay-1 { animation-delay: 0.1s, 0.9s; }
+.res-delay-2 { animation-delay: 0.2s, 1.4s; }
+.res-delay-3 { animation-delay: 0.3s; }
+.res-delay-4 { animation-delay: 0.4s, 1.8s; }
