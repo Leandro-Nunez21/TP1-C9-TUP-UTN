@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const barraProgreso = document.getElementById("barra-test");
     const preguntas = document.querySelectorAll("fieldset");
     const totalPreguntas = preguntas.length;
+    
+    // Capturamos el nuevo contador que agregaste en el HTML
+    const contadorPreguntas = document.getElementById("contador-preguntas");
 
     // Función creada por vos para mostrar una alerta de Bootstrap dinámica
     function mostrarAlertaPersonalizada() {
@@ -44,14 +47,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 20000);
     }
 
-    // 1. BARRA DE PROGRESO EN TIEMPO REAL
+    // 1. BARRA DE PROGRESO EN TIEMPO REAL Y CONTADOR
     formulario.addEventListener("change", function () {
         const respondidas = formulario.querySelectorAll('input[type="radio"]:checked').length;
         const porcentaje = Math.round((respondidas / totalPreguntas) * 100);
         
+        // Actualiza la barra
         barraProgreso.style.width = porcentaje + "%";
         barraProgreso.textContent = porcentaje + "%";
         barraProgreso.setAttribute("aria-valuenow", porcentaje);
+
+        // Actualiza el texto del contador (ej: "2 de 6 completadas")
+        if (contadorPreguntas) {
+            contadorPreguntas.textContent = `${respondidas} de ${totalPreguntas} completadas`;
+        }
 
         preguntas.forEach(fieldset => {
             if (fieldset.querySelector('input[type="radio"]:checked')) {
@@ -80,9 +89,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 3. BOTÓN DE REINICIO
     formulario.addEventListener("reset", function () {
+        // Reinicia la barra
         barraProgreso.style.width = "0%";
         barraProgreso.textContent = "0%";
         barraProgreso.setAttribute("aria-valuenow", "0");
+
+        // Reinicia el contador
+        if (contadorPreguntas) {
+            contadorPreguntas.textContent = `0 de ${totalPreguntas} completadas`;
+        }
 
         preguntas.forEach(fieldset => {
             fieldset.classList.remove("border-danger", "border-2");
