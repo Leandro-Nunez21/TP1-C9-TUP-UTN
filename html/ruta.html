@@ -61,18 +61,22 @@
     />
 
     <meta name="twitter:image" content="../img/CareerPath.jpeg" />
+
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="../img/CareerPath.jpeg" type="image/jpeg" />
+    <link rel="shortcut icon" href="../img/CareerPath.jpeg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="../img/CareerPath.jpeg" />
   </head>
 
   <body class="d-flex flex-column min-vh-100">
     <!-- HEADER -->
     <header class="cp-header">
       <nav
-        class="navbar navbar-expand-lg navbar-dark cp-navbar"
+        class="navbar navbar-dark cp-navbar"
         aria-label="Navegación principal"
       >
         <div class="container">
-
-          <!-- Identidad de la marca -->
+          <!-- Marca -->
           <a
             class="navbar-brand cp-brand d-flex align-items-center gap-2"
             href="index.html"
@@ -96,72 +100,192 @@
             </span>
           </a>
 
-          <!-- Botón del menú móvil -->
+          <!-- Navegación de escritorio -->
+          <ul class="navbar-nav ms-auto gap-1 d-none d-lg-flex flex-row">
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="index.html"
+                href="index.html"
+              >
+                Inicio
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="perfil.html"
+                href="perfil.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">01</span>
+                Mi perfil
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="test.html"
+                href="test.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">02</span>
+                Test vocacional
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="resultados.html"
+                href="resultados.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">03</span>
+                Resultados
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="ruta.html"
+                href="ruta.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">04</span>
+                Mi ruta
+              </a>
+            </li>
+          </ul>
+
+          <!-- Botón hamburguesa -->
           <button
-            class="navbar-toggler cp-toggler"
+            class="navbar-toggler cp-toggler d-lg-none"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#menuPrincipal"
             aria-controls="menuPrincipal"
             aria-expanded="false"
-            aria-label="Mostrar u ocultar la navegación"
+            aria-label="Abrir o cerrar el menú"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+        </div>
 
-          <!-- Enlaces -->
-          <div class="collapse navbar-collapse" id="menuPrincipal">
-            <ul class="navbar-nav ms-auto gap-1 pt-3 pt-lg-0">
+        <!-- Menú móvil: se despliega hacia abajo -->
+        <div class="collapse cp-mobile-menu d-lg-none" id="menuPrincipal">
+          <div class="container">
+            <div class="cp-mobile-menu-panel">
+              <div class="cp-mobile-menu-header">
+                <div>
+                  <span class="cp-menu-etiqueta">CareerPath AI</span>
+                  <p class="cp-menu-titulo mb-0">Tu recorrido</p>
+                </div>
 
-              <li class="nav-item">
-                <a class="nav-link cp-nav-link" href="index.html">
-                  Inicio
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link cp-nav-link" href="perfil.html">
-                  <span class="cp-nav-number" aria-hidden="true">
-                    01
-                  </span>
-                  Mi perfil
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link cp-nav-link" href="test.html">
-                  <span class="cp-nav-number" aria-hidden="true">
-                    02
-                  </span>
-                  Test vocacional
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link cp-nav-link" href="resultados.html">
-                  <span class="cp-nav-number" aria-hidden="true">
-                    03
-                  </span>
-                  Resultados
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a
-                  class="nav-link cp-nav-link active"
-                  aria-current="page"
-                  href="ruta.html"
+                <button
+                  class="cp-mobile-close"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#menuPrincipal"
+                  aria-controls="menuPrincipal"
+                  aria-label="Cerrar menú"
                 >
-                  <span class="cp-nav-number" aria-hidden="true">
-                    04
-                  </span>
-                  Mi ruta
-                </a>
-              </li>
-            </ul>
+                  ×
+                </button>
+              </div>
+
+              <p class="cp-menu-descripcion">
+                Navegá por las etapas de tu orientación vocacional.
+              </p>
+
+              <ul class="navbar-nav cp-mobile-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="index.html"
+                    href="index.html"
+                  >
+                    <span class="cp-menu-numero">00</span>
+                    <span>
+                      <strong>Inicio</strong>
+                      <small>Conocé CareerPath AI</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="perfil.html"
+                    href="perfil.html"
+                  >
+                    <span class="cp-menu-numero">01</span>
+                    <span>
+                      <strong>Mi perfil</strong>
+                      <small>Creá tu cuenta y contanos quién sos</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="test.html"
+                    href="test.html"
+                  >
+                    <span class="cp-menu-numero">02</span>
+                    <span>
+                      <strong>Test vocacional</strong>
+                      <small>Explorá tus intereses</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="resultados.html"
+                    href="resultados.html"
+                  >
+                    <span class="cp-menu-numero">03</span>
+                    <span>
+                      <strong>Resultados</strong>
+                      <small>Descubrí posibilidades</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="ruta.html"
+                    href="ruta.html"
+                  >
+                    <span class="cp-menu-numero">04</span>
+                    <span>
+                      <strong>Mi ruta</strong>
+                      <small>Seguí tu progreso</small>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="cp-menu-pie">
+                <span aria-hidden="true">✦</span>
+                <p class="mb-0">Tu elección. A tu ritmo.</p>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
+
+      <!-- Capa borrosa detrás del menú móvil -->
+      <button
+        class="cp-nav-overlay d-lg-none"
+        id="navOverlay"
+        type="button"
+        aria-label="Cerrar menú"
+        tabindex="-1"
+      ></button>
     </header>
 
     <!-- MAIN -->
@@ -275,7 +399,7 @@
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#etapa1"
-                aria-expanded="true"
+                aria-expanded="false"
                 aria-controls="etapa1"
               >
                 <span class="ruta-numero-etapa"> 01 </span>
@@ -286,7 +410,7 @@
 
             <div
               id="etapa1"
-              class="accordion-collapse collapse show"
+              class="accordion-collapse collapse"
               data-bs-parent="#accordionEtapas"
             >
               <div class="accordion-body">
@@ -647,5 +771,6 @@
 
     <!-- JavaScript de Ruta -->
     <script src="../js/ruta.js"></script>
+    <script src="../js/navbar.js"></script>
   </body>
 </html>

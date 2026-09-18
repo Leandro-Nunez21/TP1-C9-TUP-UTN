@@ -47,293 +47,636 @@
       content="Entorno de pruebas de la plataforma estudiantil."
     />
     <meta name="twitter:image" content="../img/preview.png" />
+
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="../img/CareerPath.jpeg" type="image/jpeg" />
+    <link rel="shortcut icon" href="../img/CareerPath.jpeg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="../img/CareerPath.jpeg" />
   </head>
-  
+
   <body class="d-flex flex-column min-vh-100">
-    
     <!-- HEADER / NAVBAR CON BOOTSTRAP -->
     <header class="cp-header">
-        <nav
-            class="navbar navbar-expand-lg navbar-dark cp-navbar"
-            aria-label="Navegación principal"
-        >
-            <div class="container">
+      <nav
+        class="navbar navbar-dark cp-navbar"
+        aria-label="Navegación principal"
+      >
+        <div class="container">
+          <!-- Marca -->
+          <a
+            class="navbar-brand cp-brand d-flex align-items-center gap-2"
+            href="index.html"
+          >
+            <img
+              src="../img/CareerPath.jpeg"
+              alt=""
+              width="52"
+              height="52"
+              class="cp-logo"
+            />
 
-                <!-- Identidad de la marca -->
-                <a
-                    class="navbar-brand cp-brand d-flex align-items-center gap-2"
-                    href="index.html"
-                >
-                    <img
-                        src="../img/CareerPath.jpeg"
-                        alt=""
-                        width="52"
-                        height="52"
-                        class="cp-logo"
-                    >
+            <span class="cp-brand-text">
+              <span class="cp-brand-name">
+                CareerPath <span class="cp-brand-ai">AI</span>
+              </span>
 
-                    <span class="cp-brand-text">
-                        <span class="cp-brand-name">
-                            CareerPath <span class="cp-brand-ai">AI</span>
-                        </span>
+              <span class="cp-brand-caption d-none d-sm-block">
+                Descubrí tu próximo paso
+              </span>
+            </span>
+          </a>
 
-                        <span class="cp-brand-caption d-none d-sm-block">
-                            Descubrí tu próximo paso
-                        </span>
-                    </span>
-                </a>
+          <!-- Navegación de escritorio -->
+          <ul class="navbar-nav ms-auto gap-1 d-none d-lg-flex flex-row">
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="index.html"
+                href="index.html"
+              >
+                Inicio
+              </a>
+            </li>
 
-                <!-- Botón del menú móvil -->
-                <button
-                    class="navbar-toggler cp-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal"
-                    aria-expanded="false"
-                    aria-label="Mostrar u ocultar la navegación"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="perfil.html"
+                href="perfil.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">01</span>
+                Mi perfil
+              </a>
+            </li>
 
-                <!-- Enlaces -->
-                <div
-                    class="collapse navbar-collapse"
-                    id="menuPrincipal"
-                >
-                    <ul class="navbar-nav ms-auto gap-1 pt-3 pt-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="test.html"
+                href="test.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">02</span>
+                Test vocacional
+              </a>
+            </li>
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link cp-nav-link"
-                                href="index.html"
-                            >
-                                Inicio
-                            </a>
-                        </li>
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="resultados.html"
+                href="resultados.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">03</span>
+                Resultados
+              </a>
+            </li>
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link cp-nav-link"
-                                href="perfil.html"
-                            >
-                                <span class="cp-nav-number" aria-hidden="true">
-                                    01
-                                </span>
-                                Mi perfil
-                            </a>
-                        </li>
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="ruta.html"
+                href="ruta.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">04</span>
+                Mi ruta
+              </a>
+            </li>
+          </ul>
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link cp-nav-link active"
-                                aria-current="page"
-                                href="test.html"
-                            >
-                                <span class="cp-nav-number" aria-hidden="true">
-                                    02
-                                </span>
-                                Test vocacional
-                            </a>
-                        </li>
+          <!-- Botón hamburguesa -->
+          <button
+            class="navbar-toggler cp-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir o cerrar el menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link cp-nav-link"
-                                href="resultados.html"
-                            >
-                                <span class="cp-nav-number" aria-hidden="true">
-                                    03
-                                </span>
-                                Resultados
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a
-                                class="nav-link cp-nav-link"
-                                href="ruta.html"
-                            >
-                                <span class="cp-nav-number" aria-hidden="true">
-                                    04
-                                </span>
-                                Mi ruta
-                            </a>
-                        </li>
-
-                    </ul>
+        <!-- Menú móvil: se despliega hacia abajo -->
+        <div class="collapse cp-mobile-menu d-lg-none" id="menuPrincipal">
+          <div class="container">
+            <div class="cp-mobile-menu-panel">
+              <div class="cp-mobile-menu-header">
+                <div>
+                  <span class="cp-menu-etiqueta">CareerPath AI</span>
+                  <p class="cp-menu-titulo mb-0">Tu recorrido</p>
                 </div>
 
+                <button
+                  class="cp-mobile-close"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#menuPrincipal"
+                  aria-controls="menuPrincipal"
+                  aria-label="Cerrar menú"
+                >
+                  ×
+                </button>
+              </div>
+
+              <p class="cp-menu-descripcion">
+                Navegá por las etapas de tu orientación vocacional.
+              </p>
+
+              <ul class="navbar-nav cp-mobile-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="index.html"
+                    href="index.html"
+                  >
+                    <span class="cp-menu-numero">00</span>
+                    <span>
+                      <strong>Inicio</strong>
+                      <small>Conocé CareerPath AI</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="perfil.html"
+                    href="perfil.html"
+                  >
+                    <span class="cp-menu-numero">01</span>
+                    <span>
+                      <strong>Mi perfil</strong>
+                      <small>Creá tu cuenta y contanos quién sos</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="test.html"
+                    href="test.html"
+                  >
+                    <span class="cp-menu-numero">02</span>
+                    <span>
+                      <strong>Test vocacional</strong>
+                      <small>Explorá tus intereses</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="resultados.html"
+                    href="resultados.html"
+                  >
+                    <span class="cp-menu-numero">03</span>
+                    <span>
+                      <strong>Resultados</strong>
+                      <small>Descubrí posibilidades</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="ruta.html"
+                    href="ruta.html"
+                  >
+                    <span class="cp-menu-numero">04</span>
+                    <span>
+                      <strong>Mi ruta</strong>
+                      <small>Seguí tu progreso</small>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="cp-menu-pie">
+                <span aria-hidden="true">✦</span>
+                <p class="mb-0">Tu elección. A tu ritmo.</p>
+              </div>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Capa borrosa detrás del menú móvil -->
+      <button
+        class="cp-nav-overlay d-lg-none"
+        id="navOverlay"
+        type="button"
+        aria-label="Cerrar menú"
+        tabindex="-1"
+      ></button>
     </header>
 
     <main class="container py-5 flex-grow-1">
-        
-        <div class="row g-5">
-            <!-- COLUMNA IZQUIERDA: PANEL DE IA (Fijo en compu) -->
-            <div class="col-lg-4">
-                <div class="panel-ia-fijo sticky-lg-top" style="top: 2rem;">
-                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill">Motor de IA Activo</span>
-                    <h1 class="mb-3">Evaluación de Perfil</h1>
-                    <p class="mb-4 text-white-50">Nuestro algoritmo de CareerPath AI analizará tus patrones de respuesta para encontrar la mejor coincidencia con la oferta académica de la UTN.</p>
-                    
-                    <div class="mb-2 d-flex justify-content-between align-items-center">
-    <span class="fw-bold">Progreso del análisis</span>
-    <span id="contador-preguntas" class="badge bg-light text-dark rounded-pill shadow-sm px-3 py-2">0 de 6 completadas</span>
-</div>
-                    
-                    <!-- BARRA DE PROGRESO NUEVA -->
-                    <div class="progress contenedor-progreso-test mb-4 shadow-sm">
-                        <div id="barra-test" class="progress-bar progress-bar-striped progress-bar-animated barra-progreso-test" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-                    </div>
+      <div class="row g-5">
+        <!-- COLUMNA IZQUIERDA: PANEL DE IA (Fijo en compu) -->
+        <div class="col-lg-4">
+          <div class="panel-ia-fijo sticky-lg-top" style="top: 2rem">
+            <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill"
+              >Motor de IA Activo</span
+            >
+            <h1 class="mb-3">Evaluación de Perfil</h1>
+            <p class="mb-4 text-white-50">
+              Nuestro algoritmo de CareerPath AI analizará tus patrones de
+              respuesta para encontrar la mejor coincidencia con la oferta
+              académica de la UTN.
+            </p>
 
-                    <p class="small text-white-50 mb-0"><i class="bi bi-info-circle"></i> Elegí la opción que mejor represente tus instintos. No hay respuestas incorrectas.</p>
-                </div>
+            <div class="mb-2 d-flex justify-content-between align-items-center">
+              <span class="fw-bold">Progreso del análisis</span>
+              <span
+                id="contador-preguntas"
+                class="badge bg-light text-dark rounded-pill shadow-sm px-3 py-2"
+                >0 de 6 completadas</span
+              >
             </div>
 
-            <!-- COLUMNA DERECHA: PREGUNTAS DEL TEST -->
-            <div class="col-lg-8">
-                <form id="formulario-test" action="resultados.html" method="get">
-                    
-                    <!-- PREGUNTA 1 -->
-                    <fieldset class="pregunta-card">
-                        <h3 class="pregunta-titulo">1. ¿Qué actividad disfrutás más?</h3>
-                        
-                        <input class="opcion-test-input" type="radio" id="p1-tec" name="pregunta1" value="tecnologia" />
-                        <label class="opcion-test-label" for="p1-tec">Resolver problemas de lógica o utilizar tecnología.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p1-soc" name="pregunta1" value="social" />
-                        <label class="opcion-test-label" for="p1-soc">Ayudar, escuchar o acompañar a otras personas.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p1-ges" name="pregunta1" value="gestion" />
-                        <label class="opcion-test-label" for="p1-ges">Organizar tareas, recursos o proyectos.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p1-cre" name="pregunta1" value="creatividad" />
-                        <label class="opcion-test-label" for="p1-cre">Crear, diseñar o comunicar ideas.</label>
-                    </fieldset>
-
-                    <!-- PREGUNTA 2 -->
-                    <fieldset class="pregunta-card">
-                        <h3 class="pregunta-titulo">2. ¿Qué grupo de materias te interesa más?</h3>
-                        
-                        <input class="opcion-test-input" type="radio" id="p2-tec" name="pregunta2" value="tecnologia" />
-                        <label class="opcion-test-label" for="p2-tec">Matemática, informática y programación.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p2-soc" name="pregunta2" value="social" />
-                        <label class="opcion-test-label" for="p2-soc">Biología, salud y ciencias sociales.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p2-ges" name="pregunta2" value="gestion" />
-                        <label class="opcion-test-label" for="p2-ges">Economía, administración y negocios.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p2-cre" name="pregunta2" value="creatividad" />
-                        <label class="opcion-test-label" for="p2-cre">Arte, literatura y comunicación.</label>
-                    </fieldset>
-
-                    <!-- PREGUNTA 3 -->
-                    <fieldset class="pregunta-card">
-                       <h3 class="pregunta-titulo">3. Cuando trabajás en equipo, ¿qué tarea preferís realizar?</h3>
-
-                        <input class="opcion-test-input" type="radio" id="p3-tec" name="pregunta3" value="tecnologia" />
-                        <label class="opcion-test-label" for="p3-tec">Buscar una solución técnica o práctica.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p3-soc" name="pregunta3" value="social" />
-                        <label class="opcion-test-label" for="p3-soc">Escuchar y apoyar a los integrantes.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p3-ges" name="pregunta3" value="gestion" />
-                        <label class="opcion-test-label" for="p3-ges">Coordinar las tareas y controlar los tiempos.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p3-cre" name="pregunta3" value="creatividad" />
-                        <label class="opcion-test-label" for="p3-cre">Proponer ideas y preparar la presentación.</label>
-                    </fieldset>
-
-                    <!-- PREGUNTA 4 -->
-                    <fieldset class="pregunta-card">
-                        <h3 class="pregunta-titulo">4. ¿En qué lugar te imaginás trabajando?</h3>
-                        
-                        <input class="opcion-test-input" type="radio" id="p4-tec" name="pregunta4" value="tecnologia" />
-                        <label class="opcion-test-label" for="p4-tec">En una empresa tecnológica o creando proyectos digitales.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p4-soc" name="pregunta4" value="social" />
-                        <label class="opcion-test-label" for="p4-soc">En contacto directo con personas o comunidades.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p4-ges" name="pregunta4" value="gestion" />
-                        <label class="opcion-test-label" for="p4-ges">En una empresa, negocio o emprendimiento.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p4-cre" name="pregunta4" value="creatividad" />
-                        <label class="opcion-test-label" for="p4-cre">En un estudio creativo o medio de comunicación.</label>
-                    </fieldset>
-
-                    <!-- PREGUNTA 5 -->
-                    <fieldset class="pregunta-card">
-                        <h3 class="pregunta-titulo">5. ¿Cuál de estas habilidades te representa más?</h3>
-                        
-                        <input class="opcion-test-input" type="radio" id="p5-tec" name="pregunta5" value="tecnologia" />
-                        <label class="opcion-test-label" for="p5-tec">Pensamiento lógico y resolución de problemas.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p5-soc" name="pregunta5" value="social" />
-                        <label class="opcion-test-label" for="p5-soc">Empatía y capacidad para escuchar.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p5-ges" name="pregunta5" value="gestion" />
-                        <label class="opcion-test-label" for="p5-ges">Organización y liderazgo.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p5-cre" name="pregunta5" value="creatividad" />
-                        <label class="opcion-test-label" for="p5-cre">Imaginación y comunicación.</label>
-                    </fieldset>
-
-                    <!-- PREGUNTA 6 -->
-                    <fieldset class="pregunta-card">
-                        <h3 class="pregunta-titulo">6. ¿Qué resultado te produciría mayor satisfacción?</h3>
-                        
-                        <input class="opcion-test-input" type="radio" id="p6-tec" name="pregunta6" value="tecnologia" />
-                        <label class="opcion-test-label" for="p6-tec">Ver una solución tecnológica funcionando.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p6-soc" name="pregunta6" value="social" />
-                        <label class="opcion-test-label" for="p6-soc">Saber que ayudé a mejorar la vida de alguien.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p6-ges" name="pregunta6" value="gestion" />
-                        <label class="opcion-test-label" for="p6-ges">Alcanzar una meta junto con un equipo.</label>
-                        
-                        <input class="opcion-test-input" type="radio" id="p6-cre" name="pregunta6" value="creatividad" />
-                        <label class="opcion-test-label" for="p6-cre">Crear algo que transmita una idea.</label>
-                    </fieldset>
-
-                    <div class="d-flex flex-column flex-sm-row justify-content-end gap-3 mt-4">
-                        <button type="reset" class="btn btn-outline-secondary px-4 py-2 fw-bold">Borrar respuestas</button>
-                        <button type="submit" class="btn-destacado">
-                            <span class="texto-boton">Analizar Perfil con IA</span>
-                        </button>
-                    </div>
-                </form>
+            <!-- BARRA DE PROGRESO NUEVA -->
+            <div class="progress contenedor-progreso-test mb-4 shadow-sm">
+              <div
+                id="barra-test"
+                class="progress-bar progress-bar-striped progress-bar-animated barra-progreso-test"
+                role="progressbar"
+                style="width: 0%"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                0%
+              </div>
             </div>
+
+            <p class="small text-white-50 mb-0">
+              <i class="bi bi-info-circle"></i> Elegí la opción que mejor
+              represente tus instintos. No hay respuestas incorrectas.
+            </p>
+          </div>
         </div>
+
+        <!-- COLUMNA DERECHA: PREGUNTAS DEL TEST -->
+        <div class="col-lg-8">
+          <form id="formulario-test" action="resultados.html" method="get">
+            <!-- PREGUNTA 1 -->
+            <fieldset class="pregunta-card">
+              <h3 class="pregunta-titulo">1. ¿Qué actividad disfrutás más?</h3>
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p1-tec"
+                name="pregunta1"
+                value="tecnologia"
+              />
+              <label class="opcion-test-label" for="p1-tec"
+                >Resolver problemas de lógica o utilizar tecnología.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p1-soc"
+                name="pregunta1"
+                value="social"
+              />
+              <label class="opcion-test-label" for="p1-soc"
+                >Ayudar, escuchar o acompañar a otras personas.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p1-ges"
+                name="pregunta1"
+                value="gestion"
+              />
+              <label class="opcion-test-label" for="p1-ges"
+                >Organizar tareas, recursos o proyectos.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p1-cre"
+                name="pregunta1"
+                value="creatividad"
+              />
+              <label class="opcion-test-label" for="p1-cre"
+                >Crear, diseñar o comunicar ideas.</label
+              >
+            </fieldset>
+
+            <!-- PREGUNTA 2 -->
+            <fieldset class="pregunta-card">
+              <h3 class="pregunta-titulo">
+                2. ¿Qué grupo de materias te interesa más?
+              </h3>
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p2-tec"
+                name="pregunta2"
+                value="tecnologia"
+              />
+              <label class="opcion-test-label" for="p2-tec"
+                >Matemática, informática y programación.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p2-soc"
+                name="pregunta2"
+                value="social"
+              />
+              <label class="opcion-test-label" for="p2-soc"
+                >Biología, salud y ciencias sociales.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p2-ges"
+                name="pregunta2"
+                value="gestion"
+              />
+              <label class="opcion-test-label" for="p2-ges"
+                >Economía, administración y negocios.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p2-cre"
+                name="pregunta2"
+                value="creatividad"
+              />
+              <label class="opcion-test-label" for="p2-cre"
+                >Arte, literatura y comunicación.</label
+              >
+            </fieldset>
+
+            <!-- PREGUNTA 3 -->
+            <fieldset class="pregunta-card">
+              <h3 class="pregunta-titulo">
+                3. Cuando trabajás en equipo, ¿qué tarea preferís realizar?
+              </h3>
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p3-tec"
+                name="pregunta3"
+                value="tecnologia"
+              />
+              <label class="opcion-test-label" for="p3-tec"
+                >Buscar una solución técnica o práctica.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p3-soc"
+                name="pregunta3"
+                value="social"
+              />
+              <label class="opcion-test-label" for="p3-soc"
+                >Escuchar y apoyar a los integrantes.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p3-ges"
+                name="pregunta3"
+                value="gestion"
+              />
+              <label class="opcion-test-label" for="p3-ges"
+                >Coordinar las tareas y controlar los tiempos.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p3-cre"
+                name="pregunta3"
+                value="creatividad"
+              />
+              <label class="opcion-test-label" for="p3-cre"
+                >Proponer ideas y preparar la presentación.</label
+              >
+            </fieldset>
+
+            <!-- PREGUNTA 4 -->
+            <fieldset class="pregunta-card">
+              <h3 class="pregunta-titulo">
+                4. ¿En qué lugar te imaginás trabajando?
+              </h3>
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p4-tec"
+                name="pregunta4"
+                value="tecnologia"
+              />
+              <label class="opcion-test-label" for="p4-tec"
+                >En una empresa tecnológica o creando proyectos
+                digitales.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p4-soc"
+                name="pregunta4"
+                value="social"
+              />
+              <label class="opcion-test-label" for="p4-soc"
+                >En contacto directo con personas o comunidades.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p4-ges"
+                name="pregunta4"
+                value="gestion"
+              />
+              <label class="opcion-test-label" for="p4-ges"
+                >En una empresa, negocio o emprendimiento.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p4-cre"
+                name="pregunta4"
+                value="creatividad"
+              />
+              <label class="opcion-test-label" for="p4-cre"
+                >En un estudio creativo o medio de comunicación.</label
+              >
+            </fieldset>
+
+            <!-- PREGUNTA 5 -->
+            <fieldset class="pregunta-card">
+              <h3 class="pregunta-titulo">
+                5. ¿Cuál de estas habilidades te representa más?
+              </h3>
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p5-tec"
+                name="pregunta5"
+                value="tecnologia"
+              />
+              <label class="opcion-test-label" for="p5-tec"
+                >Pensamiento lógico y resolución de problemas.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p5-soc"
+                name="pregunta5"
+                value="social"
+              />
+              <label class="opcion-test-label" for="p5-soc"
+                >Empatía y capacidad para escuchar.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p5-ges"
+                name="pregunta5"
+                value="gestion"
+              />
+              <label class="opcion-test-label" for="p5-ges"
+                >Organización y liderazgo.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p5-cre"
+                name="pregunta5"
+                value="creatividad"
+              />
+              <label class="opcion-test-label" for="p5-cre"
+                >Imaginación y comunicación.</label
+              >
+            </fieldset>
+
+            <!-- PREGUNTA 6 -->
+            <fieldset class="pregunta-card">
+              <h3 class="pregunta-titulo">
+                6. ¿Qué resultado te produciría mayor satisfacción?
+              </h3>
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p6-tec"
+                name="pregunta6"
+                value="tecnologia"
+              />
+              <label class="opcion-test-label" for="p6-tec"
+                >Ver una solución tecnológica funcionando.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p6-soc"
+                name="pregunta6"
+                value="social"
+              />
+              <label class="opcion-test-label" for="p6-soc"
+                >Saber que ayudé a mejorar la vida de alguien.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p6-ges"
+                name="pregunta6"
+                value="gestion"
+              />
+              <label class="opcion-test-label" for="p6-ges"
+                >Alcanzar una meta junto con un equipo.</label
+              >
+
+              <input
+                class="opcion-test-input"
+                type="radio"
+                id="p6-cre"
+                name="pregunta6"
+                value="creatividad"
+              />
+              <label class="opcion-test-label" for="p6-cre"
+                >Crear algo que transmita una idea.</label
+              >
+            </fieldset>
+
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-end gap-3 mt-4"
+            >
+              <button
+                type="reset"
+                class="btn btn-outline-secondary px-4 py-2 fw-bold"
+              >
+                Borrar respuestas
+              </button>
+              <button type="submit" class="btn-destacado">
+                <span class="texto-boton">Analizar Perfil con IA</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER CON BOOTSTRAP UNIFICADO -->
     <footer class="bg-dark text-white py-4 mt-auto">
-        <div class="container">
-            <div class="row text-center text-md-start">
-                <div class="col-md-12 mb-3 text-center border-bottom border-secondary pb-2">
-                    <h5 class="m-0">Trabajo Práctico Integrador - C9 TUP UTN</h5>
-                </div>
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <p class="mb-1 text-info"><strong>Integrador:</strong></p>
-                    <p class="mb-0">Leandro Nuñez</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="mb-1 text-info"><strong>Equipo de Desarrollo:</strong></p>
-                    <p class="mb-0 small">Valentina Pérez del Rien | Marina Noguera</p>
-                    <p class="mb-0 small">Morena Giovanna | Tatiana Herrera</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <div
+            class="col-md-12 mb-3 text-center border-bottom border-secondary pb-2"
+          >
+            <h5 class="m-0">Trabajo Práctico Integrador - C9 TUP UTN</h5>
+          </div>
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="mb-1 text-info"><strong>Integrador:</strong></p>
+            <p class="mb-0">Leandro Nuñez</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-1 text-info"><strong>Equipo de Desarrollo:</strong></p>
+            <p class="mb-0 small">Valentina Pérez del Rien | Marina Noguera</p>
+            <p class="mb-0 small">Morena Giovanna | Tatiana Herrera</p>
+          </div>
         </div>
+      </div>
     </footer>
 
-
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Script del Test Interactivo -->
     <script src="../js/test.js"></script>
+    <script src="../js/navbar.js"></script>
   </body>
 </html>

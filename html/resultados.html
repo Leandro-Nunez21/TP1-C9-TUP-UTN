@@ -1,308 +1,674 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Estudiantil | Resultados</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareerPath AI | Resultados y carreras UTN</title>
 
     <!-- CSS de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Iconos de Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
     <!-- Tu CSS Global -->
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body class="d-flex flex-column min-vh-100">
-    
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="../img/CareerPath.jpeg" type="image/jpeg" />
+    <link rel="shortcut icon" href="../img/CareerPath.jpeg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="../img/CareerPath.jpeg" />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
     <header class="cp-header">
-        <nav
-            class="navbar navbar-expand-lg navbar-dark cp-navbar"
-            aria-label="Navegación principal"
-        >
-            <div class="container">
+      <nav
+        class="navbar navbar-dark cp-navbar"
+        aria-label="Navegación principal"
+      >
+        <div class="container">
+          <!-- Marca -->
+          <a
+            class="navbar-brand cp-brand d-flex align-items-center gap-2"
+            href="index.html"
+          >
+            <img
+              src="../img/CareerPath.jpeg"
+              alt=""
+              width="52"
+              height="52"
+              class="cp-logo"
+            />
 
-                <!-- Identidad de la marca -->
-                <a
-                    class="navbar-brand cp-brand d-flex align-items-center gap-2"
-                    href="index.html"
-                >
-                    <img
-                        src="../img/CareerPath.jpeg"
-                        alt=""
-                        width="52"
-                        height="52"
-                        class="cp-logo"
-                    >
+            <span class="cp-brand-text">
+              <span class="cp-brand-name">
+                CareerPath <span class="cp-brand-ai">AI</span>
+              </span>
 
-                    <span class="cp-brand-text">
-                        <span class="cp-brand-name">
-                            CareerPath <span class="cp-brand-ai">AI</span>
-                        </span>
+              <span class="cp-brand-caption d-none d-sm-block">
+                Descubrí tu próximo paso
+              </span>
+            </span>
+          </a>
 
-                        <span class="cp-brand-caption d-none d-sm-block">
-                            Descubrí tu próximo paso
-                        </span>
-                    </span>
-                </a>
+          <!-- Navegación de escritorio -->
+          <ul class="navbar-nav ms-auto gap-1 d-none d-lg-flex flex-row">
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="index.html"
+                href="index.html"
+              >
+                Inicio
+              </a>
+            </li>
 
-                <!-- Botón del menú móvil -->
-                <button
-                    class="navbar-toggler cp-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal"
-                    aria-expanded="false"
-                    aria-label="Mostrar u ocultar la navegación"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="perfil.html"
+                href="perfil.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">01</span>
+                Mi perfil
+              </a>
+            </li>
 
-                <!-- Enlaces -->
-                <div
-                    class="collapse navbar-collapse"
-                    id="menuPrincipal"
-                >
-                    <ul class="navbar-nav ms-auto gap-1 pt-3 pt-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="test.html"
+                href="test.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">02</span>
+                Test vocacional
+              </a>
+            </li>
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link cp-nav-link"
-                                href="index.html"
-                            >
-                                Inicio
-                            </a>
-                        </li>
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="resultados.html"
+                href="resultados.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">03</span>
+                Resultados
+              </a>
+            </li>
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link cp-nav-link"
-                                href="perfil.html"
-                            >
-                                <span class="cp-nav-number" aria-hidden="true">
-                                    01
-                                </span>
-                                Mi perfil
-                            </a>
-                        </li>
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="ruta.html"
+                href="ruta.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">04</span>
+                Mi ruta
+              </a>
+            </li>
+          </ul>
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link cp-nav-link"
-                                href="test.html"
-                            >
-                                <span class="cp-nav-number" aria-hidden="true">
-                                    02
-                                </span>
-                                Test vocacional
-                            </a>
-                        </li>
+          <!-- Botón hamburguesa -->
+          <button
+            class="navbar-toggler cp-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir o cerrar el menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link cp-nav-link active"
-                                aria-current="page"
-                                href="resultados.html"
-                            >
-                                <span class="cp-nav-number" aria-hidden="true">
-                                    03
-                                </span>
-                                Resultados
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a
-                                class="nav-link cp-nav-link"
-                                href="ruta.html"
-                            >
-                                <span class="cp-nav-number" aria-hidden="true">
-                                    04
-                                </span>
-                                Mi ruta
-                            </a>
-                        </li>
-
-                    </ul>
+        <!-- Menú móvil: se despliega hacia abajo -->
+        <div class="collapse cp-mobile-menu d-lg-none" id="menuPrincipal">
+          <div class="container">
+            <div class="cp-mobile-menu-panel">
+              <div class="cp-mobile-menu-header">
+                <div>
+                  <span class="cp-menu-etiqueta">CareerPath AI</span>
+                  <p class="cp-menu-titulo mb-0">Tu recorrido</p>
                 </div>
 
+                <button
+                  class="cp-mobile-close"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#menuPrincipal"
+                  aria-controls="menuPrincipal"
+                  aria-label="Cerrar menú"
+                >
+                  ×
+                </button>
+              </div>
+
+              <p class="cp-menu-descripcion">
+                Navegá por las etapas de tu orientación vocacional.
+              </p>
+
+              <ul class="navbar-nav cp-mobile-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="index.html"
+                    href="index.html"
+                  >
+                    <span class="cp-menu-numero">00</span>
+                    <span>
+                      <strong>Inicio</strong>
+                      <small>Conocé CareerPath AI</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="perfil.html"
+                    href="perfil.html"
+                  >
+                    <span class="cp-menu-numero">01</span>
+                    <span>
+                      <strong>Mi perfil</strong>
+                      <small>Creá tu cuenta y contanos quién sos</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="test.html"
+                    href="test.html"
+                  >
+                    <span class="cp-menu-numero">02</span>
+                    <span>
+                      <strong>Test vocacional</strong>
+                      <small>Explorá tus intereses</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="resultados.html"
+                    href="resultados.html"
+                  >
+                    <span class="cp-menu-numero">03</span>
+                    <span>
+                      <strong>Resultados</strong>
+                      <small>Descubrí posibilidades</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="ruta.html"
+                    href="ruta.html"
+                  >
+                    <span class="cp-menu-numero">04</span>
+                    <span>
+                      <strong>Mi ruta</strong>
+                      <small>Seguí tu progreso</small>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="cp-menu-pie">
+                <span aria-hidden="true">✦</span>
+                <p class="mb-0">Tu elección. A tu ritmo.</p>
+              </div>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Capa borrosa detrás del menú móvil -->
+      <button
+        class="cp-nav-overlay d-lg-none"
+        id="navOverlay"
+        type="button"
+        aria-label="Cerrar menú"
+        tabindex="-1"
+      ></button>
     </header>
 
     <main class="container my-5 flex-grow-1">
-        
-        <!-- SECCIÓN 1: Hero (CUADRO DE ARRIBA FLOTANTE) -->
-        <section class="res-hero mb-5 res-caja-flotante">
-            <div class="row align-items-center">
-                <div class="col-md-7">
-                    <div class="d-flex align-items-center gap-3 mb-3">
-                        <i class="bi bi-bullseye fs-1"></i>
-                        <h1 class="m-0 fw-bold fs-2">Resultados de tu orientación<br>profesional</h1>
-                    </div>
-                    <p class="mb-0" style="color: #E0E7FF; font-size: 1.1rem; max-width: 90%;">
-                        Estos resultados muestran las áreas profesionales que podrían adaptarse a tus intereses y habilidades.
-                    </p>
-                </div>
-                <div class="col-md-5 d-none d-md-flex justify-content-center position-relative mt-4 mt-md-0">
-                    <div class="res-hero-bubble text-center">
-                        ¡Tu futuro<br>también se<br>construye hoy!
-                    </div>
-                    <!-- Ilustración Laptop CSS -->
-                    <div class="d-flex align-items-end gap-4">
-                        <i class="bi bi-flower1" style="font-size: 3rem; color: #34D399;"></i>
-                        <div class="res-laptop-icon">&lt;/&gt;</div>
-                        <i class="bi bi-lightbulb" style="font-size: 3rem; color: #FBBF24;"></i>
-                    </div>
-                </div>
+      <!-- SECCIÓN 1: Hero (CUADRO DE ARRIBA FLOTANTE) -->
+      <section class="res-hero mb-5 res-caja-flotante">
+        <div class="row align-items-center">
+          <div class="col-md-7">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <i class="bi bi-bullseye fs-1"></i>
+              <h1 class="m-0 fw-bold fs-2">
+                Resultados de tu orientación<br />profesional
+              </h1>
             </div>
-        </section>
+            <p
+              class="mb-0"
+              style="color: #e0e7ff; font-size: 1.1rem; max-width: 90%"
+            >
+              Estos resultados muestran las áreas profesionales que podrían
+              adaptarse a tus intereses y habilidades.
+            </p>
+          </div>
+          <div
+            class="col-md-5 d-none d-md-flex justify-content-center position-relative mt-4 mt-md-0"
+          >
+            <div class="res-hero-bubble text-center">
+              ¡Tu futuro<br />también se<br />construye hoy!
+            </div>
+            <!-- Ilustración Laptop CSS -->
+            <div class="d-flex align-items-end gap-4">
+              <i
+                class="bi bi-flower1"
+                style="font-size: 3rem; color: #34d399"
+              ></i>
+              <div class="res-laptop-icon">&lt;/&gt;</div>
+              <i
+                class="bi bi-lightbulb"
+                style="font-size: 3rem; color: #fbbf24"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- SECCIÓN 2: Áreas Recomendadas -->
-        <section class="mb-5 position-relative res-animar-entrada res-delay-1">
-            <h4 class="fw-bold mb-4" style="color: var(--res-dark-blue);">
-                <i class="bi bi-star-fill me-2" style="color: var(--res-purple);"></i>Áreas recomendadas
+      <!-- SECCIÓN 2: Áreas Recomendadas -->
+      <section class="mb-5 position-relative res-animar-entrada res-delay-1">
+        <h4 class="fw-bold mb-4" style="color: var(--res-dark-blue)">
+          <i class="bi bi-star-fill me-2" style="color: var(--res-purple)"></i
+          >Áreas recomendadas
+        </h4>
+        <div
+          class="d-flex flex-wrap gap-3 align-items-center position-relative"
+          style="max-width: fit-content"
+        >
+          <span
+            class="badge rounded-pill res-badge-tech px-4 py-2 fs-6 fw-normal"
+          >
+            <i class="bi bi-code-slash me-1"></i> Desarrollo de software
+          </span>
+          <span
+            class="badge rounded-pill res-badge-ai px-4 py-2 fs-6 fw-normal"
+          >
+            <i class="bi bi-cpu me-1"></i> Inteligencia artificial
+          </span>
+          <span
+            class="badge rounded-pill res-badge-web px-4 py-2 fs-6 fw-normal"
+          >
+            <i class="bi bi-globe me-1"></i> Desarrollo web
+          </span>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: Tarjetas de Habilidades -->
+      <section class="row g-4 mb-5">
+        <!-- Habilidades Actuales -->
+        <div class="col-md-6">
+          <div class="res-skill-card res-caja-flotante res-delay-1">
+            <h5 class="fw-bold mb-3" style="color: var(--res-dark-blue)">
+              <i
+                class="bi bi-person-fill me-2"
+                style="color: var(--res-purple)"
+              ></i
+              >Habilidades actuales
+            </h5>
+            <p class="text-muted small mb-4">
+              Según las respuestas del test, estas son algunas habilidades que
+              el estudiante posee:
+            </p>
+
+            <div class="row">
+              <div class="col-12">
+                <ul
+                  class="list-unstyled mb-0 d-flex flex-column gap-2"
+                  style="color: var(--res-dark-blue)"
+                >
+                  <li>
+                    <i
+                      class="bi bi-check-lg me-2 fw-bold"
+                      style="color: var(--res-purple)"
+                    ></i
+                    >Pensamiento lógico
+                  </li>
+                  <li>
+                    <i
+                      class="bi bi-check-lg me-2 fw-bold"
+                      style="color: var(--res-purple)"
+                    ></i
+                    >Resolución de problemas
+                  </li>
+                  <li>
+                    <i
+                      class="bi bi-check-lg me-2 fw-bold"
+                      style="color: var(--res-purple)"
+                    ></i
+                    >Trabajo en equipo
+                  </li>
+                  <li>
+                    <i
+                      class="bi bi-check-lg me-2 fw-bold"
+                      style="color: var(--res-purple)"
+                    ></i
+                    >Interés por la tecnología
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Habilidades a Desarrollar -->
+        <div class="col-md-6">
+          <div
+            class="res-skill-card bg-light-yellow res-caja-flotante res-delay-2"
+          >
+            <h5 class="fw-bold mb-3" style="color: var(--res-dark-blue)">
+              <i
+                class="bi bi-graph-up-arrow me-2"
+                style="color: var(--res-bus-color)"
+              ></i
+              >Habilidades a desarrollar
+            </h5>
+            <p class="text-muted small mb-4">
+              Para avanzar hacia tus objetivos profesionales, recomendamos
+              trabajar en las siguientes habilidades:
+            </p>
+
+            <div class="row">
+              <div class="col-12">
+                <ul
+                  class="list-unstyled mb-0 d-flex flex-column gap-2"
+                  style="color: var(--res-dark-blue)"
+                >
+                  <li>
+                    <i class="bi bi-arrow-right me-2 text-muted"></i
+                    >Programación avanzada
+                  </li>
+                  <li>
+                    <i class="bi bi-arrow-right me-2 text-muted"></i>Inglés
+                    técnico
+                  </li>
+                  <li>
+                    <i class="bi bi-arrow-right me-2 text-muted"></i
+                    >Comunicación
+                  </li>
+                  <li>
+                    <i class="bi bi-arrow-right me-2 text-muted"></i>Trabajo con
+                    bases de datos
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 4: Caminos Profesionales -->
+      <section class="mb-5 res-animar-entrada res-delay-3">
+        <h4 class="fw-bold mb-2" style="color: var(--res-dark-blue)">
+          <i
+            class="bi bi-compass-fill me-2"
+            style="color: var(--res-purple)"
+          ></i
+          >Posibles caminos profesionales
+        </h4>
+        <p class="text-muted small mb-4">
+          Catálogo académico de la Universidad Tecnológica Nacional. Explorá
+          carreras de grado, tecnicaturas, ciclos de complementación y
+          posgrados.
+        </p>
+
+        <!-- Filtros -->
+        <div class="d-flex flex-wrap gap-2 mb-4" id="contenedor-filtros">
+          <button class="btn btn-sm filtro-btn active" data-area="todas">
+            Todas
+          </button>
+          <button class="btn btn-sm filtro-btn" data-area="grado">Grado</button>
+          <button class="btn btn-sm filtro-btn" data-area="pregrado">
+            Tecnicaturas
+          </button>
+          <button class="btn btn-sm filtro-btn" data-area="complementacion">
+            Complementación
+          </button>
+          <button class="btn btn-sm filtro-btn" data-area="posgrado">
+            Posgrado
+          </button>
+        </div>
+
+        <!-- Búsqueda y controles de vista -->
+        <div class="res-catalog-tools">
+          <div class="res-search-box">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input
+              id="buscarCarreraUTN"
+              class="res-search-input"
+              type="search"
+              placeholder="Buscar carrera, tecnicatura, posgrado..."
+              aria-label="Buscar carreras de la UTN"
+            />
+          </div>
+
+          <div class="d-flex align-items-center gap-3">
+            <span class="text-muted small" id="contador-resultados"></span>
+
+            <div class="res-view-toggle" aria-label="Cambiar vista">
+              <button
+                id="btn-vista-grid"
+                class="res-view-button active"
+                type="button"
+                title="Vista de grilla"
+                aria-label="Vista de grilla"
+              >
+                <i class="bi bi-grid-fill" aria-hidden="true"></i>
+              </button>
+
+              <button
+                id="btn-vista-list"
+                class="res-view-button"
+                type="button"
+                title="Vista de lista"
+                aria-label="Vista de lista"
+              >
+                <i class="bi bi-list" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grilla de Tarjetas -->
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4"
+          id="contenedor-carreras"
+        >
+          <!-- Las tarjetas se inyectan acá desde resultados.js -->
+        </div>
+      </section>
+
+      <!-- SECCIÓN 5: Llamado a la Acción (CUADRO DE ABAJO FLOTANTE) -->
+      <section
+        class="res-cta-section mb-4 flex-column flex-md-row text-center text-md-start res-caja-flotante res-delay-4"
+      >
+        <div
+          class="d-flex align-items-center flex-column flex-md-row gap-4 mb-4 mb-md-0"
+        >
+          <!-- SVG Montaña simplificado -->
+          <svg class="res-mountain-svg" viewBox="0 0 100 80" fill="none">
+            <path d="M10 80 L50 20 L90 80 Z" fill="#5C3DA3" />
+            <path d="M50 20 L40 35 L50 45 L60 30 Z" fill="#D9CBEA" />
+            <path d="M50 20 L50 5 L65 10 L50 15" fill="#F97316" />
+            <line
+              x1="50"
+              y1="20"
+              x2="50"
+              y2="5"
+              stroke="#4B3285"
+              stroke-width="2"
+            />
+          </svg>
+          <div>
+            <h4 class="fw-bold m-0" style="color: var(--res-dark-blue)">
+              ¿Querés comenzar tu ruta profesional?
             </h4>
-            <div class="d-flex flex-wrap gap-3 align-items-center position-relative" style="max-width: fit-content;">
-                <span class="badge rounded-pill res-badge-tech px-4 py-2 fs-6 fw-normal">
-                    <i class="bi bi-code-slash me-1"></i> Desarrollo de software
-                </span>
-                <span class="badge rounded-pill res-badge-ai px-4 py-2 fs-6 fw-normal">
-                    <i class="bi bi-cpu me-1"></i> Inteligencia artificial
-                </span>
-                <span class="badge rounded-pill res-badge-web px-4 py-2 fs-6 fw-normal">
-                    <i class="bi bi-globe me-1"></i> Desarrollo web
-                </span>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 3: Tarjetas de Habilidades -->
-        <section class="row g-4 mb-5">
-            <!-- Habilidades Actuales -->
-            <div class="col-md-6">
-                <div class="res-skill-card res-caja-flotante res-delay-1">
-                    <h5 class="fw-bold mb-3" style="color: var(--res-dark-blue);">
-                        <i class="bi bi-person-fill me-2" style="color: var(--res-purple);"></i>Habilidades actuales
-                    </h5>
-                    <p class="text-muted small mb-4">Según las respuestas del test, estas son algunas habilidades que el estudiante posee:</p>
-                    
-                    <div class="row">
-                        <div class="col-12">
-                            <ul class="list-unstyled mb-0 d-flex flex-column gap-2" style="color: var(--res-dark-blue);">
-                                <li><i class="bi bi-check-lg me-2 fw-bold" style="color: var(--res-purple);"></i>Pensamiento lógico</li>
-                                <li><i class="bi bi-check-lg me-2 fw-bold" style="color: var(--res-purple);"></i>Resolución de problemas</li>
-                                <li><i class="bi bi-check-lg me-2 fw-bold" style="color: var(--res-purple);"></i>Trabajo en equipo</li>
-                                <li><i class="bi bi-check-lg me-2 fw-bold" style="color: var(--res-purple);"></i>Interés por la tecnología</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Habilidades a Desarrollar -->
-            <div class="col-md-6">
-                <div class="res-skill-card bg-light-yellow res-caja-flotante res-delay-2">
-                    <h5 class="fw-bold mb-3" style="color: var(--res-dark-blue);">
-                        <i class="bi bi-graph-up-arrow me-2" style="color: var(--res-bus-color);"></i>Habilidades a desarrollar
-                    </h5>
-                    <p class="text-muted small mb-4">Para avanzar hacia tus objetivos profesionales, recomendamos trabajar en las siguientes habilidades:</p>
-                    
-                    <div class="row">
-                        <div class="col-12">
-                            <ul class="list-unstyled mb-0 d-flex flex-column gap-2" style="color: var(--res-dark-blue);">
-                                <li><i class="bi bi-arrow-right me-2 text-muted"></i>Programación avanzada</li>
-                                <li><i class="bi bi-arrow-right me-2 text-muted"></i>Inglés técnico</li>
-                                <li><i class="bi bi-arrow-right me-2 text-muted"></i>Comunicación</li>
-                                <li><i class="bi bi-arrow-right me-2 text-muted"></i>Trabajo con bases de datos</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 4: Caminos Profesionales -->
-        <section class="mb-5 res-animar-entrada res-delay-3">
-            <h4 class="fw-bold mb-2" style="color: var(--res-dark-blue);">
-                <i class="bi bi-compass-fill me-2" style="color: var(--res-purple);"></i>Posibles caminos profesionales
-            </h4>
-            <p class="text-muted small mb-4">Oferta académica completa de la Universidad Nacional de Tucumán, filtrada por área de interés.</p>
-
-           <!-- Filtros -->
-             <div class="d-flex flex-wrap gap-2 mb-4" id="contenedor-filtros">
-<button class="btn btn-sm filtro-btn" data-area="todas" style="background-color: var(--color-primario); color: white;">Todas</button>
- <button class="btn btn-sm filtro-btn" data-area="grado" style="background-color: var(--color-fondo); color: var(--color-texto); border: 1px solid var(--color-primario);">Grado</button>
- <button class="btn btn-sm filtro-btn" data-area="pregrado" style="background-color: var(--color-fondo); color: var(--color-texto); border: 1px solid var(--color-primario);">Pregrado</button>
-<button class="btn btn-sm filtro-btn" data-area="complementacion" style="background-color: var(--color-fondo); color: var(--color-texto); border: 1px solid var(--color-primario);">Complementación</button>
- <button class="btn btn-sm filtro-btn" data-area="posgrado" style="background-color: var(--color-fondo); color: var(--color-texto); border: 1px solid var(--color-primario);">Posgrado</button>
- </div>
-
-            <!-- Controles de vista -->
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted small" id="contador-resultados"></span>
-                <div class="text-muted small d-flex align-items-center">
-                    <i class="bi bi-grid-fill ms-2 fs-5" id="btn-vista-grid" style="color: var(--res-purple); cursor: pointer;" title="Vista de grilla"></i>
-                    <i class="bi bi-list ms-1 fs-5" id="btn-vista-list" style="color: #6B7280; cursor: pointer;" title="Vista de lista"></i>
-                </div>
-            </div>
-
-            <!-- Grilla de Tarjetas -->
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="contenedor-carreras">
-                <!-- Las tarjetas se inyectan acá desde resultados.js -->
-            </div>
-        </section>
-
-        <!-- SECCIÓN 5: Llamado a la Acción (CUADRO DE ABAJO FLOTANTE) -->
-        <section class="res-cta-section mb-4 flex-column flex-md-row text-center text-md-start res-caja-flotante res-delay-4">
-            <div class="d-flex align-items-center flex-column flex-md-row gap-4 mb-4 mb-md-0">
-                <!-- SVG Montaña simplificado -->
-                <svg class="res-mountain-svg" viewBox="0 0 100 80" fill="none">
-                    <path d="M10 80 L50 20 L90 80 Z" fill="#5C3DA3"/>
-                    <path d="M50 20 L40 35 L50 45 L60 30 Z" fill="#D9CBEA"/>
-                    <path d="M50 20 L50 5 L65 10 L50 15" fill="#F97316"/>
-                    <line x1="50" y1="20" x2="50" y2="5" stroke="#4B3285" stroke-width="2"/>
-                </svg>
-                <div>
-                    <h4 class="fw-bold m-0" style="color: var(--res-dark-blue);">¿Querés comenzar tu ruta profesional?</h4>
-                    <p class="text-muted m-0">Conocé las etapas y recomendaciones para alcanzar tu objetivo profesional.</p>
-                </div>
-            </div>
-            <!-- BOTÓN ORIGINAL -->
-            <a href="ruta.html" class="btn-destacado text-decoration-none">
-                <span class="texto-boton">Ver mi ruta profesional</span>
-            </a>
-        </section>
-
+            <p class="text-muted m-0">
+              Conocé las etapas y recomendaciones para alcanzar tu objetivo
+              profesional.
+            </p>
+          </div>
+        </div>
+        <!-- BOTÓN ORIGINAL -->
+        <a href="ruta.html" class="btn-destacado text-decoration-none">
+          <span class="texto-boton">Ver mi ruta profesional</span>
+        </a>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="res-footer text-white py-4 mt-auto">
-        <div class="container">
-            <div class="row text-center text-md-start">
-                <div class="col-md-12 mb-3 text-center border-bottom border-light pb-2">
-                    <h6 class="m-0 text-white-50">Trabajo Práctico Integrador - C9 TUP UTN</h6>
-                </div>
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <p class="mb-1" style="color: var(--res-lilac);"><strong>Integrador:</strong></p>
-                    <p class="mb-0 small">Leandro Nuñez</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="mb-1" style="color: var(--res-lilac);"><strong>Equipo de Desarrollo:</strong></p>
-                    <p class="mb-0 small">Valentina Pérez del Rien | Marina Noguera</p>
-                    <p class="mb-0 small">Morena Giovanna | Tatiana Herrera</p>
-                </div>
-            </div>
-            <div class="row mt-3 pt-3 text-center">
-                <div class="col-12">
-                    <p class="mb-0 small text-white-50">© 2026 CareerPath AI | Plataforma de orientación profesional para estudiantes.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <div
+            class="col-md-12 mb-3 text-center border-bottom border-light pb-2"
+          >
+            <h6 class="m-0 text-white-50">
+              Trabajo Práctico Integrador - C9 TUP UTN
+            </h6>
+          </div>
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="mb-1" style="color: var(--res-lilac)">
+              <strong>Integrador:</strong>
+            </p>
+            <p class="mb-0 small">Leandro Nuñez</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-1" style="color: var(--res-lilac)">
+              <strong>Equipo de Desarrollo:</strong>
+            </p>
+            <p class="mb-0 small">Valentina Pérez del Rien | Marina Noguera</p>
+            <p class="mb-0 small">Morena Giovanna | Tatiana Herrera</p>
+          </div>
         </div>
+        <div class="row mt-3 pt-3 text-center">
+          <div class="col-12">
+            <p class="mb-0 small text-white-50">
+              © 2026 CareerPath AI | Plataforma de orientación profesional para
+              estudiantes.
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <!-- ==================================================
+         MODAL DE DETALLE DE CARRERA UTN
+         ================================================== -->
+    <div
+      class="modal fade res-career-modal"
+      id="modalCarrera"
+      tabindex="-1"
+      aria-labelledby="modalCarreraTitulo"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <span
+                id="modalCarreraCategoria"
+                class="res-modal-category"
+              ></span>
+              <h2 class="modal-title" id="modalCarreraTitulo">Carrera UTN</h2>
+            </div>
+
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <section class="res-modal-section">
+              <h3 class="res-modal-heading">
+                <i class="bi bi-compass" aria-hidden="true"></i>
+                ¿De qué se trata?
+              </h3>
+              <p
+                id="modalCarreraDescripcion"
+                class="res-modal-description mb-0"
+              ></p>
+            </section>
+
+            <section class="res-modal-section">
+              <h3 class="res-modal-heading">
+                <i class="bi bi-info-circle" aria-hidden="true"></i>
+                Información académica
+              </h3>
+              <div id="modalCarreraDatos" class="res-modal-data-grid"></div>
+            </section>
+
+            <section class="res-modal-section">
+              <h3 class="res-modal-heading">
+                <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                Facultades / sedes
+              </h3>
+              <div id="modalCarreraFacultades" class="res-sedes-lista"></div>
+            </section>
+
+            <section class="res-modal-section">
+              <h3 class="res-modal-heading">
+                <i class="bi bi-journal-text" aria-hidden="true"></i>
+                <span id="modalCarreraPlanTitulo">Plan de estudios</span>
+              </h3>
+              <div id="modalCarreraPlan"></div>
+            </section>
+          </div>
+
+          <div class="modal-footer">
+            <a
+              id="modalCarreraFuente"
+              class="res-modal-link res-modal-link-secondary"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+              Ver información oficial UTN
+            </a>
+
+            <a
+              id="modalCarreraPlanLink"
+              class="res-modal-link res-modal-link-primary"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-journal-check" aria-hidden="true"></i>
+              Ver plan oficial
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/carreras-utn.js"></script>
     <script src="../js/resultados.js"></script>
-</body>
+    <script src="../js/navbar.js"></script>
+  </body>
 </html>
