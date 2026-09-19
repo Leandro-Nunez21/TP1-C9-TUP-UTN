@@ -1,521 +1,579 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- SEO: título y descripción específicos de la página -->
     <title>CareerPath AI | Orientación vocacional con IA</title>
 
     <meta
-        name="description"
-        content="Explorá tus intereses y descubrí tu próximo paso con CareerPath AI, un proyecto de orientación vocacional con inteligencia artificial para estudiantes."
-    >
+      name="description"
+      content="Explorá tus intereses y descubrí tu próximo paso con CareerPath AI, un proyecto de orientación vocacional con inteligencia artificial para estudiantes."
+    />
 
     <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-        crossorigin="anonymous"
-    >
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="../style.css">
-</head>
+    <link rel="stylesheet" href="../style.css" />
 
-<body class="inicio d-flex flex-column min-vh-100">
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="../img/CareerPath.jpeg" type="image/jpeg" />
+    <link rel="shortcut icon" href="../img/CareerPath.jpeg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="../img/CareerPath.jpeg" />
+  </head>
 
-    <a
-        class="visually-hidden-focusable inicio-salto"
-        href="#contenido"
-    >
-        Saltar al contenido
+  <body class="inicio d-flex flex-column min-vh-100">
+    <a class="visually-hidden-focusable inicio-salto" href="#contenido">
+      Saltar al contenido
     </a>
 
-<!-- Navegación principal de CareerPath AI -->
-<header class="cp-header">
-    <nav
-        class="navbar navbar-expand-lg navbar-dark cp-navbar"
+    <!-- Navegación principal de CareerPath AI -->
+    <header class="cp-header">
+      <nav
+        class="navbar navbar-dark cp-navbar"
         aria-label="Navegación principal"
-    >
+      >
         <div class="container">
+          <!-- Marca -->
+          <a
+            class="navbar-brand cp-brand d-flex align-items-center gap-2"
+            href="index.html"
+          >
+            <img
+              src="../img/CareerPath.jpeg"
+              alt=""
+              width="52"
+              height="52"
+              class="cp-logo"
+            />
 
-            <!-- Identidad de la marca -->
-            <a
-                class="navbar-brand cp-brand d-flex align-items-center gap-2"
+            <span class="cp-brand-text">
+              <span class="cp-brand-name">
+                CareerPath <span class="cp-brand-ai">AI</span>
+              </span>
+
+              <span class="cp-brand-caption d-none d-sm-block">
+                Descubrí tu próximo paso
+              </span>
+            </span>
+          </a>
+
+          <!-- Navegación de escritorio -->
+          <ul class="navbar-nav ms-auto gap-1 d-none d-lg-flex flex-row">
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="index.html"
                 href="index.html"
-            >
-                <img
-                    src="../img/CareerPath.jpeg"
-                    alt=""
-                    width="52"
-                    height="52"
-                    class="cp-logo"
-                >
+              >
+                Inicio
+              </a>
+            </li>
 
-                <span class="cp-brand-text">
-                    <span class="cp-brand-name">
-                        CareerPath <span class="cp-brand-ai">AI</span>
-                    </span>
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="perfil.html"
+                href="perfil.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">01</span>
+                Mi perfil
+              </a>
+            </li>
 
-                    <span class="cp-brand-caption d-none d-sm-block">
-                        Descubrí tu próximo paso
-                    </span>
-                </span>
-            </a>
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="test.html"
+                href="test.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">02</span>
+                Test vocacional
+              </a>
+            </li>
 
-            <!-- Botón del menú móvil -->
-            <button
-                class="navbar-toggler cp-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal"
-                aria-expanded="false"
-                aria-label="Mostrar u ocultar la navegación"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="resultados.html"
+                href="resultados.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">03</span>
+                Resultados
+              </a>
+            </li>
 
-            <!-- Enlaces -->
-            <div
-                class="collapse navbar-collapse"
-                id="menuPrincipal"
-            >
-                <ul class="navbar-nav ms-auto gap-1 pt-3 pt-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link cp-nav-link"
+                data-page="ruta.html"
+                href="ruta.html"
+              >
+                <span class="cp-nav-number" aria-hidden="true">04</span>
+                Mi ruta
+              </a>
+            </li>
+          </ul>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link cp-nav-link active"
-                            aria-current="page"
-                            href="index.html"
-                        >
-                            Inicio
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link cp-nav-link"
-                            href="perfil.html"
-                        >
-                            <span class="cp-nav-number" aria-hidden="true">
-                                01
-                            </span>
-                            Mi perfil
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link cp-nav-link"
-                            href="test.html"
-                        >
-                            <span class="cp-nav-number" aria-hidden="true">
-                                02
-                            </span>
-                            Test vocacional
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link cp-nav-link"
-                            href="resultados.html"
-                        >
-                            <span class="cp-nav-number" aria-hidden="true">
-                                03
-                            </span>
-                            Resultados
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link cp-nav-link"
-                            href="ruta.html"
-                        >
-                            <span class="cp-nav-number" aria-hidden="true">
-                                04
-                            </span>
-                            Mi ruta
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
+          <!-- Botón hamburguesa -->
+          <button
+            class="navbar-toggler cp-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir o cerrar el menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-    </nav>
-</header>
+
+        <!-- Menú móvil: se despliega hacia abajo -->
+        <div class="collapse cp-mobile-menu d-lg-none" id="menuPrincipal">
+          <div class="container">
+            <div class="cp-mobile-menu-panel">
+              <div class="cp-mobile-menu-header">
+                <div>
+                  <span class="cp-menu-etiqueta">CareerPath AI</span>
+                  <p class="cp-menu-titulo mb-0">Tu recorrido</p>
+                </div>
+
+                <button
+                  class="cp-mobile-close"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#menuPrincipal"
+                  aria-controls="menuPrincipal"
+                  aria-label="Cerrar menú"
+                >
+                  ×
+                </button>
+              </div>
+
+              <p class="cp-menu-descripcion">
+                Navegá por las etapas de tu orientación vocacional.
+              </p>
+
+              <ul class="navbar-nav cp-mobile-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="index.html"
+                    href="index.html"
+                  >
+                    <span class="cp-menu-numero">00</span>
+                    <span>
+                      <strong>Inicio</strong>
+                      <small>Conocé CareerPath AI</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="perfil.html"
+                    href="perfil.html"
+                  >
+                    <span class="cp-menu-numero">01</span>
+                    <span>
+                      <strong>Mi perfil</strong>
+                      <small>Creá tu cuenta y contanos quién sos</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="test.html"
+                    href="test.html"
+                  >
+                    <span class="cp-menu-numero">02</span>
+                    <span>
+                      <strong>Test vocacional</strong>
+                      <small>Explorá tus intereses</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="resultados.html"
+                    href="resultados.html"
+                  >
+                    <span class="cp-menu-numero">03</span>
+                    <span>
+                      <strong>Resultados</strong>
+                      <small>Descubrí posibilidades</small>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link cp-nav-link cp-mobile-link"
+                    data-page="ruta.html"
+                    href="ruta.html"
+                  >
+                    <span class="cp-menu-numero">04</span>
+                    <span>
+                      <strong>Mi ruta</strong>
+                      <small>Seguí tu progreso</small>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="cp-menu-pie">
+                <span aria-hidden="true">✦</span>
+                <p class="mb-0">Tu elección. A tu ritmo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Capa borrosa detrás del menú móvil -->
+      <button
+        class="cp-nav-overlay d-lg-none"
+        id="navOverlay"
+        type="button"
+        aria-label="Cerrar menú"
+        tabindex="-1"
+      ></button>
+    </header>
 
     <main id="contenido" class="flex-grow-1">
+      <!-- Presentación principal -->
+      <section class="inicio-hero" aria-labelledby="titulo-inicio">
+        <div class="container py-5">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+              <p class="inicio-etiqueta">
+                Orientación vocacional con inteligencia artificial
+              </p>
 
-        <!-- Presentación principal -->
-        <section class="inicio-hero" aria-labelledby="titulo-inicio">
-            <div class="container py-5">
-                <div class="row align-items-center g-5">
+              <h1 id="titulo-inicio" class="inicio-titulo">
+                Tu futuro empieza<br />
+                por <span>conocerte.</span>
+              </h1>
 
-                    <div class="col-lg-7">
-                        <p class="inicio-etiqueta">
-                            Orientación vocacional con inteligencia artificial
-                        </p>
+              <p class="inicio-bajada mt-4">
+                ¿Todavía no sabés qué estudiar? Descubrí qué te interesa,
+                explorá tus posibilidades y empezá a construir tu propio camino.
+              </p>
 
-                        <h1 id="titulo-inicio" class="inicio-titulo">
-                            Tu futuro empieza<br>
-                            por <span>conocerte.</span>
-                        </h1>
+              <p class="inicio-texto">
+                CareerPath AI está pensado para estudiantes que están eligiendo
+                una carrera o buscando una nueva dirección. Nuestra propuesta
+                combina perfil, test vocacional e inteligencia artificial para
+                orientar esa búsqueda.
+              </p>
 
-                        <p class="inicio-bajada mt-4">
-                            ¿Todavía no sabés qué estudiar? Descubrí qué
-                            te interesa, explorá tus posibilidades y
-                            empezá a construir tu propio camino.
-                        </p>
+              <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+                <a class="btn inicio-boton" href="perfil.html">
+                  Comenzar con mi perfil
+                  <span aria-hidden="true">↗</span>
+                </a>
 
-                        <p class="inicio-texto">
-                            CareerPath AI está pensado para estudiantes
-                            que están eligiendo una carrera o buscando
-                            una nueva dirección. Nuestra propuesta combina
-                            perfil, test vocacional e inteligencia artificial
-                            para orientar esa búsqueda.
-                        </p>
+                <a class="btn inicio-boton-secundario" href="#como-funciona">
+                  Conocer el recorrido
+                </a>
+              </div>
 
-                        <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
-                            <a class="btn inicio-boton" href="perfil.html">
-                                Comenzar con mi perfil
-                                <span aria-hidden="true">↗</span>
-                            </a>
-
-                            <a
-                                class="btn inicio-boton-secundario"
-                                href="#como-funciona"
-                            >
-                                Conocer el recorrido
-                            </a>
-                        </div>
-
-                        <p class="inicio-nota mt-3 mb-0">
-                            No necesitás tener una carrera elegida para empezar.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-5">
-                        <aside
-                            class="inicio-mapa p-4 p-md-5"
-                            aria-label="Resumen del recorrido"
-                        >
-                            <div class="d-flex justify-content-between align-items-center gap-3 mb-4">
-                                <p class="inicio-etiqueta mb-0">
-                                    Tu próximo capítulo
-                                </p>
-
-                                <span class="inicio-simbolo" aria-hidden="true">
-                                    ✳
-                                </span>
-                            </div>
-
-                            <p class="inicio-mapa-titulo">
-                                Hay un camino<br>
-                                que empieza en vos.
-                            </p>
-
-                            <ol class="inicio-recorrido list-unstyled mb-0">
-                                <li>
-                                    <span class="inicio-nodo" aria-hidden="true">
-                                        01
-                                    </span>
-
-                                    <div>
-                                        <strong>Conocé tus intereses</strong>
-                                        <p>Lo que disfrutás y te da curiosidad.</p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <span class="inicio-nodo" aria-hidden="true">
-                                        02
-                                    </span>
-
-                                    <div>
-                                        <strong>Explorá posibilidades</strong>
-                                        <p>Carreras e instituciones para descubrir.</p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <span class="inicio-nodo" aria-hidden="true">
-                                        03
-                                    </span>
-
-                                    <div>
-                                        <strong>Encontrá tu próximo paso</strong>
-                                        <p>Conocimientos para seguir creciendo.</p>
-                                    </div>
-                                </li>
-                            </ol>
-
-                            <p class="inicio-mapa-pie mt-4 mb-0">
-                                <span aria-hidden="true">↗</span>
-                                Tu elección. A tu ritmo.
-                            </p>
-                        </aside>
-                    </div>
-
-                </div>
+              <p class="inicio-nota mt-3 mb-0">
+                No necesitás tener una carrera elegida para empezar.
+              </p>
             </div>
-        </section>
 
-        <!-- Franja de conexión con el usuario -->
-        <section class="inicio-franja py-4" aria-label="Preguntas para empezar">
-            <div class="container">
-                <div class="row align-items-center gy-3">
+            <div class="col-lg-5">
+              <aside
+                class="inicio-mapa p-4 p-md-5"
+                aria-label="Resumen del recorrido"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center gap-3 mb-4"
+                >
+                  <p class="inicio-etiqueta mb-0">Tu próximo capítulo</p>
 
-                    <div class="col-lg-4">
-                        <p class="fw-bold mb-0">
-                            Elegir empieza con buenas preguntas.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-8">
-                        <ul class="list-unstyled d-flex flex-wrap justify-content-lg-end gap-2 mb-0">
-                            <li class="inicio-chip">¿Qué me interesa?</li>
-                            <li class="inicio-chip">¿Qué podría estudiar?</li>
-                            <li class="inicio-chip">¿Por dónde empiezo?</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Explicación del recorrido del producto -->
-        <section
-            id="como-funciona"
-            class="container inicio-seccion"
-            aria-labelledby="titulo-recorrido"
-        >
-            <div class="row g-5">
-
-                <div class="col-lg-4">
-                    <p class="inicio-etiqueta">Cómo funciona nuestra propuesta</p>
-
-                    <h2 id="titulo-recorrido" class="inicio-subtitulo">
-                        Cada paso<br>
-                        tiene un propósito.
-                    </h2>
-
-                    <p class="inicio-texto mt-3">
-                        Conocerte, explorar y empezar a aprender.
-                        Un recorrido pensado para ayudarte a
-                        decidir con más información.
-                    </p>
-
-                    <a class="inicio-enlace" href="test.html">
-                        Explorar el test vocacional
-                        <span aria-hidden="true">↗</span>
-                    </a>
+                  <span class="inicio-simbolo" aria-hidden="true"> ✳ </span>
                 </div>
 
-                <div class="col-lg-8">
-                    <ol class="inicio-pasos list-unstyled mb-0">
-
-                        <li class="row g-3">
-                            <div class="col-2">
-                                <span class="inicio-paso-numero" aria-hidden="true">
-                                    01
-                                </span>
-                            </div>
-
-                            <div class="col-10">
-                                <h3>Primero, tu perfil</h3>
-                                <p>
-                                    Identificá tus intereses y habilidades.
-                                    Son el punto de partida para comprender
-                                    qué actividades te atraen.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li class="row g-3">
-                            <div class="col-2">
-                                <span class="inicio-paso-numero" aria-hidden="true">
-                                    02
-                                </span>
-                            </div>
-
-                            <div class="col-10">
-                                <h3>Después, tus preferencias</h3>
-                                <p>
-                                    Respondé el test vocacional pensando en
-                                    lo que disfrutás. No es un examen
-                                    de conocimientos.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li class="row g-3">
-                            <div class="col-2">
-                                <span class="inicio-paso-numero" aria-hidden="true">
-                                    03
-                                </span>
-                            </div>
-
-                            <div class="col-10">
-                                <h3>Análisis y posibilidades</h3>
-                                <p>
-                                    La integración de IA prevista relacionará
-                                    tu perfil y tus respuestas para explicar
-                                    recomendaciones de carreras e instituciones.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li class="row g-3">
-                            <div class="col-2">
-                                <span class="inicio-paso-numero" aria-hidden="true">
-                                    04
-                                </span>
-                            </div>
-
-                            <div class="col-10">
-                                <h3>Un camino para aprender</h3>
-                                <p>
-                                    La propuesta final incluye una ruta
-                                    adaptada a tu elección. En esta versión
-                                    podés explorar un recorrido de ejemplo
-                                    y registrar tu avance.
-                                </p>
-                            </div>
-                        </li>
-
-                    </ol>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Explicación del papel de la IA -->
-        <section
-            class="container pb-5"
-            aria-labelledby="titulo-ia"
-        >
-            <div class="inicio-panel p-4 p-md-5">
-                <div class="row align-items-center g-4">
-
-                    <div class="col-lg-6">
-                        <p class="inicio-etiqueta">
-                            Tecnología para ampliar tu mirada
-                        </p>
-
-                        <h2 id="titulo-ia" class="inicio-subtitulo">
-                            La IA acompaña.<br>
-                            La decisión es tuya.
-                        </h2>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <p>
-                            Buscamos que cada recomendación tenga una
-                            explicación: qué intereses la conectan con vos,
-                            dónde podrías estudiar y qué podrías
-                            aprender después.
-                        </p>
-
-                        <p class="inicio-texto mb-0">
-                            La orientación es un punto de partida para
-                            explorar alternativas y conversar con docentes
-                            u orientadores. Tus objetivos pueden cambiar
-                            a medida que descubrís cosas nuevas.
-                        </p>
-                    </div>
-
-                </div>
-
-                <p class="inicio-estado mt-4 pt-4 mb-0">
-                    <strong>Proyecto en desarrollo.</strong>
-                    Esta versión es un prototipo académico. El análisis
-                    con IA y la conexión personalizada entre las etapas
-                    todavía no están integrados.
+                <p class="inicio-mapa-titulo">
+                  Hay un camino<br />
+                  que empieza en vos.
                 </p>
+
+                <ol class="inicio-recorrido list-unstyled mb-0">
+                  <li>
+                    <span class="inicio-nodo" aria-hidden="true"> 01 </span>
+
+                    <div>
+                      <strong>Conocé tus intereses</strong>
+                      <p>Lo que disfrutás y te da curiosidad.</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <span class="inicio-nodo" aria-hidden="true"> 02 </span>
+
+                    <div>
+                      <strong>Explorá posibilidades</strong>
+                      <p>Carreras e instituciones para descubrir.</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <span class="inicio-nodo" aria-hidden="true"> 03 </span>
+
+                    <div>
+                      <strong>Encontrá tu próximo paso</strong>
+                      <p>Conocimientos para seguir creciendo.</p>
+                    </div>
+                  </li>
+                </ol>
+
+                <p class="inicio-mapa-pie mt-4 mb-0">
+                  <span aria-hidden="true">↗</span>
+                  Tu elección. A tu ritmo.
+                </p>
+              </aside>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Cierre -->
-        <section
-            class="inicio-cierre py-5"
-            aria-labelledby="titulo-empezar"
-        >
-            <div class="container">
-                <div class="row align-items-center g-4">
+      <!-- Franja de conexión con el usuario -->
+      <section class="inicio-franja py-4" aria-label="Preguntas para empezar">
+        <div class="container">
+          <div class="row align-items-center gy-3">
+            <div class="col-lg-4">
+              <p class="fw-bold mb-0">Elegir empieza con buenas preguntas.</p>
+            </div>
 
-                    <div class="col-lg-8">
-                        <p class="inicio-etiqueta">Tu punto de partida</p>
+            <div class="col-lg-8">
+              <ul
+                class="list-unstyled d-flex flex-wrap justify-content-lg-end gap-2 mb-0"
+              >
+                <li class="inicio-chip">¿Qué me interesa?</li>
+                <li class="inicio-chip">¿Qué podría estudiar?</li>
+                <li class="inicio-chip">¿Por dónde empiezo?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                        <h2 id="titulo-empezar" class="inicio-subtitulo">
-                            No necesitás tener todas las respuestas.
-                        </h2>
+      <!-- Explicación del recorrido del producto -->
+      <section
+        id="como-funciona"
+        class="container inicio-seccion"
+        aria-labelledby="titulo-recorrido"
+      >
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <p class="inicio-etiqueta">Cómo funciona nuestra propuesta</p>
 
-                        <p class="mb-0 mt-3">
-                            Empezá por lo que te interesa.
-                            El próximo paso es conocerte.
-                        </p>
-                    </div>
+            <h2 id="titulo-recorrido" class="inicio-subtitulo">
+              Cada paso<br />
+              tiene un propósito.
+            </h2>
 
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="btn inicio-boton" href="perfil.html">
-                            Explorar mi perfil
-                            <span aria-hidden="true">↗</span>
-                        </a>
-                    </div>
+            <p class="inicio-texto mt-3">
+              Conocerte, explorar y empezar a aprender. Un recorrido pensado
+              para ayudarte a decidir con más información.
+            </p>
 
+            <a class="inicio-enlace" href="test.html">
+              Explorar el test vocacional
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="col-lg-8">
+            <ol class="inicio-pasos list-unstyled mb-0">
+              <li class="row g-3">
+                <div class="col-2">
+                  <span class="inicio-paso-numero" aria-hidden="true">
+                    01
+                  </span>
                 </div>
-            </div>
-        </section>
 
+                <div class="col-10">
+                  <h3>Primero, tu perfil</h3>
+                  <p>
+                    Identificá tus intereses y habilidades. Son el punto de
+                    partida para comprender qué actividades te atraen.
+                  </p>
+                </div>
+              </li>
+
+              <li class="row g-3">
+                <div class="col-2">
+                  <span class="inicio-paso-numero" aria-hidden="true">
+                    02
+                  </span>
+                </div>
+
+                <div class="col-10">
+                  <h3>Después, tus preferencias</h3>
+                  <p>
+                    Respondé el test vocacional pensando en lo que disfrutás. No
+                    es un examen de conocimientos.
+                  </p>
+                </div>
+              </li>
+
+              <li class="row g-3">
+                <div class="col-2">
+                  <span class="inicio-paso-numero" aria-hidden="true">
+                    03
+                  </span>
+                </div>
+
+                <div class="col-10">
+                  <h3>Análisis y posibilidades</h3>
+                  <p>
+                    La integración de IA prevista relacionará tu perfil y tus
+                    respuestas para explicar recomendaciones de carreras e
+                    instituciones.
+                  </p>
+                </div>
+              </li>
+
+              <li class="row g-3">
+                <div class="col-2">
+                  <span class="inicio-paso-numero" aria-hidden="true">
+                    04
+                  </span>
+                </div>
+
+                <div class="col-10">
+                  <h3>Un camino para aprender</h3>
+                  <p>
+                    La propuesta final incluye una ruta adaptada a tu elección.
+                    En esta versión podés explorar un recorrido de ejemplo y
+                    registrar tu avance.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Explicación del papel de la IA -->
+      <section class="container pb-5" aria-labelledby="titulo-ia">
+        <div class="inicio-panel p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <p class="inicio-etiqueta">Tecnología para ampliar tu mirada</p>
+
+              <h2 id="titulo-ia" class="inicio-subtitulo">
+                La IA acompaña.<br />
+                La decisión es tuya.
+              </h2>
+            </div>
+
+            <div class="col-lg-6">
+              <p>
+                Buscamos que cada recomendación tenga una explicación: qué
+                intereses la conectan con vos, dónde podrías estudiar y qué
+                podrías aprender después.
+              </p>
+
+              <p class="inicio-texto mb-0">
+                La orientación es un punto de partida para explorar alternativas
+                y conversar con docentes u orientadores. Tus objetivos pueden
+                cambiar a medida que descubrís cosas nuevas.
+              </p>
+            </div>
+          </div>
+
+          <p class="inicio-estado mt-4 pt-4 mb-0">
+            <strong>Proyecto en desarrollo.</strong>
+            Esta versión es un prototipo académico. El análisis con IA y la
+            conexión personalizada entre las etapas todavía no están integrados.
+          </p>
+        </div>
+      </section>
+
+      <!-- Cierre -->
+      <section class="inicio-cierre py-5" aria-labelledby="titulo-empezar">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <p class="inicio-etiqueta">Tu punto de partida</p>
+
+              <h2 id="titulo-empezar" class="inicio-subtitulo">
+                No necesitás tener todas las respuestas.
+              </h2>
+
+              <p class="mb-0 mt-3">
+                Empezá por lo que te interesa. El próximo paso es conocerte.
+              </p>
+            </div>
+
+            <div class="col-lg-4 text-lg-end">
+              <a class="btn inicio-boton" href="perfil.html">
+                Explorar mi perfil
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Créditos del proyecto -->
     <footer class="bg-dark text-white py-4 mt-auto">
-        <div class="container">
-            <div class="row text-center text-md-start">
-
-                <div class="col-12 mb-3 border-bottom border-secondary pb-3">
-                    <p class="fw-bold text-center mb-0">
-                        CareerPath AI · Trabajo Práctico Integrador
-                    </p>
-
-                    <p class="small text-center mb-0">
-                        C9 · Tecnicatura Universitaria en Programación · UTN
-                    </p>
-                </div>
-
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <p class="fw-bold mb-1">Integrador</p>
-                    <p class="small mb-0">Leandro Nñez</p>
-                </div>
-
-                <div class="col-md-6 text-md-end">
-                    <p class="fw-bold mb-1">Equipo de desarrollo</p>
-
-                    <ul class="list-unstyled small mb-0">
-                        <li>Valentina Pérez del Rien</li>
-                        <li>Marina Noguera Morena Giovanna</li>
-                        <li>Tatiana Herrera</li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <p class="small text-center mt-4 mb-0">
-                © 2026 CareerPath AI · Orientación vocacional
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <div class="col-12 mb-3 border-bottom border-secondary pb-3">
+            <p class="fw-bold text-center mb-0">
+              CareerPath AI · Trabajo Práctico Integrador
             </p>
+
+            <p class="small text-center mb-0">
+              C9 · Tecnicatura Universitaria en Programación · UTN
+            </p>
+          </div>
+
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="fw-bold mb-1">Integrador</p>
+            <p class="small mb-0">Leandro Nñez</p>
+          </div>
+
+          <div class="col-md-6 text-md-end">
+            <p class="fw-bold mb-1">Equipo de desarrollo</p>
+
+            <ul class="list-unstyled small mb-0">
+              <li>Valentina Pérez del Rien</li>
+              <li>Marina Noguera Morena Giovanna</li>
+              <li>Tatiana Herrera</li>
+            </ul>
+          </div>
         </div>
+
+        <p class="small text-center mt-4 mb-0">
+          © 2026 CareerPath AI · Orientación vocacional
+        </p>
+      </div>
     </footer>
 
     <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
     ></script>
-
-</body>
+    <script src="../js/navbar.js"></script>
+  </body>
 </html>

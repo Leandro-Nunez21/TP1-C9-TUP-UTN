@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ==========================================
-    // 1. MODO OSCURO (Controlado por clases de CSS)
-    // ==========================================
+// 1. MODO OSCURO (Controlado por clases de CSS)
     const btnTheme = document.getElementById('btn-theme');
     const body = document.body;
 
@@ -18,9 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
-    // 2. PERFIL INTERACTIVO (En tiempo real)
-    // ==========================================
+// 2. PERFIL INTERACTIVO (En tiempo real)
     const formPerfil = document.getElementById('form-perfil');
     
     if (formPerfil) { 
